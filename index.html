@@ -25,18 +25,38 @@
 						<h2> Personal Information </h2>
 						<p>First name: <br><br> <input id="input" type="text" name="firstname"></p>
 						<p>Last name: <br><br> <input id="input" type="text" name="lastname"></p>
-						<p>Age: <br><br> <input id="input" type="number" min="10" max="100" name="age"></p>
+						<p>Age: <br><br> <input id="input" type="number" min="5" max="130" name="age"></p>
 						<br>
 						<br>
 
 					</div>
 
 					<div class="question">
-						<h2> What you like </h2>
-						I like:<br>
-						<input type="checkbox" name="Color" value="Red">Red<br>
-						<input type="checkbox" name="Color" value="Green">Green<br>
-						<input type="checkbox" name="Color" value="Blue">Blue<br>
+					  <h2> How easy is it to find information? (1 = easy, 5 = hard)</h2>
+					  <input type="radio" id="one" name="ease_of_use_rating" value=1>
+					  <label for="one">1</label><br>
+
+					  <input type="radio" id="two" name="ease_of_use_rating" value=2>
+					  <label for="two">2</label><br>
+
+					  <input type="radio" id="three" name="ease_of_use_rating" value=3>
+					  <label for="three">3</label><br>
+
+					  <input type="radio" id="four" name="ease_of_use_rating" value=4>
+					  <label for="four">4</label><br>
+
+					  <input type="radio" id="five" name="ease_of_use_rating" value=5>
+					  <label for="five">5</label><br>
+					</div>
+
+					<div class="question">
+						<h2> What are reddit.com's weaknesses? Choose all that apply. </h2>
+						<input type="checkbox" name="weaknesses" value="Too much content">Too much content<br>
+						<input type="checkbox" name="weaknesses" value="Not enough content">Not enough content<br>
+						<input type="checkbox" name="weaknesses" value="Hard to find what you're looking for">Hard to find what you're looking for<br>
+						<input type="checkbox" name="weaknesses" value="Slow">Slow<br>
+						<input type="checkbox" name="weaknesses" value="Not interactive enough">Not interactive enough<br>
+						<textarea id="othertext" rows="4" cols="35">Other</textarea>
 
 						<br>
 
@@ -51,12 +71,12 @@
 					<br>
 					<br>
 
-					<textarea id="commenttext" rows="4" cols="35">Leave your comments Here :</textarea>
+					<textarea id="commenttext" rows="4" cols="35">Any final thoughts? Write here:</textarea>
 
 					<br>
 					<br>
 
-					<input type="button" value="Submit your survey response HERE" onclick="alert ('Survey submitted successfully')">
+					<input type="button" value="SUBMIT" onclick="alert ('Survey submitted successfully')">
 					<br>
 					<br>
 					<center>Thanks for taking the time to complete this survey ! </center>
