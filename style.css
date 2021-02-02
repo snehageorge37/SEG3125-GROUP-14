@@ -27,15 +27,9 @@ h1 {
 	font-family: monospace;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
 
-img:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
+
+
 
 p {
   color: #000000; 
@@ -53,7 +47,20 @@ table {
   margin: 20px;
   padding: 20px;
 }
-
+.picture {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width:450px;
+  height:300px;
+}
+.zoomonpicture {
+	position: absolute;
+	width: 0px;
+}
+.picture:hover + .zoomonpicture{
+	width:1000px;
+}
 
 /* Defining styling for a specific element with an id */
 #signature {
