@@ -14,6 +14,11 @@ body {
   padding: 20px;
   margin:auto;
   font-family:sans-serif;
+  scroll-behavior: smooth;
+}
+
+.tab{
+	width: 10px;
 }
 
 h1 {
@@ -30,8 +35,12 @@ img {
   text-align: center;
 }
 
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
 p {
-  color: #000000); /* Red */
+  color: #000000; 
 }
 
 table {

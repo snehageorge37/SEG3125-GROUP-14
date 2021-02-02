@@ -15,75 +15,82 @@
 		<form id="myform" action="index.php">
 			<br>
 			<br>
-				<p>Please take a few minutes to complete this survey to help us improve the User Experience for the <a href="https://www.reddit.com/">Reddit</a> website :</p>
+			<p>Please take a few minutes to complete this survey to help us improve the User Experience for the <a
+					href="https://www.reddit.com/">Reddit</a> website :</p>
+			<br>
+			<br>
+			<a href="https://www.reddit.com/">
+				<img src="images/reddit_front_page.png" title="site image" alt="https://www.reddit.com/" width="450"
+					height="300">
+			</a>
+			<br>
+			<br>
+			<div class="question">
+				<h3> Personal Information </h3>
+				<p>First name: <br><br> <input id="input" type="text" name="firstname"></p>
+				<p>Last name: <br><br> <input id="input" type="text" name="lastname"></p>
+				<p>Age: <br><br> <input id="input" type="number" min="5" max="130" name="age"></p>
 				<br>
 				<br>
-					<a href="https://www.reddit.com/">
-					<img src="images/reddit_front_page.png" title="site image" alt="https://www.reddit.com/" width="450" height="300">
-					</a>
-					<br>
-					<br>
-					<div class="question">
-						<h2> Personal Information </h2>
-						<p>First name: <br><br> <input id="input" type="text" name="firstname"></p>
-						<p>Last name: <br><br> <input id="input" type="text" name="lastname"></p>
-						<p>Age: <br><br> <input id="input" type="number" min="5" max="130" name="age"></p>
-						<br>
-						<br>
 
-					</div>
+				<label>What is your overall opinion of this website's UI?</label><br>
+				<textarea></textarea><br><br><br>
 
-					<div class="question">
-					  <h2> How easy is it to find information? (1 = easy, 5 = hard)</h2>
-					  <input type="radio" id="one" name="ease_of_use_rating" value=1>
-					  <label for="one">1</label><br>
+				<label>Have you ever visited reddit.com before?</label><br>
+				<input type="radio" name="info">
+				<label>Yes</label>
+				<input type="radio" name="info">
+				<label>No</label><br><br><br>
 
-					  <input type="radio" id="two" name="ease_of_use_rating" value=2>
-					  <label for="two">2</label><br>
+				<label>If you answered yes to the previous question, how often do you visit reddit.com? </label><br>
+				<input type="radio"><label>Multiple times a day</label><br>
+				<input type="radio"><label>Once a day</label><br>
+				<input type="radio"><label>Few times a week</label><br>
+				<input type="radio"><label>Once a week</label><br>
+				<input type="radio"><label>Every few weeks</label><br>
+				<input type="radio"><label>Once a month</label><br>
+				<input type="radio"><label>Every few months</label>
+				<br><br><br>
 
-					  <input type="radio" id="three" name="ease_of_use_rating" value=3>
-					  <label for="three">3</label><br>
+				<label> How easy was it for you to find information? (1 = easy, 5 = difficult)</label><br>
+				<input type="radio" id="one" name="ease_of_use_rating" value=1>
+				<label for="one">1</label><br>
 
-					  <input type="radio" id="four" name="ease_of_use_rating" value=4>
-					  <label for="four">4</label><br>
+				<input type="radio" id="two" name="ease_of_use_rating" value=2>
+				<label for="two">2</label><br>
 
-					  <input type="radio" id="five" name="ease_of_use_rating" value=5>
-					  <label for="five">5</label><br>
-					</div>
+				<input type="radio" id="three" name="ease_of_use_rating" value=3>
+				<label for="three">3</label><br>
 
-					<div class="question">
-						<h2> What are reddit.com's weaknesses? Choose all that apply. </h2>
-						<input type="checkbox" name="weaknesses" value="Too much content">Too much content<br>
-						<input type="checkbox" name="weaknesses" value="Not enough content">Not enough content<br>
-						<input type="checkbox" name="weaknesses" value="Hard to find what you're looking for">Hard to find what you're looking for<br>
-						<input type="checkbox" name="weaknesses" value="Slow">Slow<br>
-						<input type="checkbox" name="weaknesses" value="Not interactive enough">Not interactive enough<br>
-						<textarea id="othertext" rows="4" cols="35">Other</textarea>
+				<input type="radio" id="four" name="ease_of_use_rating" value=4>
+				<label for="four">4</label><br>
 
-						<br>
+				<input type="radio" id="five" name="ease_of_use_rating" value=5>
+				<label for="five">5</label>
+				<br><br><br>
 
-						What is your favorite fruit?<br>
-						<select id="favorite">
-							<option value="Apples" selected="selected">Apples</option>
-							<option value="Oranges">Oranges</option>
-							<option value="Bananas">Bananas</option>
-						</select>
-					</div>
+				<label> What are reddit.com's weaknesses? Choose all that apply. </label><br>
+				<input type="checkbox" name="weaknesses" value="Too much content">Too much content<br>
+				<input type="checkbox" name="weaknesses" value="Not enough content">Not enough content<br>
+				<input type="checkbox" name="weaknesses" value="Hard to find what you're looking for">Hard to find what I am looking for<br>
+				<input type="checkbox" name="weaknesses" value="Slow">Slow<br>
+				<input type="checkbox" name="weaknesses" value="Not interactive enough">Not interactive enough<br>
+				<textarea id="othertext" rows="4" cols="35">Other</textarea>
 
-					<br>
-					<br>
+				<br><br><br>
 
-					<textarea id="commenttext" rows="4" cols="35">Any final thoughts? Write here:</textarea>
+				<textarea id="commenttext" rows="4" cols="35">Any final thoughts? Write here:</textarea>
+				<br><br><br>
 
-					<br>
-					<br>
+				<input type="button" value="SUBMIT" onclick="alert ('Survey submitted successfully. \n Thank you for your feedback!')">
+				<br><br><br>
 
-					<input type="button" value="SUBMIT" onclick="alert ('Survey submitted successfully')">
-					<br>
-					<br>
-					<center>Thanks for taking the time to complete this survey ! </center>
-					<br>
-					<p id="signature">Site created by Group 14: Sneha, Lamya and Raïssa</p>
+			</div>
+
+			<br><br><br>
+			<center>Thanks for taking the time to complete this survey! </center>
+			<br>
+			<p id="signature">Site created by Group 14: Sneha, Lamya and Raïssa</p>
 
 		</form>
 	</body>
