@@ -3,14 +3,12 @@
 */
 
 html {
-  background-color: white;
+  background-color: rgb(253, 221, 209);
 }
  
 body {
-  background-color: RGB(205,205,205); /* Light Grey */
-  border-radius:10px;
+  background-color: rgb(253, 221, 209);
   width: 600px;
-  border: 1px solid black;
   padding: 20px;
   margin:auto;
   font-family:sans-serif;
@@ -25,7 +23,7 @@ h1 {
 	text-align: center;
 	margin: 0;
 	padding: 20px 0;
-	color: #FF0000;  /* Red */
+	color: black;  /* Red */
 	font-family: monospace;
 }
 
