@@ -4,21 +4,80 @@
 
 var products = [
 	{
-		name: "brocoli",
+		name: "broccoli",
 		vegetarian: true,
 		glutenFree: true,
+		organic: false;
 		price: 1.99
 	},
 	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false;
 		price: 2.35
+	},
+	{
+		name: "apple",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true;
+		price: 1.35
+	},
+	{
+		name: "pasta",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true;
+		price: 1.99
+	},
+	{
+		name: "whole chicken",
+		vegetarian: false,
+		glutenFree: true,
+		organic: true;
+		price: 7.42
+	},
+	{
+		name: "kitkat minis",
+		vegetarian: true,
+		glutenFree: false,
+		organic: false;
+		price: 2.99
+	},
+	{
+		name: "milk",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false;
+		price: 4.69
+	},
+	{
+		name: "carrots",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false;
+		price: 2.29
+	},
+	{
+		name: "yogurt",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true;
+		price: 3.99
+	},
+	{
+		name: "cereal",
+		vegetarian: true,
+		glutenFree: true,
+		organic: true;
+		price: 4.99
 	},
 	{
 		name: "salmon",
 		vegetarian: false,
 		glutenFree: true,
+		organic: false;
 		price: 10.00
 	}
 ];
