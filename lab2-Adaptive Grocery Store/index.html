@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <! This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp>
+    <! This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp >
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -20,21 +20,26 @@
         <h3>Client Information</h3>
         <p>Tell us a bit about you. This will help us meet your needs, and provide a customized shopping experience for you.</p>
         <p>Choose all of which apply to you:</p>
-        <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'dietSelect2','dietSelect3','displayProduct')">
+        <select id="dietSelect1" name="dietSelect1" onchange="populateListProductChoices(this.id, 'displayProduct')">
             <option value=""></option>
             <option value="Vegetarian">Vegetarian</option>
-        <option value="None">n/a</option>
+            <option value="None">n/a</option>
         </select>
-        <select id="dietSelect2" name="dietSelect" onchange="populateListProductChoices('dietSelect', this.id,'dietSelect3','displayProduct')">
+        <select id="dietSelect2" name="dietSelect2" onchange="populateListProductChoices(this.id, 'displayProduct')">
             <option value=""></option>
             <option value="GlutenFree">Gluten Intolerant</option>
             <option value="None">n/a</option>
         </select>
         <!-- Add option to choose organic, non-organic or both -->
+        <select id="dietSelect3" name="dietSelect3" onchange="populateListProductChoices(this.id, 'displayProduct')">
+            <option value=""></option>
+            <option value="Organic">Organic</option>
+            <option value="Non-organic">Non-organic</option>
+            <option value="None">n/a</option>
+        </select>
         <br>
         <br>
-        <input type="checkbox" name="checkOrganic" value="Organic">Organic<br>
-        <input type="checkbox" name="checkNonOrganic" value="Non-organic">Non-organic<br>
+        <input type="button" value="Submit my preferences" onclick="displayuserproducts('displayProduct')">
     </div>
 
     <div id="Products" class="tabcontent">
