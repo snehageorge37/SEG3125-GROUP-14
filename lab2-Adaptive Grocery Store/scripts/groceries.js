@@ -2,70 +2,70 @@
 // A set of ingredients should be added to products		 
 
 var products = [{
-        name: "broccoli",
+        name: "Broccoli",
         vegetarian: true,
         glutenFree: true,
         organic: false,
         price: 1.99
     },
     {
-        name: "bread",
+        name: "Bread",
         vegetarian: true,
         glutenFree: false,
         organic: false,
         price: 2.35
     },
     {
-        name: "apple",
+        name: "Organic Apple",
         vegetarian: true,
         glutenFree: true,
         organic: true,
         price: 1.35
     },
     {
-        name: "pasta",
+        name: "GF Organic Pasta",
         vegetarian: true,
         glutenFree: true,
         organic: true,
         price: 1.99
     },
     {
-        name: "whole chicken",
+        name: "Organic Whole Chicken",
         vegetarian: false,
         glutenFree: true,
         organic: true,
         price: 7.42
     },
     {
-        name: "kitkat minis",
+        name: "Kitkat Minis",
         vegetarian: true,
         glutenFree: false,
         organic: false,
         price: 2.99
     },
     {
-        name: "milk",
+        name: "Milk",
         vegetarian: true,
         glutenFree: true,
         organic: false,
         price: 4.69
     },
     {
-        name: "carrots",
+        name: "Carrots",
         vegetarian: true,
         glutenFree: true,
         organic: false,
         price: 2.29
     },
     {
-        name: "yogurt",
+        name: "Organic Yogurt",
         vegetarian: true,
         glutenFree: true,
         organic: true,
         price: 3.99
     },
     {
-        name: "cereal",
+        name: "GF Organic Cereal",
         vegetarian: true,
         glutenFree: true,
         organic: true,
