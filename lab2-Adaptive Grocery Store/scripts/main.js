@@ -41,22 +41,25 @@ function displayuserproducts(table){
     table.innerHTML = "";
     for (i = 0; i < chosen_elements.length; i++) {
         var productName = chosen_elements[i].name;
+        var productPrice = chosen_elements[i].price;
+        var productData = productName + " , " + '\xa0\xa0\xa0\xa0\xa0\xa0' + "Price :" + productPrice + "$" ;
         // create the checkbox and add in HTML DOM
         var checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.name = "product";
-        checkbox.value = productName;
+        checkbox.value = productData;
         table.appendChild(checkbox);
 
         // create a label for the checkbox, and also add in HTML DOM
         var label = document.createElement('label')
-        label.htmlFor = productName;
-        label.appendChild(document.createTextNode(productName));
+        label.htmlFor = productData;
+        label.appendChild(document.createTextNode(productData));
         table.appendChild(label);
 
         // create a breakline node and add in HTML DOM
         table.appendChild(document.createElement("br"));
     }
+    chosen_elements = products;
 }
 
 // This function is called when the "Add selected items to cart" button in clicked
