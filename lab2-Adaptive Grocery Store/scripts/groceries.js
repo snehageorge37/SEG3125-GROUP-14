@@ -81,32 +81,62 @@ var products = [{
 ];
 
 
-
-// given restrictions provided, make a reduced list of products
-// prices should be included in this list, as well as a sort based on price
-
-function restrictListProducts(prods, restriction) {
-	let products = [];
-	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			products.push(prods[i]);
+function restrictListProducts(prods, vegetarian, glutin, organic) {	
+	let product_names = [];
+	for (let i=0; i<prods.length; i++) {
+		if ((vegetarian == "Vegetarian") && (prods[i].vegetarian == true)){
+			if ((glutin == "GlutenFree") && (prods[i].glutenFree == true)){
+                // logic for organic
+				if ((organic == "Organic") && (prods[i].organic == true)){
+                    product_names.push(prods[i].name + " - Price: "+prods[i].price.toFixed(2) + "$");
+				}
+				else if ((organic == "Non-organic") && (prods[i].organic == false)){
+					product_names.push(prods[i].name +  " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+				else if ((organic == "None")){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+			}
+			else if ((glutin == "None")){
+				if ((organic == "Organic") && (prods[i].organic == true)){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+				else if ((organic == "Non-organic") && (prods[i].organic == false)){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+				else if ((organic == "None")){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+			}
 		}
-		if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			products.push(prods[i]);
-        }
-        if ((restriction == "Organic") && (prods[i].organic == true)){
-			products.push(prods[i]);
-        }
-        if ((restriction == "Non-organic") && (prods[i].organic == false)){
-			products.push(prods[i]);
-		}
-		else if (restriction == "None"){
-			products.push(prods[i]);
+		else if ((vegetarian == "None")){
+			if ((glutin == "GlutenFree") && (prods[i].glutenFree == true)){
+				if ((organic == "Organic") && (prods[i].organic == true)){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+				else if ((organic == "Non-organic") && (prods[i].organic == false)){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+				else if ((organic == "None")){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+			}
+			else if ((glutin == "None")){
+				if ((organic == "Organic") && (prods[i].organic == true)){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+				else if ((organic == "Non-organic") && (prods[i].organic == false)){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+				else if ((organic == "None")){
+					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
+				}
+			}
+
 		}
 	}
-	return products;
+	return product_names;
 }
-
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
     totalPrice = 0;
