@@ -5,11 +5,12 @@ body {
     font-family: "Times New Roman";
 }
 
-h1{
+h1 {
     text-align: center;
     font-family: monospace;
-    color: purple;  /* Red */
+    color: purple;
 }
+
 h2,
 h4 {
     color: white;
@@ -21,7 +22,9 @@ h3 {
     color: #300050;
 }
 
+
 /* Defining styling for a specific element with an id */
+
 #signature {
     text-align: right;
     font-family: monospace;
@@ -29,6 +32,7 @@ h3 {
     font-style: italic;
     font-size: 85%;
 }
+
 
 /* Style the header */
 

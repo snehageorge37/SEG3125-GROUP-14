@@ -22,29 +22,29 @@ function populateListProductChoices(slct1, slct2, slct3, table) {
     var s2 = document.getElementById(slct2);
     var s3 = document.getElementById(slct3);
     var table = document.getElementById(table);
-	// table represents the <div> in the Products tab, which shows the product list, so we first set it empty
+    // table represents the <div> in the Products tab, which shows the product list, so we first set it empty
     table.innerHTML = "";
-	// obtain a reduced list of products based on restrictions
+    // obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value, s2.value, s3.value);
-	// for each item in the array, create a checkbox element, each containing information such as:
-	// <input type="checkbox" name="product" value="Bread">
-	// <label for="Bread">Bread/label><br>
-	for (i = 0; i < optionArray.length; i++) {
-		var productName = optionArray[i];
-		// create the checkbox and add in HTML DOM
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "product";
-		checkbox.value = productName;
-		table.appendChild(checkbox);
-		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
-		table.appendChild(label);
-		// create a breakline node and add in HTML DOM
-		table.appendChild(document.createElement("br"));    
-	}
+    // for each item in the array, create a checkbox element, each containing information such as:
+    // <input type="checkbox" name="product" value="Bread">
+    // <label for="Bread">Bread/label><br>
+    for (i = 0; i < optionArray.length; i++) {
+        var productName = optionArray[i];
+        // create the checkbox and add in HTML DOM
+        var checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = "product";
+        checkbox.value = productName;
+        table.appendChild(checkbox);
+        // create a label for the checkbox, and also add in HTML DOM
+        var label = document.createElement('label')
+        label.htmlFor = productName;
+        label.appendChild(document.createTextNode(productName));
+        table.appendChild(label);
+        // create a breakline node and add in HTML DOM
+        table.appendChild(document.createElement("br"));
+    }
 }
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 

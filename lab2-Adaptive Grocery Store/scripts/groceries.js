@@ -81,69 +81,58 @@ var products = [{
 ];
 
 
-function restrictListProducts(prods, vegetarian, glutin, organic) {	
-	let product_names = [];
-	for (let i=0; i<prods.length; i++) {
-		if ((vegetarian == "Vegetarian") && (prods[i].vegetarian == true)){
-			if ((glutin == "GlutenFree") && (prods[i].glutenFree == true)){
+function restrictListProducts(prods, vegetarian, glutin, organic) {
+    let product_names = [];
+    for (let i = 0; i < prods.length; i++) {
+        if ((vegetarian == "Vegetarian") && (prods[i].vegetarian == true)) {
+            if ((glutin == "GlutenFree") && (prods[i].glutenFree == true)) {
                 // logic for organic
-				if ((organic == "Organic") && (prods[i].organic == true)){
-                    product_names.push(prods[i].name + " - Price: "+prods[i].price.toFixed(2) + "$");
-				}
-				else if ((organic == "Non-organic") && (prods[i].organic == false)){
-					product_names.push(prods[i].name +  " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-				else if ((organic == "None")){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-			}
-			else if ((glutin == "None")){
-				if ((organic == "Organic") && (prods[i].organic == true)){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-				else if ((organic == "Non-organic") && (prods[i].organic == false)){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-				else if ((organic == "None")){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-			}
-		}
-		else if ((vegetarian == "None")){
-			if ((glutin == "GlutenFree") && (prods[i].glutenFree == true)){
-				if ((organic == "Organic") && (prods[i].organic == true)){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-				else if ((organic == "Non-organic") && (prods[i].organic == false)){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-				else if ((organic == "None")){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-			}
-			else if ((glutin == "None")){
-				if ((organic == "Organic") && (prods[i].organic == true)){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-				else if ((organic == "Non-organic") && (prods[i].organic == false)){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-				else if ((organic == "None")){
-					product_names.push(prods[i].name + " - Price: $"+prods[i].price.toFixed(2) + "$");
-				}
-			}
+                if ((organic == "Organic") && (prods[i].organic == true)) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                } else if ((organic == "Non-organic") && (prods[i].organic == false)) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                } else if ((organic == "None")) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                }
+            } else if ((glutin == "None")) {
+                if ((organic == "Organic") && (prods[i].organic == true)) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                } else if ((organic == "Non-organic") && (prods[i].organic == false)) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                } else if ((organic == "None")) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                }
+            }
+        } else if ((vegetarian == "None")) {
+            if ((glutin == "GlutenFree") && (prods[i].glutenFree == true)) {
+                if ((organic == "Organic") && (prods[i].organic == true)) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                } else if ((organic == "Non-organic") && (prods[i].organic == false)) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                } else if ((organic == "None")) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                }
+            } else if ((glutin == "None")) {
+                if ((organic == "Organic") && (prods[i].organic == true)) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                } else if ((organic == "Non-organic") && (prods[i].organic == false)) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                } else if ((organic == "None")) {
+                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                }
+            }
 
-		}
-	}
+        }
+    }
 
     // Sort items by price (least to greatest)
-    product_names.sort(function(a,b){
-        var aPrice = a.split('$')[1].trim();  // get price from product string
+    product_names.sort(function(a, b) {
+        var aPrice = a.split('$')[1].trim(); // get price from product string
         var bPrice = b.split('$')[1].trim();
-        return aPrice-bPrice
+        return aPrice - bPrice
     });
 
-	return product_names;
+    return product_names;
 }
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
@@ -151,9 +140,9 @@ function getTotalPrice(chosenProducts) {
 
     for (i = 0; i < chosenProducts.length; i++) {
         var prod = chosenProducts[i];
-        var prodPrice = prod.split('$')[1].trim();  // get price from product string
+        var prodPrice = prod.split('$')[1].trim(); // get price from product string
         totalPrice = parseFloat(totalPrice) + parseFloat(prodPrice);
     }
 
-    return "$" + totalPrice.toFixed(2) + "$";
+    return "$" + totalPrice.toFixed(2);
 }
