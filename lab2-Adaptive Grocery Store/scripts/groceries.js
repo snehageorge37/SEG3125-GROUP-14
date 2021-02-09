@@ -135,6 +135,14 @@ function restrictListProducts(prods, vegetarian, glutin, organic) {
 
 		}
 	}
+
+    // Sort items by price (least to greatest)
+    product_names.sort(function(a,b){
+        var aPrice = a.split('$')[1].trim();  // get price from product string
+        var bPrice = b.split('$')[1].trim();
+        return aPrice-bPrice
+    });
+
 	return product_names;
 }
 // Calculate the total price of items, with received parameter being a list of products
