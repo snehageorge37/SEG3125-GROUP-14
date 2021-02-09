@@ -72,7 +72,7 @@ var products = [{
         price: 4.99
     },
     {
-        name: "salmon",
+        name: "Salmon",
         vegetarian: false,
         glutenFree: true,
         organic: false,
@@ -147,11 +147,13 @@ function restrictListProducts(prods, vegetarian, glutin, organic) {
 }
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
-    totalPrice = 0;
-    for (let i = 0; i < products.length; i += 1) {
-        if (chosenProducts.indexOf(products[i].name) > -1) {
-            totalPrice += products[i].price;
-        }
+    var totalPrice = 0;
+
+    for (i = 0; i < chosenProducts.length; i++) {
+        var prod = chosenProducts[i];
+        var prodPrice = prod.split('$')[1].trim();  // get price from product string
+        totalPrice = parseFloat(totalPrice) + parseFloat(prodPrice);
     }
-    return totalPrice;
+
+    return "$" + totalPrice.toFixed(2) + "$";
 }
