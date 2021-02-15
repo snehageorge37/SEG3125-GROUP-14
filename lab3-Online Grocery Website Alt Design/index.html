@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <! This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp >
+    <!--This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -18,8 +18,10 @@
 
     <!-- Tab content -->
     <div id="Client" class="tabcontent">
-        <h3>Client Information</h3>
-        <p>Tell us a bit about you. This will help us meet your needs, and provide a customized shopping experience for you.</p>
+        <h3>Dietary Information</h3>
+        <p>Welcome to SRL Grocery Store! Your friendly neighbourhood grocer!
+            <p>
+            </p>Tell us about your dietary preferences so we can meet your needs by providing you, our valued customer, with a personalized shopping experience.</p>
         <p>Choose all of which apply to you:</p>
         <select id="dietSelect1" name="dietSelect1" onchange="populateListProductChoices(this.id, 'dietSelect2','dietSelect3','displayProduct')">
             <option value=""></option>
@@ -44,8 +46,8 @@
 
     <div id="Products" class="tabcontent">
         <h3>Your targeted products</h3>
-        <p>We preselected products based on your restrictions.</p>
-        Choose items to buy:
+        <p>Based of your preferences, we have preselected products for you.</p>
+        Select items to buy:
         <div id="displayProduct"></div>
         <button id="addCart" type="button" class="block" onclick="selectedItems()">
       Add selected items to cart.
@@ -54,8 +56,10 @@
 
     <div id="Cart" class="tabcontent">
         <h3>Cart</h3>
-        <p>Here is your cart.</p>
+
+        <p>Your Shopping Cart</p>
         <div id="displayCart"></div>
+        <p>Thank you for shopping with SRL Grocer! </p>
     </div>
 
     <p id="signature">Site created by Group 14: Sneha, Lamya and Raissa</p>

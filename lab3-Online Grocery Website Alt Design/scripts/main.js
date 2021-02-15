@@ -60,11 +60,10 @@ function selectedItems() {
     para.appendChild(document.createElement("br"));
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked) {
-
+            //add image to cart item display
             let img = document.createElement("img");
             var productName = ele[i].value.split("-", 1);
             productName = productName[0].trim();
-            //console.log(productName);
             img.src = "images/" + productName + ".PNG";
             img.width = 50;
             img.height = 50;
