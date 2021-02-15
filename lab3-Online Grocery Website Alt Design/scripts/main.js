@@ -60,6 +60,16 @@ function selectedItems() {
     para.appendChild(document.createElement("br"));
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked) {
+
+            let img = document.createElement("img");
+            var productName = ele[i].value.split("-", 1);
+            productName = productName[0].trim();
+            //console.log(productName);
+            img.src = "images/" + productName + ".PNG";
+            img.width = 50;
+            img.height = 50;
+            para.appendChild(img);
+
             para.appendChild(document.createTextNode(ele[i].value));
             para.appendChild(document.createElement("br"));
             chosenProducts.push(ele[i].value);
