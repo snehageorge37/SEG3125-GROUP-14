@@ -1,5 +1,70 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
+/* Style product card */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 150px;
+  max-height: 150px;
+  margin: 10px 0px 15px 0px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+/* Style accordion */
+.accordion {
+  background-color: #f2e0ff;
+  color: purple;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: 1.5px solid purple;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: purple; 
+  color: #f2e0ff;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #f2e0ff;
+  overflow: hidden;
+  border: 1px solid purple;
+  text-align: center;
+}
+
+
+.column {
+  float: left;
+  width: 15.8%;
+  padding: 5px;
+}
+
+/* Clear floats after the columns */
+.row: after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
     background-color: #f2e0ff;
     font-family: "Times New Roman";
@@ -26,13 +91,19 @@ h3 {
 /* Defining styling for a specific element with an id */
 
 #signature {
-    text-align: right;
+    position: absolute; 
+    bottom: 0;
+    right: 30px;
     font-family: monospace;
     color: purple;
     font-style: italic;
     font-size: 85%;
 }
 
+#addCart {
+    position: absolute; 
+    right: 30px;
+}
 
 /* Style the header */
 
@@ -85,14 +156,13 @@ h3 {
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
     border-top: none;
-    background-color: #f1f1f1;
+    background-color: #f2e0ff;
 }
 
 button.continueButton{
     align-self: left;
-    text-align: left;
+    text-align: center;
     height: 35px;
     width: 130px;
     color: black;
@@ -102,7 +172,7 @@ button.continueButton{
 
 button.selectButton{
     align-self: left;
-    text-align: left;
+    text-align: center;
     height: 35px;
     width: 180px;
     color: black;

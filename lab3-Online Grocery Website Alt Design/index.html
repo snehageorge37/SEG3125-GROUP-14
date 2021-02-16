@@ -56,13 +56,43 @@
     <div id="Products" class="tabcontent">
         <h3>Your targeted products</h3>
         <p>Based of your preferences, we have preselected products for you.</p>
-        Select items to buy:
-        <br>
-        <div id="displayProduct"></div>
-        <br>
+        <p style="display: inline-block">Select items to buy:</p>
         <button id="addCart" type="button" class="selectButton" onclick="selectedItems()">
-      Add selected items to cart.
-    </button>
+        Add selected items to cart
+        </button>
+        <div id="displayProduct"></div>
+        <div class="row">
+            <div class="column" id="fruitsAndVegetablesAccordionColumn" style="display: none">
+                <button class="accordion" id="fruitsAndVegetablesAccordion" onclick="accordionClicked(this)">Fruits & Vegetables</button>
+                <div class="panel" id="fruitsAndVegetablesAccordionPanel">
+                </div>
+            </div>
+            <div class="column" id="meatAndSeafoodAccordionColumn" style="display: none">
+                <button  class="accordion" id="meatAndSeafoodAccordion" onclick="accordionClicked(this)">Meat & Seafood</button>
+                <div class="panel" id="meatAndSeafoodAccordionPanel">
+                </div>
+            </div>
+            <div class="column" id="bakeryAccordionColumn" style="display: none">
+                <button class="accordion" id="bakeryAccordion" onclick="accordionClicked(this)">Bakery</button>
+                <div class="panel" id="bakeryAccordionPanel">
+                </div>
+            </div>
+            <div class="column" id="dairyAccordionColumn" style="display: none">
+                <button class="accordion" id="dairyAccordion" onclick="accordionClicked(this)">Dairy</button>
+                <div class="panel" id="dairyAccordionPanel">
+                </div>
+            </div>
+            <div class="column" id="pantryAccordionColumn" style="display: none">
+                <button class="accordion" id="pantryAccordion" onclick="accordionClicked(this)">Pantry</button>
+                <div class="panel" id="pantryAccordionPanel">
+                </div>
+            </div>
+            <div class="column" id="snacksAccordionColumn" style="display: none">
+                <button class="accordion" id="snacksAccordion" onclick="accordionClicked(this)">Snacks</button>
+                <div class="panel" id="snacksAccordionPanel">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="Cart" class="tabcontent">

@@ -6,77 +6,88 @@ var products = [{
         vegetarian: true,
         glutenFree: true,
         organic: false,
-        price: 1.99
+        price: 1.99,
+        category: "vegetable"
     },
     {
         name: "Bread",
         vegetarian: true,
         glutenFree: false,
         organic: false,
-        price: 2.35
+        price: 2.35,
+        category: "bakery"
     },
     {
         name: "Organic Apple",
         vegetarian: true,
         glutenFree: true,
         organic: true,
-        price: 1.35
+        price: 1.35,
+        category: "fruit"
     },
     {
         name: "GF Organic Pasta",
         vegetarian: true,
         glutenFree: true,
         organic: true,
-        price: 1.99
+        price: 1.99,
+        category: "pantry"
     },
     {
         name: "Organic Whole Chicken",
         vegetarian: false,
         glutenFree: true,
         organic: true,
-        price: 7.42
+        price: 7.42,
+        category: "meat"
     },
     {
         name: "Kitkat Minis",
         vegetarian: true,
         glutenFree: false,
         organic: false,
-        price: 2.99
+        price: 2.99,
+        category: "snack"
     },
     {
         name: "Milk",
         vegetarian: true,
         glutenFree: true,
         organic: false,
-        price: 4.69
+        price: 4.69,
+        category: "dairy"
     },
     {
         name: "Carrots",
         vegetarian: true,
         glutenFree: true,
         organic: false,
-        price: 2.29
+        price: 2.29,
+        category: "vegetable"
     },
     {
         name: "Organic Yogurt",
         vegetarian: true,
         glutenFree: true,
         organic: true,
-        price: 3.99
+        price: 3.99,
+        category: "dairy"
     },
     {
         name: "GF Organic Cereal",
         vegetarian: true,
         glutenFree: true,
         organic: true,
-        price: 4.99
+        price: 4.99,
+        category: "pantry"
     },
     {
         name: "Salmon",
         vegetarian: false,
         glutenFree: true,
         organic: false,
-        price: 10.00
+        price: 10.00,
+        category: "seafood"
     }
 ];
 
@@ -88,37 +99,37 @@ function restrictListProducts(prods, vegetarian, glutin, organic) {
             if ((glutin == "GlutenFree") && (prods[i].glutenFree == true)) {
                 // logic for organic
                 if ((organic == "Organic") && (prods[i].organic == true)) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 } else if ((organic == "Non-organic") && (prods[i].organic == false)) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 } else if ((organic == "None")) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 }
             } else if ((glutin == "None")) {
                 if ((organic == "Organic") && (prods[i].organic == true)) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 } else if ((organic == "Non-organic") && (prods[i].organic == false)) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 } else if ((organic == "None")) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 }
             }
         } else if ((vegetarian == "None")) {
             if ((glutin == "GlutenFree") && (prods[i].glutenFree == true)) {
                 if ((organic == "Organic") && (prods[i].organic == true)) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 } else if ((organic == "Non-organic") && (prods[i].organic == false)) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 } else if ((organic == "None")) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 }
             } else if ((glutin == "None")) {
                 if ((organic == "Organic") && (prods[i].organic == true)) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 } else if ((organic == "Non-organic") && (prods[i].organic == false)) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 } else if ((organic == "None")) {
-                    product_names.push(prods[i].name + " - Price:\t$" + prods[i].price.toFixed(2));
+                    product_names.push(prods[i].name + " - \t$" + prods[i].price.toFixed(2) + " (" + prods[i].category + ")");
                 }
             }
 
