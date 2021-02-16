@@ -123,8 +123,8 @@ function populateListProductChoices(slct1, slct2, slct3, table) {
         var img = document.createElement("img");
         img.src = "images/" + productName + ".PNG";
         img.alt = productName;
-        img.width = 100;
-        img.height = 100;
+        img.width = 130;
+        img.height = 130;
         cardDiv.appendChild(img);
 
         // create a breakline node and add in HTML DOM (<br>)
