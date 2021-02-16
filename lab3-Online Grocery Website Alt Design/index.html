@@ -10,12 +10,20 @@
 
     <!-- Tab links, each one with an onclick event associated with it -->
     <h1> SRL Grocery Store</h1>
-    <div class="tab">
-        <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-        <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-        <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+    <p>Welcome to our store , click the below link to start shopping !</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p>
+            <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+        </p>
+        <p>
+            <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+        </p>
+        <p>
+            <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+        </p>
     </div>
-
     <!-- Tab content -->
     <div id="Client" class="tabcontent">
         <h3>Dietary Information</h3>
@@ -42,15 +50,17 @@
         </select>
         <br>
         <br>
-        <button class="conitueButton" onclick="populateListProductChoices('dietSelect1', 'dietSelect2','dietSelect3','displayProduct')">Click to Continue ></button>
+        <button class="continueButton" onclick="populateListProductChoices('dietSelect1', 'dietSelect2','dietSelect3','displayProduct')">Click to Continue ></button>
     </div>
 
     <div id="Products" class="tabcontent">
         <h3>Your targeted products</h3>
         <p>Based of your preferences, we have preselected products for you.</p>
         Select items to buy:
+        <br>
         <div id="displayProduct"></div>
-        <button id="addCart" type="button" class="block" onclick="selectedItems()">
+        <br>
+        <button id="addCart" type="button" class="selectButton" onclick="selectedItems()">
       Add selected items to cart.
     </button>
     </div>

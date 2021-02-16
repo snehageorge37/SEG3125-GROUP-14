@@ -78,3 +78,11 @@ function selectedItems() {
     c.appendChild(para);
     c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
 }
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
