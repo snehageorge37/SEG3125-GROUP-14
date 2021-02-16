@@ -5,7 +5,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 130px;
   max-height: 130px;
-  margin: 10px 0px 15px 0px;
+  margin: 25px 0px 15px 0px;
   text-align: center;
   display: inline-block;
 }
@@ -91,8 +91,8 @@ h3 {
 /* Defining styling for a specific element with an id */
 
 #signature {
-    position: absolute; 
-    bottom: 0;
+    position:fixed;
+    bottom:0;
     right: 30px;
     font-family: monospace;
     color: purple;
