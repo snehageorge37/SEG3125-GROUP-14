@@ -138,8 +138,8 @@ function restrictListProducts(prods, vegetarian, glutin, organic) {
 
     // Sort items by price (least to greatest)
     product_names.sort(function(a, b) {
-        var aPrice = a.split('$')[1].trim(); // get price from product string
-        var bPrice = b.split('$')[1].trim();
+        var aPrice = a.split('$').pop().split('(')[0]; // get price from product string
+        var bPrice = b.split('$').pop().split('(')[0];
         return aPrice - bPrice
     });
 
@@ -151,7 +151,7 @@ function getTotalPrice(chosenProducts) {
 
     for (i = 0; i < chosenProducts.length; i++) {
         var prod = chosenProducts[i];
-        var prodPrice = prod.split('$')[1].trim(); // get price from product string
+        var prodPrice = prod.split('$').pop().split('(')[0]; // get price from product string
         totalPrice = parseFloat(totalPrice) + parseFloat(prodPrice);
     }
 

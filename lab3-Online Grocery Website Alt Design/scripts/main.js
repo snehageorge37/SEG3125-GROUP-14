@@ -204,7 +204,6 @@ function selectedItems() {
             cardDiv.className = "card";
             cardDiv.style.maxWidth = "205px";
             cardDiv.style.margin = "25px 25px 0px 0px";
-            cardDiv.style.boxShadow = "none";
             para.appendChild(cardDiv);
             //add image to cart item display
             let img = document.createElement("img");
