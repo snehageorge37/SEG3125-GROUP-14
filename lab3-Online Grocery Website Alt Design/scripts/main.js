@@ -199,32 +199,40 @@ function selectedItems() {
     para.appendChild(document.createElement("br"));
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked) {
+            // create card and add in HTML DOM (<div class="card">)
+            var cardDiv = document.createElement("div");
+            cardDiv.className = "card";
+            cardDiv.style.maxWidth = "205px";
+            cardDiv.style.margin = "25px 25px 0px 0px";
+            cardDiv.style.boxShadow = "none";
+            para.appendChild(cardDiv);
             //add image to cart item display
             let img = document.createElement("img");
             var productName = ele[i].value.split("-", 1);
             productName = productName[0].trim();
             img.src = "images/" + productName + ".PNG";
-            img.width = 50;
-            img.height = 50;
-            para.appendChild(img);
-
-            para.appendChild(document.createTextNode(ele[i].value));
-            para.appendChild(document.createElement("br"));
+            img.width =135;
+            img.height = 130;
+            cardDiv.appendChild(img);
+            cardDiv.appendChild(document.createElement("br"));
+            cardDiv.appendChild(document.createTextNode(ele[i].value));
+            cardDiv.appendChild(document.createElement("br"));
             chosenProducts.push(ele[i].value);
         }
     }
     // add paragraph and total price
     c.appendChild(para);
+    c.appendChild(document.createElement("br"));
     c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
 }
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-  }
+}
   
-  function closeNav() {
+function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-  }
+}
 
 // accordion onclick function
 function accordionClicked(item){
