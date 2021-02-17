@@ -26,6 +26,10 @@ function openInfo(evt, tabName) {
 
 
 function populateListProductChoices(slct1, slct2, slct3, table) {
+    var thisTab = document.getElementById("Client");
+	thisTab.setAttribute('style','visibility:hidden; display:none;');
+	var nextTab = document.getElementById("Products");
+	nextTab.setAttribute('style','visibility: visible; display:block;');
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
     var s3 = document.getElementById(slct3);
@@ -68,7 +72,6 @@ function populateListProductChoices(slct1, slct2, slct3, table) {
     //    <label for="productName">productNameAndPrice</label>   
     // </div>
     for (i = 0; i < optionArray.length; i++) {
-
         product = optionArray[i];
         productName = product.split('-')[0].trim();
         productNameAndPrice = product.split('(')[0].trim();
@@ -189,6 +192,11 @@ function populateListProductChoices(slct1, slct2, slct3, table) {
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
 function selectedItems() {
+    var thisTab = document.getElementById("Products");
+	thisTab.setAttribute('style','visibility:hidden; display:none;');
+	var nextTab = document.getElementById("Cart");
+	nextTab.setAttribute('style','visibility: visible; display:block;');
+
     var ele = document.getElementsByName("product");
     var chosenProducts = [];
     var c = document.getElementById('displayCart');
