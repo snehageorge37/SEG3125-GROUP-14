@@ -28,4 +28,7 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab3-Online%20Grocery%20Website
 <br/> Salmon : https://www.skinnytaste.com/baked-salmon/
 
 
-
+<br/>
+### Sources of images used for lab4:
+<br/> Logo: https://www.vectorstock.com/royalty-free-vector/cute-bicycle-cartoon-vector-23111600
+<br/>
