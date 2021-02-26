@@ -35,5 +35,5 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab4-Designing%20a%20website%20
 <br/>
 
 ### Sources of images used for lab4:
-<br/> Logo: https://www.vectorstock.com/royalty-free-vector/cute-bicycle-cartoon-vector-23111600
+<br/> Logo: https://www.canva.com/
 <br/>
