@@ -13,6 +13,11 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab2-Adaptive%20Grocery%20Store
 Lab3
 https://snehageorge37.github.io/SEG3125-GROUP-14/lab3-Online%20Grocery%20Website%20Alt%20Design/index.html
 <br/> <br/> 
+Lab4
+https://snehageorge37.github.io/SEG3125-GROUP-14/lab4-Designing%20a%20website%20to%20demonstrate%20design%20principles/index.html
+<br/> <br/> 
+
+
 ### Sources of images used for lab3:
 <br/>
  Broccoli : https://snaped.fns.usda.gov/seasonal-produce-guide/broccoli
