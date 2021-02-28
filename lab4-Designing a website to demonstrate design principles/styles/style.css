@@ -20,6 +20,18 @@ h3 {
     font-weight: bold;
 }
 
+p {
+    text-align: left;
+}
+
+h6 {
+    text-align: center;
+}
+
+h4 {
+    color: #ff5757;
+}
+
 
 /* Container holding the image and the text */
 
