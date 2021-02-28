@@ -37,4 +37,5 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab4-Designing%20a%20website%20
 ### Sources of images used for lab4:
 <br/> Logo: https://www.canva.com/
 <br/> Favicon: https://www.vectorstock.com/royalty-free-vector/cute-bicycle-cartoon-vector-23111600
-<br/>
+<br/> Mech1: https://depositphotos.com/stock-photos/female-mechanic.html?qview=6478572
+<br/> Mech2: https://www.colourbox.com/image/female-mechanic-at-work-image-4315866
