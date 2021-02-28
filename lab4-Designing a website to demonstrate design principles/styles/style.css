@@ -1,229 +1,90 @@
-/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
-
-
-/* Style product card */
-
-.card {
-    width: 100%;
-    max-height: 130px;
-    margin: 25px 0px 15px 0px;
-    text-align: center;
-    display: inline-block;
-}
-
-
-/* Style accordion */
-
-.accordion {
-    background-color: #f2e0ff;
-    color: purple;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: 1.5px solid purple;
-    font-size: 15px;
-    transition: 0.4s;
-}
-
-.active,
-.accordion:hover {
-    background-color: purple;
-    color: #f2e0ff;
-}
-
-.accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2212";
-}
-
-.panel {
-    display: none;
-    background-color: #f2e0ff;
-    overflow: hidden;
-    border: 1px solid purple;
-    text-align: left;
-}
-
-.column {
-    float: left;
-    width: 15.8%;
-    padding: 5px;
-}
-
-
-/* Clear floats after the columns */
-
-.row: after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-body {
-    background-color: #f2e0ff;
-    font-family: "Times New Roman";
+h5 {
+    color: #4f64cc;
+    margin-right: 17px;
 }
 
 h1 {
-    text-align: center;
-    font-family: monospace;
-    color: purple;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
 }
 
-h2,
-h4 {
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    margin-top: 0.5em;
+h2 {
+    color: #4f64cc;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 h3 {
-    color: #300050;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 
-/* Defining styling for a specific element with an id */
-
-#signature {
-    position: fixed;
-    bottom: 0;
-    right: 30px;
-    font-family: monospace;
-    color: purple;
-    font-style: italic;
-    font-size: 85%;
+/* Container holding the image and the text */
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 170px;
+  left: 170px;
 }
 
-#addCart {
-    position: absolute;
-    right: 30px;
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 90px;
+  right: 170px;
+}
+/* Container holding the image and the text */
+
+/* modal dialog */
+.modal-lg {
+    max-width: 80%;
 }
 
-
-/* Style the header */
-
-.header {
-    overflow: hidden;
-    text-align: center;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+.modal-header {
+    border-bottom: 0 none;
 }
 
+.modal-footer {
+    border-top: 0 none;
+}
+/* modal dialog */
 
-/* Style the tab */
-
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+/* button */
+.button {
+  background-color: #4f64cc;
+  border: none;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
+.btn1 {
+    border-radius: 15px;
+}
+/* button */
 
-/* Style the buttons that are used to open the tab content */
-
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
+/* Appointment form formationg */
+fieldset {
+  border: solid;
 }
 
-
-/* Change background color of buttons on hover */
-
-.tab button:hover {
-    background-color: #ddd;
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding:0 20px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
 }
-
-
-/* Create an active/current tablink class */
-
-.tab button.active {
-    background-color: rgb(204, 204, 204);
-}
-
-
-/* Style the tab content */
-
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-    background-color: #f2e0ff;
-}
-
-button.continueButton {
-    align-self: left;
-    text-align: center;
-    height: 35px;
-    width: 130px;
-    color: black;
-    background-color: #f097f0;
-    border: 2px rgb(188, 98, 230) solid;
-}
-
-button.selectButton {
-    align-self: left;
-    text-align: center;
-    height: 35px;
-    width: 180px;
-    color: black;
-    background-color: #f097f0;
-    border: 2px rgb(188, 98, 230) solid;
-}
-
-button.tablinks {
-    align-self: left;
-    text-align: left;
-    height: 35px;
-    width: 300px;
-    color: black;
-    background-color: #f097f0;
-    border: 2px rgb(188, 98, 230) solid;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+/* Appointment form formationg */
