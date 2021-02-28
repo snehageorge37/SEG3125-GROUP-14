@@ -2,331 +2,335 @@
 <html>
 
 <head>
-	<title>Bootstrap Example</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-<!-- Navigation : Code from https://startbootstrap.com/snippets/navbar-logo -->
-<nav class="navbar navbar-expand-lg static-top" style="background-color: white">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-          <img src="http://placehold.it/150x50?text=Logo" alt="">  <!-- TO DO : ADD LOGO -->
-        </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navigation : Code from https://startbootstrap.com/snippets/navbar-logo -->
+    <nav class="navbar navbar-expand-lg static-top" style="background-color: white">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="She Repairs logo" width="250px" height="100px">
+                <!-- TO DO : ADD LOGO -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <h5 class="nav-link js-scroll-trigger" href="#home">Home
-                <span class="sr-only">(current)</span>
-              </h5>
-        </li>
-        <li class="nav-item">
-          <h5 class="nav-link js-scroll-trigger" href="#services">Services</h5>
-        </li>
-        <li class="nav-item">
-          <h5 class="nav-link js-scroll-trigger" href="#team">Team</h5>
-        </li>
-        <li class="nav-item">
-          <h5 class="nav-link js-scroll-trigger" href="#about">About Us</h5>
-        </li>
-      </ul>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <h5 class="nav-link js-scroll-trigger" href="#home">Home
+                            <span class="sr-only">(current)</span>
+                        </h5>
+                    </li>
+                    <li class="nav-item">
+                        <h5 class="nav-link js-scroll-trigger" href="#services">Services</h5>
+                    </li>
+                    <li class="nav-item">
+                        <h5 class="nav-link js-scroll-trigger" href="#team">Team</h5>
+                    </li>
+                    <li class="nav-item">
+                        <h5 class="nav-link js-scroll-trigger" href="#about">About Us</h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Home-->
+        <section class="page-section" id="home" style="margin-top: 70px">
+            <div class="container">
+                <img src="images/home_image.png" alt="home_image" style="width:100%">
+                <div class="top-left">
+                    <h1>BICYCLE</h1>
+                </div>
+                <div class="bottom-right">
+                    <h1>REPAIR</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services-->
+        <section class="page-section" id="services" style="margin-top: 80px">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Services</h2>
+                <h6 class="section-subheading text-muted">Give a description of the services section here </h6>
+            </div>
+
+            <div class="row text-center" style="margin-top: 60px">
+
+                <div class="col-md-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top" src="images/temp.png" alt="service1_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter">
+                        <div class="card-body">
+                            <h4 class="card-title">Service Name</h4>
+                            <p class="card-text">Service Price</p>
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          									<span aria-hidden="true">&times;</span>
+        								</button>
+                                        </div>
+                                        <div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
+                                            <!-- Service Details Go Here-->
+                                            <h3 class="text-uppercase">Service 1</h3>
+                                            <p class="item-intro text-muted">Price: 123$</p>
+                                            <img src="images/temp.png" alt="service1" style="width:30%" />
+                                            <br>
+                                            <p>Use this area to describe the service. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
+                                                beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                            <form id="appointmentForm" style="margin-top: 50px">
+                                                <fieldset>
+                                                    <legend class="w-auto">Book an Appointment</legend>
+                                                    <div style="margin: 40px">
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentDateInput">Appointment Date *</label>
+                                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentTimeInput">Appointment Time *</label>
+                                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <button class="button btn1" style="margin-top: 15px">Book</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top" src="images/temp.png" alt="service2_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter1">
+                        <div class="card-body">
+                            <h4 class="card-title">Service Name</h4>
+                            <p class="card-text">Service Price</p>
+                            <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          									<span aria-hidden="true">&times;</span>
+        								</button>
+                                        </div>
+                                        <div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
+                                            <!-- Service Details Go Here-->
+                                            <h3 class="text-uppercase">Service 2</h3>
+                                            <p class="item-intro text-muted">Price: 123$</p>
+                                            <img src="images/temp.png" alt="service2" style="width:30%" />
+                                            <br>
+                                            <p>Use this area to describe the service. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
+                                                beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                            <form id="appointmentForm" style="margin-top: 50px">
+                                                <fieldset>
+                                                    <legend class="w-auto">Book an Appointment</legend>
+                                                    <div style="margin: 40px">
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentDateInput">Appointment Date *</label>
+                                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentTimeInput">Appointment Time *</label>
+                                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <button class="button btn1" style="margin-top: 15px">Book</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top" src="images/temp.png" alt="service1_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter3">
+                        <div class="card-body">
+                            <h4 class="card-title">Service Name</h4>
+                            <p class="card-text">Service Price</p>
+                            <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          									<span aria-hidden="true">&times;</span>
+        								</button>
+                                        </div>
+                                        <div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
+                                            <!-- Service Details Go Here-->
+                                            <h3 class="text-uppercase">Service 3</h3>
+                                            <p class="item-intro text-muted">Price: 123$</p>
+                                            <img src="images/temp.png" alt="service1" style="width:30%" />
+                                            <br>
+                                            <p>Use this area to describe the service. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita
+                                                beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                            <form id="appointmentForm" style="margin-top: 50px">
+                                                <fieldset>
+                                                    <legend class="w-auto">Book an Appointment</legend>
+                                                    <div style="margin: 40px">
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentDateInput">Appointment Date *</label>
+                                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentTimeInput">Appointment Time *</label>
+                                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <button class="button btn1" style="margin-top: 15px">Book</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Team-->
+        <section class="page-section" id="team" style="margin-top: 80px">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Team</h2>
+                <h6 class="section-subheading text-muted">Give a description of the team section here </h6>
+            </div>
+
+            <div class="row text-center" style="margin-top: 60px">
+
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="images/temp.png" alt="team member 1" data-holder-rendered="true" style="width:65%">
+                    <h4 style="margin-top: 20px">Name 1</h4>
+                    <p>******* Description *******</p>
+                </div>
+
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="images/temp.png" alt="team member 2" data-holder-rendered="true" style="width:65%">
+                    <h4 style="margin-top: 20px">Name 2</h4>
+                    <p>******* Description *******</p>
+                </div>
+
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="images/temp.png" alt="team member 3" data-holder-rendered="true" style="width:65%">
+                    <h4 style="margin-top: 20px">Name 3</h4>
+                    <p>******* Description *******</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us-->
+        <section class="page-section" id="about" style="margin-top: 80px">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">About Us</h2>
+                <h6 class="section-subheading text-muted">Give a description of the about us section here </h6>
+            </div>
+        </section>
+
+
+
     </div>
-  </div>
-</nav>
-
-<!-- Page Content -->
-<div class="container">
-
-	<!-- Home-->
-    <section class="page-section" id="home" style="margin-top: 70px">
-    	<div class="container">
-	    	<img src="images/home_image.png" alt="home_image" style="width:100%">
-	    	<div class="top-left">
-	    		<h1>BICYCLE</h1>
-	    	</div>
-	    	<div class="bottom-right">
-	    		<h1>REPAIR</h1>
-	    	</div>
-	    </div>
-    </section>
-
-	<!-- Services-->
-    <section class="page-section" id="services" style="margin-top: 80px">
-    	<div class="text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h6 class="section-subheading text-muted">Give a description of the services section here </h6>
-        </div>
-
-        <div class="row text-center" style="margin-top: 60px">
-
-            <div class="col-md-4">
-	  			<div class="card" style="width:100%">
-	    			<img class="card-img-top" src="images/temp.png" alt="service1_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter"> 
-				    <div class="card-body">
-				    	<h4 class="card-title">Service Name</h4>
-				    	<p class="card-text">Service Price</p>
-				    	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  							<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    							<div class="modal-content">
-      								<div class="modal-header">
-        								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          									<span aria-hidden="true">&times;</span>
-        								</button>
-      								</div>
-      								<div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
-		                                <!-- Service Details Go Here-->
-		                                <h3 class="text-uppercase">Service 1</h3>
-		                                <p class="item-intro text-muted">Price: 123$</p>
-		                                <img src="images/temp.png" alt="service1" style="width:30%"/>
-		                                <br>
-		                                <p>Use this area to describe the service. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-		                                <form id="appointmentForm" style="margin-top: 50px">
-		                                    <fieldset>
-		                                        <legend class="w-auto">Book an Appointment</legend>
-		                                        <div style="margin: 40px">
-			                                        <div class="row row-space">                                            
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="firstNameInput">First Name *</label>
-		                                                    <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="lastNameInput">Last Name *</label>
-			                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                        </div>
-			                                        <div class="form-group" style="text-align: left;">
-			                                            <label for="emailInput">Email *</label>
-			                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
-			                                            <p class="help-block text-danger"></p>
-			                                        </div>
-			                                        <div class="form-group" style="text-align: left;">
-			                                            <label for="phoneInput">Phone *</label>
-			                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
-			                                            <p class="help-block text-danger"></p>
-			                                        </div>
-			                                        <div class="row row-space">
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="appointmentDateInput">Appointment Date *</label>
-			                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="appointmentTimeInput">Appointment Time *</label>
-			                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
-			                                                <p class="help-block text-danger"></p>
-		                                                </div>
-		                                            </div>
-			                                        <button class="button btn1"style="margin-top: 15px">Book</button>
-			                                    </div>
-		                                    </fieldset>
-		                                </form>
-      								</div>
-    							</div>
-  							</div>
-						</div>
-				    </div>
-	  			</div>                
-            </div>
-
-            <div class="col-md-4">
-	  			<div class="card" style="width:100%">
-	    			<img class="card-img-top" src="images/temp.png" alt="service2_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter1"> 
-				    <div class="card-body">
-				    	<h4 class="card-title">Service Name</h4>
-				    	<p class="card-text">Service Price</p>
-				    	<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  							<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    							<div class="modal-content">
-      								<div class="modal-header">
-        								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          									<span aria-hidden="true">&times;</span>
-        								</button>
-      								</div>
-      								<div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
-		                                <!-- Service Details Go Here-->
-		                                <h3 class="text-uppercase">Service 2</h3>
-		                                <p class="item-intro text-muted">Price: 123$</p>
-		                                <img src="images/temp.png" alt="service2" style="width:30%"/>
-		                                <br>
-		                                <p>Use this area to describe the service. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-		                                <form id="appointmentForm" style="margin-top: 50px">
-		                                    <fieldset>
-		                                        <legend class="w-auto">Book an Appointment</legend>
-		                                        <div style="margin: 40px">
-			                                        <div class="row row-space">                                            
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="firstNameInput">First Name *</label>
-		                                                    <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="lastNameInput">Last Name *</label>
-			                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                        </div>
-			                                        <div class="form-group" style="text-align: left;">
-			                                            <label for="emailInput">Email *</label>
-			                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
-			                                            <p class="help-block text-danger"></p>
-			                                        </div>
-			                                        <div class="form-group" style="text-align: left;">
-			                                            <label for="phoneInput">Phone *</label>
-			                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
-			                                            <p class="help-block text-danger"></p>
-			                                        </div>
-			                                        <div class="row row-space">
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="appointmentDateInput">Appointment Date *</label>
-			                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="appointmentTimeInput">Appointment Time *</label>
-			                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
-			                                                <p class="help-block text-danger"></p>
-		                                                </div>
-		                                            </div>
-			                                        <button class="button btn1"style="margin-top: 15px">Book</button>
-			                                    </div>
-		                                    </fieldset>
-		                                </form>
-      								</div>
-    							</div>
-  							</div>
-						</div>
-				    </div>
-	  			</div>                
-            </div>
-
-            <div class="col-md-4">
-	  			<div class="card" style="width:100%">
-	    			<img class="card-img-top" src="images/temp.png" alt="service1_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter3"> 
-				    <div class="card-body">
-				    	<h4 class="card-title">Service Name</h4>
-				    	<p class="card-text">Service Price</p>
-				    	<div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  							<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    							<div class="modal-content">
-      								<div class="modal-header">
-        								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          									<span aria-hidden="true">&times;</span>
-        								</button>
-      								</div>
-      								<div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
-		                                <!-- Service Details Go Here-->
-		                                <h3 class="text-uppercase">Service 3</h3>
-		                                <p class="item-intro text-muted">Price: 123$</p>
-		                                <img src="images/temp.png" alt="service1" style="width:30%"/>
-		                                <br>
-		                                <p>Use this area to describe the service. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-		                                <form id="appointmentForm" style="margin-top: 50px">
-		                                    <fieldset>
-		                                        <legend class="w-auto">Book an Appointment</legend>
-		                                        <div style="margin: 40px">
-			                                        <div class="row row-space">                                            
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="firstNameInput">First Name *</label>
-		                                                    <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="lastNameInput">Last Name *</label>
-			                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                        </div>
-			                                        <div class="form-group" style="text-align: left;">
-			                                            <label for="emailInput">Email *</label>
-			                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
-			                                            <p class="help-block text-danger"></p>
-			                                        </div>
-			                                        <div class="form-group" style="text-align: left;">
-			                                            <label for="phoneInput">Phone *</label>
-			                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
-			                                            <p class="help-block text-danger"></p>
-			                                        </div>
-			                                        <div class="row row-space">
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="appointmentDateInput">Appointment Date *</label>
-			                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
-			                                                <p class="help-block text-danger"></p>
-			                                            </div>
-			                                            <div class="col-6" style="text-align: left;">
-			                                                <label for="appointmentTimeInput">Appointment Time *</label>
-			                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
-			                                                <p class="help-block text-danger"></p>
-		                                                </div>
-		                                            </div>
-			                                        <button class="button btn1"style="margin-top: 15px">Book</button>
-			                                    </div>
-		                                    </fieldset>
-		                                </form>
-      								</div>
-    							</div>
-  							</div>
-						</div>
-				    </div>
-	  			</div> 
-	  		</div>               
-        </div>
-    </section>
-
-
-	<!-- Team-->
-    <section class="page-section" id="team" style="margin-top: 80px">
-    	<div class="text-center">
-            <h2 class="section-heading text-uppercase">Team</h2>
-            <h6 class="section-subheading text-muted">Give a description of the team section here </h6>
-        </div>
-
-        <div class="row text-center" style="margin-top: 60px">
-
-            <div class="col-md-4">
-				<img class="rounded-circle" src="images/temp.png" alt="team member 1" data-holder-rendered="true" style="width:65%">
-             	<h4 style="margin-top: 20px">Name 1</h4>
-             	<p>******* Description *******</p>
-            </div>
-
-            <div class="col-md-4">
-	  			<img class="rounded-circle" src="images/temp.png" alt="team member 2" data-holder-rendered="true" style="width:65%">
-             	<h4 style="margin-top: 20px">Name 2</h4>
-             	<p>******* Description *******</p> 
-            </div>
-
-            <div class="col-md-4">
-	  			<img class="rounded-circle" src="images/temp.png" alt="team member 3" data-holder-rendered="true" style="width:65%">
-             	<h4 style="margin-top: 20px">Name 3</h4>
-             	<p>******* Description *******</p>
-            </div>
-        </div>
-    </section>
-
-	<!-- About Us-->
-    <section class="page-section" id="about" style="margin-top: 80px">
-    	<div class="text-center">
-            <h2 class="section-heading text-uppercase">About Us</h2>
-            <h6 class="section-subheading text-muted">Give a description of the about us section here </h6>
-        </div>
-    </section>
-
-
-
-</div>
-<!-- /.container -->
+    <!-- /.container -->
 
 </body>
-</html>
 
+</html>
