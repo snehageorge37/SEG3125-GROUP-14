@@ -14,13 +14,10 @@
 </head>
 
 <body>
-
-    <!-- Navigation : Code from https://startbootstrap.com/snippets/navbar-logo -->
-    <nav class="navbar navbar-expand-lg static-top" style="background-color: white">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: white">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="She Repairs logo" width="250px" height="100px">
-                <!-- TO DO : ADD LOGO -->
+            <a class="navbar-brand" href="#home">
+                <img src="images/logo.png" alt="She Repairs logo" width="215px" height="75px">                
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,7 +36,7 @@
                         <a class="nav-link js-scroll-trigger" href="#team">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About Us</a>
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -50,25 +47,24 @@
     <div class="container">
 
         <!-- Home-->
-        <section>
+        <section class="page-section" id="home">
             <div class="jumbotron p-7 p-md-7 text-white rounded bg-dark" style="margin-top: 70px; margin-bottom: 30px" >
                 <div> 
-                    <h1 class="display-4" style="text-align:center"> Bicycle Repair</h1>
+                    <h1 class="display-4" style="text-align:center; padding-top: 30px"> Bicycle Repair</h1>
                     <br> 
-                    <br>
                     <img src="images/home_image.png" alt="home_image" style="width:100%">
                 </div>
             </div>
         </section>
 
         <!-- Services-->
-        <section class="page-section" id="services" style="margin-top: 80px">
+        <section class="page-section" id="services">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Services</h2>
+                <h2 class="section-heading text-uppercase" style="padding-top: 100px">Services</h2>
                 <h6 class="section-subheading text-muted">Offered services below :</h6>
             </div>
 
-            <div class="row text-center" style="margin-top: 60px">
+            <div class="row text-center" style="margin-top: 30px">
 
                 <div class="col-md-4">
                     <div class="card" style="width:100%">
@@ -88,7 +84,7 @@
                                             <!-- Service Details Go Here-->
                                             <h3 class="text-uppercase">Bike Flat Repair</h3>
                                             <br>
-                                            <p class="item-intro text-muted" style="text-align:center">Price: 15$</p>
+                                            <p class="item-intro text-muted" style="text-align:center">Price: 15 $</p>
                                             <br>
                                             <img src="images/services/service1.jpg" alt="service1" style="width:30%" />
                                             <br>
@@ -162,7 +158,7 @@
                                             <!-- Service Details Go Here-->
                                             <h3 class="text-uppercase">Basic Tune Up</h3>
                                             <br>
-                                            <p class="item-intro text-muted" style="text-align:center">Price: 65$</p>
+                                            <p class="item-intro text-muted" style="text-align:center">Price: 65 $</p>
                                             <br>
                                             <img src="images/services/service2.jpg" alt="service2" style="width:30%" />
                                             <br>
@@ -236,7 +232,7 @@
                                             <!-- Service Details Go Here-->
                                             <h3 class="text-uppercase">Bike Overhaul</h3>
                                             <br>
-                                            <p class="item-intro text-muted" style="text-align:center">Price: 300$</p>
+                                            <p class="item-intro text-muted" style="text-align:center">Price: 300 $</p>
                                             <br>
                                             <img src="images/services/service3.jpg" alt="service3" style="width:30%" />
                                             <br>
@@ -296,14 +292,14 @@
 
 
         <!-- Team-->
-        <section class="page-section" id="team" style="margin-top: 80px">
+        <section class="page-section" id="team">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Meet our Team</h2>
+                <h2 class="section-heading text-uppercase" style="padding-top: 100px">Meet our Team</h2>
                 <h6 class="section-subheading text-muted"> Keep your bike safely running by getting a professional tune-up today! When it comes to the safety of our customers, we take our responsibility in getting your bicycle tuned up and repaired very seriously. A well tuned bike is a safe bike.
                 </h6>
             </div>
 
-            <div class="row text-center" style="margin-top: 60px">
+            <div class="row text-center" style="margin-top: 30px">
 
                 <div class="col-md-4">
                     <img class="rounded-circle" src="images/employees/mech1.png" alt="team member 1" data-holder-rendered="true" style="width:65%">
@@ -327,20 +323,19 @@
             </div>
         </section>
 
-        <!-- About Us-->
-        <section class="page-section" id="about" style="margin-top: 80px">
-            <footer class="bg-dark text-center text-lg-start">
-                <div class="container p-5">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2> <br/>
-                    <h6 class="section-subheading text-muted">Visit Us: 123 Main Street, K2K 0E9, Ottawa, ON, Canada</h6>
-                    <h6 class="section-subheading text-muted">Call Us: (613)-141-1414</h6>
-                    <h6 class="section-subheading text-muted">Email Us: sherepairs@services.com</h6><br/><br/>
+        <!-- Contact Us-->
+        <section class="page-section" id="contact" style="margin-top: 80px">
+             <footer class="bg-dark text-lg-start"> 
+                <div class="container p-5"> 
+                    <h2 class="section-heading text-uppercase" style="padding-top: 80px">Contact Us</h2> <br/>
+                    <h6 class="section-subheading text-muted" style="text-align: left">Visit Us: 123 Main Street, K2K 0E9, Ottawa, ON, Canada</h6>
+                    <h6 class="section-subheading text-muted" style="text-align: left">Call Us: (613)-141-1414</h6>
+                    <h6 class="section-subheading text-muted" style="padding-bottom: 190px; text-align: left">Email Us: sherepairs@services.com</h6><br/><br/>
                 </div>
-            </footer>
+            </footer> 
         </section>
 
-
-
+        <p id="signature" style="padding-top: 20px">Site created by Group 14: Sneha, Lamya and Raissa</p>
     </div>
     <!-- /.container -->
 
