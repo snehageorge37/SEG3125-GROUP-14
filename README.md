@@ -42,3 +42,4 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab4-Designing%20a%20website%20
 <br/> Mech3: https://360.here.com/adas-technicians
 <br/> Wesite text inspo: https://www.velofix.com/locations/ottawa/ & https://kunstadt.com/pages/bike-repair-tune-ups
 <br/> Service1: https://www.walmart.ca/fr/ip/14-in-1-Bicycle-Flat-Tire-Repair-Patch-Glue-Lever-Cement-Tyre-Rubber-Tube-Kit/PRD0S4G27HNH2FS
+<br/> Service2: https://www.choosemybicycle.com/en/woc/a-basic-diy-bicycle-tune-up
