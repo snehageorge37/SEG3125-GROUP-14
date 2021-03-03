@@ -6,7 +6,7 @@ a {
 }
 
 h1 {
-    color: white;
+    color: #4f64cc;
     font-size: 80px;
     font-weight: bold;
 }
@@ -34,7 +34,6 @@ h4 {
     color: #ff5757;
 }
 
-
 #signature {
     text-align: center;
     font-style: italic;
@@ -42,8 +41,12 @@ h4 {
     color: #4f64cc;
 }
 
+
 /* Container holding the image and the text */
+
+
 /* Top left text */
+
 .top-left {
     position: absolute;
     top: 170px;
@@ -52,12 +55,12 @@ h4 {
 
 
 /* Bottom right text */
+
 .bottom-right {
     position: absolute;
     bottom: 90px;
     right: 170px;
 }
-
 
 
 /* modal dialog */
