@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>She Repairs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon_io/favicon.ico" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: white">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="images/logo.png" alt="She Repairs logo" width="215px" height="75px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#home">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#team">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Home-->
+        <section class="page-section" id="home">
+            <div class="jumbotron p-7 p-md-7 text-white rounded bg-light" style="margin-top: 70px; margin-bottom: 30px">
+                <div>
+                    <h2 class="section-heading text-uppercase" style="text-align:center; padding-top: 30px">Bicycle Repair</h1>
+                        <br>
+                        <img src="images/home_image.png" alt="home_image" style="width:100%">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase" style="padding-top: 100px">Services</h2>
+                <h6 class="section-subheading text-muted">Professional bike repair and tune ups</h6>
+            </div>
+
+            <div class="row text-center" style="margin-top: 30px">
+
+                <div class="col-md-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top" src="images/services/service1.jpg" onmouseover="this.src='images/services/service1_hover.jpg';" onmouseout="this.src='images/services/service1.jpg';" alt="service1_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter">
+                        <div class="card-body">
+                            <h4 class="card-title">Bike Flat Repair</h4>
+                            <p class="card-text" style="text-align:center">$15</p>
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          									<span aria-hidden="true">&times;</span>
+        								</button>
+                                        </div>
+                                        <div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
+                                            <!-- Service Details Go Here-->
+                                            <h3 class="text-uppercase">Bike Flat Repair</h3>
+                                            <br>
+                                            <p class="item-intro text-muted" style="text-align:center">Price: $15</p>
+                                            <br>
+                                            <img src="images/services/service1.jpg" alt="service1" style="width:30%" />
+                                            <br>
+                                            <br>
+                                            <p style="text-align:center">There is nothing worse than a flat tire, luckily we are here to help! Our team number one specialization is repairing bike flats, we make the job way easier than you think, including inflating the tire to proper
+                                                pressure and reattaching your bike, we offer it all for only $15!</p>
+                                            <form id="appointmentForm" style="margin-top: 50px">
+                                                <fieldset>
+                                                    <legend class="w-auto">Book an Appointment</legend>
+                                                    <div style="margin: 40px">
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentDateInput">Appointment Date *</label>
+                                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentTimeInput">Appointment Time *</label>
+                                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <button class="button btn1" style="margin-top: 15px">Book</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top" src="images/services/service2.jpg" onmouseover="this.src='images/services/service2_hover.jpg';" onmouseout="this.src='images/services/service2.jpg';" alt="service2_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter1">
+                        <div class="card-body">
+                            <h4 class="card-title">Basic Tune Up</h4>
+                            <p class="card-text" style="text-align:center">$65</p>
+                            <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          									<span aria-hidden="true">&times;</span>
+        								</button>
+                                        </div>
+                                        <div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
+                                            <!-- Service Details Go Here-->
+                                            <h3 class="text-uppercase">Basic Tune Up</h3>
+                                            <br>
+                                            <p class="item-intro text-muted" style="text-align:center">Price: $65</p>
+                                            <br>
+                                            <img src="images/services/service2.jpg" alt="service2" style="width:30%" />
+                                            <br>
+                                            <br>
+                                            <p style="text-align:center">Come get your bike cleaned from top to bottom with us! This service comes with cleaning, lube and a few more minor adjustments. The chain of the bike and the other key parts of the drivetrain will be treated
+                                                with a high-quality lubricant.</p>
+                                            <form id="appointmentForm" style="margin-top: 50px">
+                                                <fieldset>
+                                                    <legend class="w-auto">Book an Appointment</legend>
+                                                    <div style="margin: 40px">
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentDateInput">Appointment Date *</label>
+                                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentTimeInput">Appointment Time *</label>
+                                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <button class="button btn1" style="margin-top: 15px">Book</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top" src="images/services/service3.jpg" onmouseover="this.src='images/services/service3_hover.jpg';" onmouseout="this.src='images/services/service3.jpg';" alt="service3_image" style="width:100%" data-toggle="modal" data-target="#exampleModalCenter3">
+                        <div class="card-body">
+                            <h4 class="card-title">Bike Overhaul</h4>
+                            <p class="card-text" style="text-align:center">$300</p>
+                            <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          									<span aria-hidden="true">&times;</span>
+        								</button>
+                                        </div>
+                                        <div class="modal-body" style="margin-right: 120px; margin-left: 120px; margin-bottom: 50px">
+                                            <!-- Service Details Go Here-->
+                                            <h3 class="text-uppercase">Bike Overhaul</h3>
+                                            <br>
+                                            <p class="item-intro text-muted" style="text-align:center">Price: $300</p>
+                                            <br>
+                                            <img src="images/services/service3.jpg" alt="service3" style="width:30%" />
+                                            <br>
+                                            <br>
+                                            <p style="text-align:center"> We offer a full bike Overhaul for when you need an entire rebuild. We will take the bike down to the frame, clean it, inspect for any existing damage and build it back up again. This service also includes hub
+                                                overhaul and hydraulic brake bleed.</p>
+                                            <form id="appointmentForm" style="margin-top: 50px">
+                                                <fieldset>
+                                                    <legend class="w-auto">Book an Appointment</legend>
+                                                    <div style="margin: 40px">
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" placeholder="Enter Your First Name" required="required" data-validation-required-message="Please enter your first name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" placeholder="Enter Your Last Name" required="required" data-validation-required-message="Please enter your last name." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" placeholder="Enter Your Email" required="required" data-validation-required-message="Please enter your email address." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group" style="text-align: left;">
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" placeholder="Enter Your Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="row row-space">
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentDateInput">Appointment Date *</label>
+                                                                <input class="form-control" id="appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" data-validation-required-message="Please enter the date for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                            <div class="col-6" style="text-align: left;">
+                                                                <label for="appointmentTimeInput">Appointment Time *</label>
+                                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" data-validation-required-message="Please enter the time for the appointment." />
+                                                                <p class="help-block text-danger"></p>
+                                                            </div>
+                                                        </div>
+                                                        <button class="button btn1" style="margin-top: 15px">Book</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Team-->
+        <section class="page-section" id="team">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase" style="padding-top: 100px">Our Team</h2>
+                <h6 class="section-subheading text-muted"> Keep your bike safely running by getting a professional tune-up today! When it comes to the safety of our customers, we take our responsibility in getting your bicycle tuned up and repaired very seriously. A well tuned bike is a safe bike.
+                </h6>
+            </div>
+
+            <div class="row text-center" style="margin-top: 30px">
+
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="images/employees/mech1.png" alt="team member 1" data-holder-rendered="true" style="width:65%">
+                    <h4 style="margin-top: 20px">Sarah</h4>
+                    <p>Our newest member to the team! Sarah and Emily have been riding together for a while and have always been close friends. Over the past years, Sarah has been a big supporter of She Repairs. We’re glad to have Sarah officially join the
+                        team this year as a Lead Mechanic.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="images/employees/mech2.png" alt="team member 2" data-holder-rendered="true" style="width:65%">
+                    <h4 style="margin-top: 20px">Emily</h4>
+                    <p>Emily is a long time bike-gal and cycling enthusiast. When she’s not wrenching, she’s out riding, doing local races, touring, or kicking back and surfing her favorite cycling websites. A familiar face to anyone who cycles in the East
+                        end, down Frank Kenny Road, or along the Parkway, Emiliy is a proven professional.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="images/employees/mech3.jpg" alt="team member 3" data-holder-rendered="true" style="width:65%">
+                    <h4 style="margin-top: 20px">Leila</h4>
+                    <p>Growing up, Leila was always fascinated by bicycles, trucks, and cars. Inheriting this passion for mechanics from her dad, Leila was from a very young age very happy to assemble mechanical components and perform repairs and so she
+                        decided to pursue a career in this field and was able to successfully complete her mechanics’ licence last year!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us-->
+        <section class="page-section" id="contact" style="margin-top: 80px">
+            <footer class="bg-light text-lg-start">
+                <div class="container p-5">
+                    <h2 class="section-heading text-uppercase" style="padding-top: 80px">Contact Us</h2> <br/>
+                    <h6 class="section-subheading text-muted" style="text-align: left">Visit Us: 123 Main Street, K2K 0E9, Ottawa, ON, Canada</h6>
+                    <h6 class="section-subheading text-muted" style="text-align: left">Call Us: (613)-141-1414</h6>
+                    <h6 class="section-subheading text-muted" style="padding-bottom: 190px; text-align: left">Email Us: sherepairs@services.com</h6><br/><br/>
+                </div>
+            </footer>
+        </section>
+
+        <p id="signature" style="padding-top: 20px">Site created by Group 14: Sneha, Lamya and Raïssa</p>
+    </div>
+    <!-- /.container -->
+
+</body>
+
+</html>
