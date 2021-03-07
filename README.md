@@ -16,7 +16,9 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab3-Online%20Grocery%20Website
 Lab4
 https://snehageorge37.github.io/SEG3125-GROUP-14/lab4-Designing%20a%20website%20to%20demonstrate%20design%20principles/index.html
 <br/> <br/> 
-
+Lab5 
+https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20service%20business%20website/index.html
+<br/> <br/> 
 
 ### Sources of images used for lab3:
 <br/>
