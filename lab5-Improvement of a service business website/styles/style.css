@@ -139,3 +139,7 @@ legend {
 
 
 /* Appointment form formationg */
+
+#myAlert {
+    visibility: hidden;
+}
