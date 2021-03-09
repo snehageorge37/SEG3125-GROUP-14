@@ -11,12 +11,154 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="jqueryui/jquery-ui.js"></script>
     <script src="js/main.js"></script>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/jpg" href="images/favicon_io/favicon.ico" />
     <link rel="stylesheet" href="jqueryui/jquery-ui.css">
     <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
     <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
     <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="jqueryui//jquery-ui.css">
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="jqueryui//jquery-ui.js"></script>
+  	<link rel="stylesheet" href="https://fgelinas.com/code/timepicker/jquery.ui.timepicker.css?v=0.3.3">
+	<script src="https://fgelinas.com/code/timepicker/jquery.ui.timepicker.js?v=0.3.3"></script>
+
+    <script>
+
+    $(document).ready(function () {
+
+    	$( "#s1appointmentTimeInput").timepicker({
+	    		showPeriod: true,
+	    		showLeadingZero: true
+	    });
+
+	    $( "#s2appointmentTimeInput").timepicker({
+	    		showPeriod: true,
+	    		showLeadingZero: true
+	    });
+
+	    $( "#s3appointmentTimeInput").timepicker({
+	    		showPeriod: true,
+	    		showLeadingZero: true
+	    });
+
+		var d = new Date();
+		var curr_date = d.getDate();
+
+		/*For service 1*/
+		$('#s1appointmentDateInput').datepicker({
+		    beforeShowDay: shopClosedDays,
+		    firstDay: 1
+		});
+		 $('select[id="s1professionalDropdown"]').change( function() {
+		    var selectedValue = $(this).val();
+		    
+		    if (selectedValue == 'sarah') {
+			    $('#s1appointmentDateInput').datepicker('option', {beforeShowDay: sarahNonWorkingDays});
+		    }
+		    else if (selectedValue == 'emily') {
+			    $('#s1appointmentDateInput').datepicker('option', {beforeShowDay: emilyNonWorkingDays});
+		    }
+		    else if (selectedValue == 'leila') {
+			    $('#s1appointmentDateInput').datepicker('option', {beforeShowDay: leilaNonWorkingDays});
+		    }  
+		    else if (selectedValue == 'none') {
+			    $('#s1appointmentDateInput').datepicker('option', {beforeShowDay: shopClosedDays});
+		    } 
+
+		}); 
+
+		/*For service 2*/
+		$('#s2appointmentDateInput').datepicker({
+		    beforeShowDay: shopClosedDays,
+		    firstDay: 1
+		});
+		 $('select[id="s2professionalDropdown"]').change( function() {
+		    var selectedValue = $(this).val();
+		    
+		    if (selectedValue == 'sarah') {
+			    $('#s2appointmentDateInput').datepicker('option', {beforeShowDay: sarahNonWorkingDays});
+		    }
+		    else if (selectedValue == 'emily') {
+			    $('#s2appointmentDateInput').datepicker('option', {beforeShowDay: emilyNonWorkingDays});
+		    }
+		    else if (selectedValue == 'leila') {
+			    $('#s2appointmentDateInput').datepicker('option', {beforeShowDay: leilaNonWorkingDays});
+		    }  
+		    else if (selectedValue == 'none') {
+			    $('#s2appointmentDateInput').datepicker('option', {beforeShowDay: shopClosedDays});
+		    } 
+
+		}); 
+
+
+		/*For service 3*/
+		$('#s3appointmentDateInput').datepicker({
+		    beforeShowDay: shopClosedDays,
+		    firstDay: 1
+		});
+		 $('select[id="s3professionalDropdown"]').change( function() {
+		    var selectedValue = $(this).val();
+		    
+		    if (selectedValue == 'sarah') {
+			    $('#s3appointmentDateInput').datepicker('option', {beforeShowDay: sarahNonWorkingDays});
+		    }
+		    else if (selectedValue == 'emily') {
+			    $('#s3appointmentDateInput').datepicker('option', {beforeShowDay: emilyNonWorkingDays});
+		    }
+		    else if (selectedValue == 'leila') {
+			    $('#s3appointmentDateInput').datepicker('option', {beforeShowDay: leilaNonWorkingDays});
+		    }  
+		    else if (selectedValue == 'none') {
+			    $('#s3appointmentDateInput').datepicker('option', {beforeShowDay: shopClosedDays});
+		    } 
+
+		}); 
+
+		 function shopClosedDays(date){
+		 	var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
+		 	var closedDays = [Saturday, Sunday];
+
+		 	if ($.inArray(day, closedDays) > -1) {
+		        return [false, ''];
+		    }
+		    return [true, ''];
+
+		 }
+
+		function sarahNonWorkingDays(date){
+		    var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
+		    var nonWorkingDays = [Saturday, Sunday, Tuesday, Wednesday, Thursday, Friday];
+		       
+		    if ($.inArray(day, nonWorkingDays) > -1) {
+		        return [false, ''];
+		    }
+		    return [true, ''];
+		}
+
+		function emilyNonWorkingDays(date){
+		    var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
+		    var nonWorkingDays = [Saturday, Sunday, Monday, Thursday, Friday];
+		       
+		    if ($.inArray(day, nonWorkingDays) > -1) {
+		        return [false, ''];
+		    }
+		    return [true, ''];
+		}
+
+		function leilaNonWorkingDays(date){
+		    var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
+		    var nonWorkingDays = [Saturday, Sunday, Monday, Tuesday, Wednesday];
+		       
+		    if ($.inArray(day, nonWorkingDays) > -1) {
+		        return [false, ''];
+		    }
+		    return [true, ''];
+		}
+	});
+
+  	</script>
+  	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	
 </head>
 
 <body>
@@ -116,84 +258,86 @@
                                                 </div>
                                             </div>
 
-                                            <form id="s1appointmentForm" style="margin-top: 50px">
+                                            <form id="appointmentForm" style="margin-top: 50px">
                                                 <fieldset>
                                                     <legend class="w-auto">Book an Appointment</legend>
                                                     <div style="margin: 40px">
                                                         <h5 style="text-align: left; padding-bottom: 5px"> <i class="fas fa-id-card"></i> Contact Information</h5>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s1firstNameInput">First Name *</label>
-                                                                <input class="form-control" id="s1firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s1lastNameInput">Last Name *</label>
-                                                                <input class="form-control" id="s1lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s1emailInput">Email *</label>
-                                                            <input class="form-control" id="s1emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s1phoneInput">Phone *</label>
-                                                            <input class="form-control" id="s1phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
+                                                         <div style="text-align: left; padding-bottom: 15px">
+                                                            <label for="s1professionalDropdown">Professional *</label>
+                                                            <br>
+                                                            <select class="form-control"id="s1professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
+                                                                <option value="none" selected>Select your professional for the booking</option>
+                                                                <option value="sarah">Sarah – Works on Mondays </option>
+                                                                <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
+                                                                <option value="leila">Leila – Works on Thursdays and Fridays</option>
+                                                            </select>
+                                                        </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1appointmentDateInput">Appointment Date *</label>
-                                                                <input class="form-control" id="s1appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" title="Please enter the date for the appointment." />
+                                                                <input class="form-control" id="s1appointmentDateInput" placeholder="Select the Appointment Date" required="required" title="Please select the date for the appointment." />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" title="Please enter the time for the appointment." />
+                                                                <label for="s1appointmentTimeInput">Appointment Time *</label>
+                                                                <input class="form-control" id="s1appointmentTimeInput" placeholder="Select the Appointment Time" required="required" title="Please select the time for the appointment." />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <h5 style="text-align: left;padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-credit-card"></i> Payment</h5>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s1cardFirstNameInput">Cardholder First Name *</label>
-                                                                <input class="form-control" id="s1cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')"
+                                                                <label for="cardFirstNameInput">Cardholder First Name *</label>
+                                                                <input class="form-control" id="cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')"
                                                                 />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s1cardLastNameInput">Cardholder Last Name *</label>
-                                                                <input class="form-control" id="s1cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')"
+                                                                <label for="cardLastNameInput">Cardholder Last Name *</label>
+                                                                <input class="form-control" id="cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')"
                                                                 />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s1cardNumber">Card Number</label>
-                                                            <input class="form-control" id="s1cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
+                                                            <label for="cardNumber">Card Number</label>
+                                                            <input class="form-control" id="cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s1cardExpiryInput">Card Expiry *</label>
-                                                                <input class="form-control" id="s1cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardExpiryInput">Card Expiry *</label>
+                                                                <input class="form-control" id="cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s1cardCodeInput">Security Code *</label>
-                                                                <input class="form-control" id="s1cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardCodeInput">Security Code *</label>
+                                                                <input class="form-control" id="cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
-                                                            </div>
-                                                            <div class="col-6" style="text-align: left;">
-                                                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                                                    <option selected>Select your professional for the booking</option>
-                                                                    <option value="1">Sarah</option>
-                                                                    <option value="2">Emily</option>
-                                                                    <option value="3">Leila</option>
-                                                                </select>
                                                             </div>
                                                         </div>
                                                         <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction()">Book</button>
@@ -238,85 +382,89 @@
                                                 </div>
                                             </div>
 
-                                            <form id="s2appointmentForm" style="margin-top: 50px">
+                                            <form id="appointmentForm" style="margin-top: 50px">
                                                 <fieldset>
                                                     <legend class="w-auto">Book an Appointment</legend>
                                                     <div style="margin: 40px">
                                                         <h5 style="text-align: left; padding-bottom: 5px"> <i class="fas fa-id-card"></i> Contact Information</h5>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s2firstNameInput">First Name *</label>
-                                                                <input class="form-control" id="s2firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s2lastNameInput">Last Name *</label>
-                                                                <input class="form-control" id="s2lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s2emailInput">Email *</label>
-                                                            <input class="form-control" id="s2emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s2phoneInput">Phone *</label>
-                                                            <input class="form-control" id="s2phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
+                                                         <div style="text-align: left; padding-bottom: 15px">
+                                                            <label for="s2professionalDropdown">Professional *</label>
+                                                            <br>
+                                                            <select class="form-control"id="s2professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
+                                                                <option value="none" selected>Select your professional for the booking</option>
+                                                                <option value="sarah">Sarah – Works on Mondays </option>
+                                                                <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
+                                                                <option value="leila">Leila – Works on Thursdays and Fridays</option>
+                                                            </select>
+                                                        </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2appointmentDateInput">Appointment Date *</label>
-                                                                <input class="form-control" id="s2appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" title="Please enter the date for the appointment." />
+                                                                <input class="form-control" id="s2appointmentDateInput" placeholder="Select the Appointment Date" required="required" title="Please select the date for the appointment." />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="s2appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" title="Please enter the time for the appointment." />
+                                                                <input class="form-control" id="s2appointmentTimeInput" placeholder="Select the Appointment Time" required="required" title="Please select the time for the appointment." />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <h5 style="text-align: left;padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-credit-card"></i> Payment</h5>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s2cardFirstNameInput">Cardholder First Name *</label>
-                                                                <input class="form-control" id="s2cardFirstNameInput" type="text" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardFirstNameInput">Cardholder First Name *</label>
+                                                                <input class="form-control" id="cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')"
+                                                                />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s2cardLastNameInput">Cardholder Last Name *</label>
-                                                                <input class="form-control" id="s2cardLastNameInput" type="text" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardLastNameInput">Cardholder Last Name *</label>
+                                                                <input class="form-control" id="cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')"
+                                                                />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s2cardNumber">Card Number</label>
-                                                            <input class="form-control" id="s2cardNumber" type="tel" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
+                                                            <label for="cardNumber">Card Number</label>
+                                                            <input class="form-control" id="cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s2cardExpiryInput">Card Expiry *</label>
-                                                                <input class="form-control" id="s2cardExpiryInput" type="text" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardExpiryInput">Card Expiry *</label>
+                                                                <input class="form-control" id="cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s2cardCodeInput">Security Code *</label>
-                                                                <input class="form-control" id="s2cardCodeInput" type="text" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardCodeInput">Security Code *</label>
+                                                                <input class="form-control" id="cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
-                                                            </div>
-                                                            <div class="col-6" style="text-align: left;">
-                                                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                                                    <option selected>Select your professional for the booking</option>
-                                                                    <option value="1">Sarah</option>
-                                                                    <option value="2">Emily</option>
-                                                                    <option value="3">Leila</option>
-                                                                </select>
                                                             </div>
                                                         </div>
-                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px">Book</button>
+                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction()">Book</button>
                                                     </div>
                                                 </fieldset>
                                             </form>
@@ -358,85 +506,89 @@
                                                 </div>
                                             </div>
 
-                                            <form id="s3appointmentForm" style="margin-top: 50px">
+                                            <form id="appointmentForm" style="margin-top: 50px">
                                                 <fieldset>
                                                     <legend class="w-auto">Book an Appointment</legend>
                                                     <div style="margin: 40px">
-                                                        <h5 style="text-align: left; padding-bottom: 5px"> <i class="fas fa-id-card"></i> Contact Information </h5>
+                                                        <h5 style="text-align: left; padding-bottom: 5px"> <i class="fas fa-id-card"></i> Contact Information</h5>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s3firstNameInput">First Name *</label>
-                                                                <input class="form-control" id="s3firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <label for="firstNameInput">First Name *</label>
+                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s3lastNameInput">Last Name *</label>
-                                                                <input class="form-control" id="s3lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <label for="lastNameInput">Last Name *</label>
+                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s3emailInput">Email *</label>
-                                                            <input class="form-control" id="s3emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
+                                                            <label for="emailInput">Email *</label>
+                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s3phoneInput">Phone *</label>
-                                                            <input class="form-control" id="s3phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
+                                                            <label for="phoneInput">Phone *</label>
+                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
+                                                         <div style="text-align: left; padding-bottom: 15px">
+                                                            <label for="s3professionalDropdown">Professional *</label>
+                                                            <br>
+                                                            <select class="form-control"id="s3professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
+                                                                <option value="none" selected>Select your professional for the booking</option>
+                                                                <option value="sarah">Sarah – Works on Mondays </option>
+                                                                <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
+                                                                <option value="leila">Leila – Works on Thursdays and Fridays</option>
+                                                            </select>
+                                                        </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3appointmentDateInput">Appointment Date *</label>
-                                                                <input class="form-control" id="s3appointmentDateInput" type="tel" placeholder="Enter the Appointment Date" required="required" title="Please enter the date for the appointment." />
+                                                                <input class="form-control" id="s3appointmentDateInput" placeholder="Select the Appointment Date" required="required" title="Please select the date for the appointment." />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="s3appointmentTimeInput" type="tel" placeholder="Enter the Appointment Time" required="required" title="Please enter the time for the appointment." />
+                                                                <input class="form-control" id="s3appointmentTimeInput" placeholder="Select the Appointment Time" required="required" title="Please select the time for the appointment." />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
-                                                        <h5 style="text-align: left;padding-top: 30px; padding-bottom: 5px"><i class="fas fa-credit-card"></i> Payment</h5>
+                                                        <h5 style="text-align: left;padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-credit-card"></i> Payment</h5>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s3cardFirstNameInput">Cardholder First Name *</label>
-                                                                <input class="form-control" id="s3cardFirstNameInput" type="text" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardFirstNameInput">Cardholder First Name *</label>
+                                                                <input class="form-control" id="cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')"
+                                                                />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s3cardLastNameInput">Cardholder Last Name *</label>
-                                                                <input class="form-control" id="s3cardLastNameInput" type="text" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardLastNameInput">Cardholder Last Name *</label>
+                                                                <input class="form-control" id="cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')"
+                                                                />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
-                                                            <label for="s3cardNumber">Card Number</label>
-                                                            <input class="form-control" id="s3cardNumber" type="tel" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
+                                                            <label for="cardNumber">Card Number</label>
+                                                            <input class="form-control" id="cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s3cardExpiryInput">Card Expiry *</label>
-                                                                <input class="form-control" id="s3cardExpiryInput" type="text" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardExpiryInput">Card Expiry *</label>
+                                                                <input class="form-control" id="cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
-                                                                <label for="s3cardCodeInput">Security Code *</label>
-                                                                <input class="form-control" id="s3cardCodeInput" type="text" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
+                                                                <label for="cardCodeInput">Security Code *</label>
+                                                                <input class="form-control" id="cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
-                                                            </div>
-                                                            <div class="col-6" style="text-align: left;">
-                                                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                                                    <option selected>Select your professional for the booking</option>
-                                                                    <option value="1">Sarah</option>
-                                                                    <option value="2">Emily</option>
-                                                                    <option value="3">Leila</option>
-                                                                </select>
                                                             </div>
                                                         </div>
-                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px">Book</button>
+                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction()">Book</button>
                                                     </div>
                                                 </fieldset>
                                             </form>
