@@ -17,148 +17,189 @@
     <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  	<link rel="stylesheet" href="https://fgelinas.com/code/timepicker/jquery.ui.timepicker.css?v=0.3.3">
-	<script src="https://fgelinas.com/code/timepicker/jquery.ui.timepicker.js?v=0.3.3"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://fgelinas.com/code/timepicker/jquery.ui.timepicker.css?v=0.3.3">
+    <script src="https://fgelinas.com/code/timepicker/jquery.ui.timepicker.js?v=0.3.3"></script>
 
     <script>
+        $(document).ready(function() {
 
-    $(document).ready(function () {
+            $("#s1appointmentTimeInput").timepicker({
+                showPeriod: true,
+                showLeadingZero: true
+            });
 
-    	$( "#s1appointmentTimeInput").timepicker({
-	    		showPeriod: true,
-	    		showLeadingZero: true
-	    });
+            $("#s2appointmentTimeInput").timepicker({
+                showPeriod: true,
+                showLeadingZero: true
+            });
 
-	    $( "#s2appointmentTimeInput").timepicker({
-	    		showPeriod: true,
-	    		showLeadingZero: true
-	    });
+            $("#s3appointmentTimeInput").timepicker({
+                showPeriod: true,
+                showLeadingZero: true
+            });
 
-	    $( "#s3appointmentTimeInput").timepicker({
-	    		showPeriod: true,
-	    		showLeadingZero: true
-	    });
+            var d = new Date();
+            var curr_date = d.getDate();
 
-		var d = new Date();
-		var curr_date = d.getDate();
+            /*For service 1*/
+            $('#s1appointmentDateInput').datepicker({
+                beforeShowDay: shopClosedDays,
+                firstDay: 1
+            });
+            $('select[id="s1professionalDropdown"]').change(function() {
+                var selectedValue = $(this).val();
 
-		/*For service 1*/
-		$('#s1appointmentDateInput').datepicker({
-		    beforeShowDay: shopClosedDays,
-		    firstDay: 1
-		});
-		 $('select[id="s1professionalDropdown"]').change( function() {
-		    var selectedValue = $(this).val();
-		    
-		    if (selectedValue == 'sarah') {
-			    $('#s1appointmentDateInput').datepicker('option', {beforeShowDay: sarahNonWorkingDays});
-		    }
-		    else if (selectedValue == 'emily') {
-			    $('#s1appointmentDateInput').datepicker('option', {beforeShowDay: emilyNonWorkingDays});
-		    }
-		    else if (selectedValue == 'leila') {
-			    $('#s1appointmentDateInput').datepicker('option', {beforeShowDay: leilaNonWorkingDays});
-		    }  
-		    else if (selectedValue == 'none') {
-			    $('#s1appointmentDateInput').datepicker('option', {beforeShowDay: shopClosedDays});
-		    } 
+                if (selectedValue == 'sarah') {
+                    $('#s1appointmentDateInput').datepicker('option', {
+                        beforeShowDay: sarahNonWorkingDays
+                    });
+                } else if (selectedValue == 'emily') {
+                    $('#s1appointmentDateInput').datepicker('option', {
+                        beforeShowDay: emilyNonWorkingDays
+                    });
+                } else if (selectedValue == 'leila') {
+                    $('#s1appointmentDateInput').datepicker('option', {
+                        beforeShowDay: leilaNonWorkingDays
+                    });
+                } else if (selectedValue == 'none') {
+                    $('#s1appointmentDateInput').datepicker('option', {
+                        beforeShowDay: shopClosedDays
+                    });
+                }
 
-		}); 
+            });
 
-		/*For service 2*/
-		$('#s2appointmentDateInput').datepicker({
-		    beforeShowDay: shopClosedDays,
-		    firstDay: 1
-		});
-		 $('select[id="s2professionalDropdown"]').change( function() {
-		    var selectedValue = $(this).val();
-		    
-		    if (selectedValue == 'sarah') {
-			    $('#s2appointmentDateInput').datepicker('option', {beforeShowDay: sarahNonWorkingDays});
-		    }
-		    else if (selectedValue == 'emily') {
-			    $('#s2appointmentDateInput').datepicker('option', {beforeShowDay: emilyNonWorkingDays});
-		    }
-		    else if (selectedValue == 'leila') {
-			    $('#s2appointmentDateInput').datepicker('option', {beforeShowDay: leilaNonWorkingDays});
-		    }  
-		    else if (selectedValue == 'none') {
-			    $('#s2appointmentDateInput').datepicker('option', {beforeShowDay: shopClosedDays});
-		    } 
+            /*For service 2*/
+            $('#s2appointmentDateInput').datepicker({
+                beforeShowDay: shopClosedDays,
+                firstDay: 1
+            });
+            $('select[id="s2professionalDropdown"]').change(function() {
+                var selectedValue = $(this).val();
 
-		}); 
+                if (selectedValue == 'sarah') {
+                    $('#s2appointmentDateInput').datepicker('option', {
+                        beforeShowDay: sarahNonWorkingDays
+                    });
+                } else if (selectedValue == 'emily') {
+                    $('#s2appointmentDateInput').datepicker('option', {
+                        beforeShowDay: emilyNonWorkingDays
+                    });
+                } else if (selectedValue == 'leila') {
+                    $('#s2appointmentDateInput').datepicker('option', {
+                        beforeShowDay: leilaNonWorkingDays
+                    });
+                } else if (selectedValue == 'none') {
+                    $('#s2appointmentDateInput').datepicker('option', {
+                        beforeShowDay: shopClosedDays
+                    });
+                }
+
+            });
 
 
-		/*For service 3*/
-		$('#s3appointmentDateInput').datepicker({
-		    beforeShowDay: shopClosedDays,
-		    firstDay: 1
-		});
-		 $('select[id="s3professionalDropdown"]').change( function() {
-		    var selectedValue = $(this).val();
-		    
-		    if (selectedValue == 'sarah') {
-			    $('#s3appointmentDateInput').datepicker('option', {beforeShowDay: sarahNonWorkingDays});
-		    }
-		    else if (selectedValue == 'emily') {
-			    $('#s3appointmentDateInput').datepicker('option', {beforeShowDay: emilyNonWorkingDays});
-		    }
-		    else if (selectedValue == 'leila') {
-			    $('#s3appointmentDateInput').datepicker('option', {beforeShowDay: leilaNonWorkingDays});
-		    }  
-		    else if (selectedValue == 'none') {
-			    $('#s3appointmentDateInput').datepicker('option', {beforeShowDay: shopClosedDays});
-		    } 
+            /*For service 3*/
+            $('#s3appointmentDateInput').datepicker({
+                beforeShowDay: shopClosedDays,
+                firstDay: 1
+            });
+            $('select[id="s3professionalDropdown"]').change(function() {
+                var selectedValue = $(this).val();
 
-		}); 
+                if (selectedValue == 'sarah') {
+                    $('#s3appointmentDateInput').datepicker('option', {
+                        beforeShowDay: sarahNonWorkingDays
+                    });
+                } else if (selectedValue == 'emily') {
+                    $('#s3appointmentDateInput').datepicker('option', {
+                        beforeShowDay: emilyNonWorkingDays
+                    });
+                } else if (selectedValue == 'leila') {
+                    $('#s3appointmentDateInput').datepicker('option', {
+                        beforeShowDay: leilaNonWorkingDays
+                    });
+                } else if (selectedValue == 'none') {
+                    $('#s3appointmentDateInput').datepicker('option', {
+                        beforeShowDay: shopClosedDays
+                    });
+                }
 
-		 function shopClosedDays(date){
-		 	var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
-		 	var closedDays = [Saturday, Sunday];
+            });
 
-		 	if ($.inArray(day, closedDays) > -1) {
-		        return [false, ''];
-		    }
-		    return [true, ''];
+            function shopClosedDays(date) {
+                var day = date.getDay(),
+                    Sunday = 0,
+                    Monday = 1,
+                    Tuesday = 2,
+                    Wednesday = 3,
+                    Thursday = 4,
+                    Friday = 5,
+                    Saturday = 6;
+                var closedDays = [Saturday, Sunday];
 
-		 }
+                if ($.inArray(day, closedDays) > -1) {
+                    return [false, ''];
+                }
+                return [true, ''];
 
-		function sarahNonWorkingDays(date){
-		    var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
-		    var nonWorkingDays = [Saturday, Sunday, Tuesday, Wednesday, Thursday, Friday];
-		       
-		    if ($.inArray(day, nonWorkingDays) > -1) {
-		        return [false, ''];
-		    }
-		    return [true, ''];
-		}
+            }
 
-		function emilyNonWorkingDays(date){
-		    var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
-		    var nonWorkingDays = [Saturday, Sunday, Monday, Thursday, Friday];
-		       
-		    if ($.inArray(day, nonWorkingDays) > -1) {
-		        return [false, ''];
-		    }
-		    return [true, ''];
-		}
+            function sarahNonWorkingDays(date) {
+                var day = date.getDay(),
+                    Sunday = 0,
+                    Monday = 1,
+                    Tuesday = 2,
+                    Wednesday = 3,
+                    Thursday = 4,
+                    Friday = 5,
+                    Saturday = 6;
+                var nonWorkingDays = [Saturday, Sunday, Tuesday, Wednesday, Thursday, Friday];
 
-		function leilaNonWorkingDays(date){
-		    var day = date.getDay(), Sunday = 0, Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6;
-		    var nonWorkingDays = [Saturday, Sunday, Monday, Tuesday, Wednesday];
-		       
-		    if ($.inArray(day, nonWorkingDays) > -1) {
-		        return [false, ''];
-		    }
-		    return [true, ''];
-		}
-	});
+                if ($.inArray(day, nonWorkingDays) > -1) {
+                    return [false, ''];
+                }
+                return [true, ''];
+            }
 
-  	</script>
-  	<link href="styles/style.css" rel="stylesheet" type="text/css">
-	
+            function emilyNonWorkingDays(date) {
+                var day = date.getDay(),
+                    Sunday = 0,
+                    Monday = 1,
+                    Tuesday = 2,
+                    Wednesday = 3,
+                    Thursday = 4,
+                    Friday = 5,
+                    Saturday = 6;
+                var nonWorkingDays = [Saturday, Sunday, Monday, Thursday, Friday];
+
+                if ($.inArray(day, nonWorkingDays) > -1) {
+                    return [false, ''];
+                }
+                return [true, ''];
+            }
+
+            function leilaNonWorkingDays(date) {
+                var day = date.getDay(),
+                    Sunday = 0,
+                    Monday = 1,
+                    Tuesday = 2,
+                    Wednesday = 3,
+                    Thursday = 4,
+                    Friday = 5,
+                    Saturday = 6;
+                var nonWorkingDays = [Saturday, Sunday, Monday, Tuesday, Wednesday];
+
+                if ($.inArray(day, nonWorkingDays) > -1) {
+                    return [false, ''];
+                }
+                return [true, ''];
+            }
+        });
+    </script>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -208,14 +249,12 @@
                 </div>
             </div>
         </section>
-
         <!-- Booking Success Alert-->
         <section class="page-section" id="myAlert">
-            <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                <strong>Thank you for booking with us!</strong> We will send you an email with your appointment details at the email address you provided. See you soon! The She Repairs Team
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+            <div class="jumbotron p-7 p-md-7 text-black rounded bg-white" style="margin-top: 30px; margin-bottom: 30px">
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    <strong>Thank you for booking with us!</strong> We will send you an email with your appointment details at the email address you provided. See you soon! <br> -The She Repairs Team
+                </div>
             </div>
         </section>
 
@@ -238,7 +277,7 @@
                                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModal1">
           									<span aria-hidden="true">&times;</span>
         								</button>
                                         </div>
@@ -257,7 +296,12 @@
                                                     <p class="item-intro text-muted" style="text-align:center">Price: $15</p>
                                                 </div>
                                             </div>
-
+                                            <br>
+                                            <div class="row row-space">
+                                                <div class="alert alert-primary alert-dismissible fade show" role="alert" id="myAlert">
+                                                    <strong>Thank you for booking with us!</strong> We will send you an email with your appointment details at the email address you provided. See you soon! <br> -The She Repairs Team
+                                                </div>
+                                            </div>
                                             <form id="appointmentForm" style="margin-top: 50px">
                                                 <fieldset>
                                                     <legend class="w-auto">Book an Appointment</legend>
@@ -266,30 +310,34 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="firstNameInput">First Name *</label>
-                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="lastNameInput">Last Name *</label>
-                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="emailInput">Email *</label>
-                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="phoneInput">Phone *</label>
-                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')"
+                                                            />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
-                                                         <div style="text-align: left; padding-bottom: 15px">
+                                                        <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s1professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control"id="s1professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
+                                                            <select class="form-control" id="s1professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
                                                                 <option value="none" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
@@ -340,7 +388,7 @@
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
-                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction()">Book</button>
+                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction1(); return false;">Book</button>
                                                     </div>
                                                 </fieldset>
                                             </form>
@@ -362,7 +410,7 @@
                                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModal2">
           									<span aria-hidden="true">&times;</span>
         								</button>
                                         </div>
@@ -390,30 +438,34 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="firstNameInput">First Name *</label>
-                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="lastNameInput">Last Name *</label>
-                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="emailInput">Email *</label>
-                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="phoneInput">Phone *</label>
-                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')"
+                                                            />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
-                                                         <div style="text-align: left; padding-bottom: 15px">
+                                                        <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s2professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control"id="s2professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
+                                                            <select class="form-control" id="s2professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
                                                                 <option value="none" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
@@ -464,7 +516,7 @@
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
-                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction()">Book</button>
+                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction2(); return false;">Book</button>
                                                     </div>
                                                 </fieldset>
                                             </form>
@@ -486,7 +538,7 @@
                                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModal3">
           									<span aria-hidden="true">&times;</span>
         								</button>
                                         </div>
@@ -514,30 +566,34 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="firstNameInput">First Name *</label>
-                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <input class="form-control" id="firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="lastNameInput">Last Name *</label>
-                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')" oninput="setCustomValidity('')"/>
+                                                                <input class="form-control" id="lastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your Last Name" required="required" title="The last name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid last name. The last name should not contain numbers.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="emailInput">Email *</label>
-                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="emailInput" type="email" pattern="\b[\w.!#$%&’*+\/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)*\b" placeholder="name@example.com" required="required" title="Please enter your email address." oninvalid="setCustomValidity('Please enter the Email Address.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="phoneInput">Phone *</label>
-                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="phoneInput" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')"
+                                                            />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
-                                                         <div style="text-align: left; padding-bottom: 15px">
+                                                        <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s3professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control"id="s3professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
+                                                            <select class="form-control" id="s3professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
                                                                 <option value="none" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
@@ -588,7 +644,7 @@
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
-                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction()">Book</button>
+                                                        <button class="button btn1" id="submitBtn" style="margin-top: 15px" onclick="myFunction3(); return false;">Book</button>
                                                     </div>
                                                 </fieldset>
                                             </form>
