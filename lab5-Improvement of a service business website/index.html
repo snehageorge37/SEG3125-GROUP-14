@@ -19,27 +19,9 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://fgelinas.com/code/timepicker/jquery.ui.timepicker.css?v=0.3.3">
-    <script src="https://fgelinas.com/code/timepicker/jquery.ui.timepicker.js?v=0.3.3"></script>
 
     <script>
         $(document).ready(function() {
-
-            $("#s1appointmentTimeInput").timepicker({
-                showPeriod: true,
-                showLeadingZero: true
-            });
-
-            $("#s2appointmentTimeInput").timepicker({
-                showPeriod: true,
-                showLeadingZero: true
-            });
-
-            $("#s3appointmentTimeInput").timepicker({
-                showPeriod: true,
-                showLeadingZero: true
-            });
-
             var d = new Date();
             var curr_date = d.getDate();
 
@@ -352,7 +334,7 @@
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="s1appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
+                                                                <input type="time" class="form-control" id="s1appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -480,7 +462,7 @@
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="s2appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
+                                                                <input type="time" class="form-control" id="s2appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -608,7 +590,7 @@
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="s3appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
+                                                                <input type="time" class="form-control" id="s3appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
