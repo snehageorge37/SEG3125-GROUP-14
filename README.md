@@ -47,3 +47,7 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20ser
 <br/> Service1: https://www.walmart.ca/fr/ip/14-in-1-Bicycle-Flat-Tire-Repair-Patch-Glue-Lever-Cement-Tyre-Rubber-Tube-Kit/PRD0S4G27HNH2FS
 <br/> Service2: https://www.choosemybicycle.com/en/woc/a-basic-diy-bicycle-tune-up
 <br/> Service3: https://www.carousell.sg/p/bicycle-full-servicing-overhaul-service-148404939/ 
+
+### Sources for lab5:
+<br/> https://regex101.com/library/mX1xW0
+<br/> https://www.regular-expressions.info/creditcard.html
