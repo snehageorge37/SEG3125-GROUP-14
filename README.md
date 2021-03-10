@@ -49,5 +49,6 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20ser
 <br/> Service3: https://www.carousell.sg/p/bicycle-full-servicing-overhaul-service-148404939/ 
 
 ### Sources for lab5:
-<br/> https://regex101.com/library/mX1xW0
-<br/> https://www.regular-expressions.info/creditcard.html
+<br/> Email: https://regex101.com/library/mX1xW0
+<br/> Credit Card Number: https://www.regular-expressions.info/creditcard.html
+<br/> Expiration: https://regex101.com/library/AFarfB
