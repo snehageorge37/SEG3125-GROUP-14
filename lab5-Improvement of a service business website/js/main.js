@@ -1,4 +1,5 @@
 function myFunction1() {
+    console.log("hello");
     document.getElementById("myAlert").style.display = "block";
     document.getElementById("closeModal1").click();
 }
