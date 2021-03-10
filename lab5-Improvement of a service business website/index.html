@@ -36,7 +36,7 @@
                 if (selectedValue == 'sarah') {
                     dateField.value = '';
                     $('#s1appointmentDateInput').datepicker('option', {
-                        beforeShowDay: sarahNonWorkingDays 
+                        beforeShowDay: sarahNonWorkingDays
                     });
                 } else if (selectedValue == 'emily') {
                     dateField.value = '';
@@ -306,7 +306,7 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1firstNameInput">First Name *</label>
-                                                                <input class="form-control" id="s1firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')"
+                                                                <input class="form-control" id="s1firstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter Your First Name" required="required" data-toggle="tooltip" data-placement="auto" title="The first name should not contain numbers." oninvalid="setCustomValidity('Please enter a valid first name. The first name should not contain numbers.')"
                                                                     oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
@@ -325,15 +325,15 @@
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="s1phoneInput">Phone *</label>
-                                                            <input class="form-control" id="s1phoneInput" type="tel" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')"
-                                                            />
+                                                            <input class="form-control" id="s1phoneInput" type="tel" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
                                                         <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s1professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control" id="s1professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                                            <select class="form-control" id="s1professionalDropdown" class="form-select form-select-lg mb-3" title="Please select a mechanic for your appointment." aria-label=".form-select-lg example" required>
                                                                 <option value="" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
@@ -343,12 +343,14 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1appointmentDateInput">Appointment Date *</label>
-                                                                <input onkeypress="return false;" class="form-control" id="s1appointmentDateInput" placeholder="MM/DD/YYYY" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{2}" required="required" title="Please select the date for the appointment." />
+                                                                <input onkeypress="return false;" class="form-control" id="s1appointmentDateInput" placeholder="MM/DD/YYYY" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{2}" required="required" title="Please select the date for the appointment."
+                                                                />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1appointmentTimeInput">Appointment Time *</label>
-                                                                <input type="time" class="form-control" id="s1appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
+                                                                <input type="time" class="form-control" id="s1appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -356,31 +358,34 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1cardFirstNameInput">Cardholder First Name *</label>
-                                                                <input class="form-control" id="s1cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')"
-                                                                />
+                                                                <input class="form-control" id="s1cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" title="Please enter the first name associated with your credit card. In case of cancelation, a 25% service fee will be charged."
+                                                                    oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1cardLastNameInput">Cardholder Last Name *</label>
-                                                                <input class="form-control" id="s1cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')"
-                                                                />
+                                                                <input class="form-control" id="s1cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" title="Please enter the last name associated with your credit card. In case of cancelation, a 25% service fee will be charged to this card."
+                                                                    oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="s1cardNumber">Card Number</label>
-                                                            <input class="form-control" id="s1cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="s1cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" title="In case of cancelation, a 25% service fee will be charged to this card." oninvalid="setCustomValidity('Please enter the card number.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1cardExpiryInput">Card Expiry *</label>
-                                                                <input class="form-control" id="s1cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
+                                                                <input class="form-control" id="s1cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" title="Please enter the expiry on the front of your credit card. In case of cancelation, a 25% service fee will be charged."
+                                                                    oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1cardCodeInput">Security Code *</label>
-                                                                <input class="form-control" id="s1cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
+                                                                <input class="form-control" id="s1cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" title="Please enter the three-digit code on the back of your credit card. In case of cancelation, a 25% service fee will be charged to this card."
+                                                                    oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -453,15 +458,15 @@
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="s2phoneInput">Phone *</label>
-                                                            <input class="form-control" id="s2phoneInput" type="tel" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')"
-                                                            />
+                                                            <input class="form-control" id="s2phoneInput" type="tel" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
                                                         <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s2professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control" id="s2professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                                            <select class="form-control" id="s2professionalDropdown" class="form-select form-select-lg mb-3" title="Please select a mechanic for your appointment." aria-label=".form-select-lg example" required>
                                                                 <option value="" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
@@ -471,12 +476,14 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2appointmentDateInput">Appointment Date *</label>
-                                                                <input onkeypress="return false;" class="form-control" id="s2appointmentDateInput" placeholder="MM/DD/YYYY" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{2}" required="required" title="Please select the date for the appointment." />
+                                                                <input onkeypress="return false;" class="form-control" id="s2appointmentDateInput" placeholder="MM/DD/YYYY" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{2}" required="required" title="Please select the date for the appointment."
+                                                                />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2appointmentTimeInput">Appointment Time *</label>
-                                                                <input type="time" class="form-control" id="s2appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
+                                                                <input type="time" class="form-control" id="s2appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -484,31 +491,34 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2cardFirstNameInput">Cardholder First Name *</label>
-                                                                <input class="form-control" id="s2cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')"
-                                                                />
+                                                                <input class="form-control" id="s2cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" title="Please enter the first name associated with your credit card. In case of cancelation, a 25% service fee will be charged."
+                                                                    oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2cardLastNameInput">Cardholder Last Name *</label>
-                                                                <input class="form-control" id="s2cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')"
-                                                                />
+                                                                <input class="form-control" id="s2cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" title="Please enter the last name associated with your credit card. In case of cancelation, a 25% service fee will be charged."
+                                                                    oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="s2cardNumber">Card Number</label>
-                                                            <input class="form-control" id="s2cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="s2cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" title="In case of cancelation, a 25% service fee will be charged to this card." oninvalid="setCustomValidity('Please enter the card number.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2cardExpiryInput">Card Expiry *</label>
-                                                                <input class="form-control" id="s2cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
+                                                                <input class="form-control" id="s2cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" title="Please enter the expiry on the front of your credit card. In case of cancelation, a 25% service fee will be charged."
+                                                                    oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2cardCodeInput">Security Code *</label>
-                                                                <input class="form-control" id="s2cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
+                                                                <input class="form-control" id="s2cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" title="Please enter the three-digit code on the back of your credit card. In case of cancelation, a 25% service fee will be charged to this card."
+                                                                    oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -581,15 +591,15 @@
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="s3phoneInput">Phone *</label>
-                                                            <input class="form-control" id="s3phoneInput" type="tel" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')" oninput="setCustomValidity('')"
-                                                            />
+                                                            <input class="form-control" id="s3phoneInput" type="tel" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" placeholder="(xxx) xxx-xxxx" required="required" title="Please enter your phone number." oninvalid="setCustomValidity('Please enter the Phone Number.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <h5 style="text-align: left; padding-top: 30px; padding-bottom: 5px"> <i class="fas fa-calendar-alt"></i> Appointment</h5>
                                                         <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s3professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control" id="s3professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                                            <select class="form-control" id="s3professionalDropdown" class="form-select form-select-lg mb-3" title="Please select a mechanic for your appointment." aria-label=".form-select-lg example" required>
                                                                 <option value="" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
@@ -599,12 +609,14 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3appointmentDateInput">Appointment Date *</label>
-                                                                <input onkeypress="return false;" class="form-control" id="s3appointmentDateInput" placeholder="MM/DD/YYYY" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{2}" required="required" title="Please select the date for the appointment." />
+                                                                <input onkeypress="return false;" class="form-control" id="s3appointmentDateInput" placeholder="MM/DD/YYYY" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)[0-9]{2}" required="required" title="Please select the date for the appointment."
+                                                                />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3appointmentTimeInput">Appointment Time *</label>
-                                                                <input type="time" class="form-control" id="s3appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
+                                                                <input type="time" class="form-control" id="s3appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')"
+                                                                    oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -612,31 +624,34 @@
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3cardFirstNameInput">Cardholder First Name *</label>
-                                                                <input class="form-control" id="s3cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')"
-                                                                />
+                                                                <input class="form-control" id="s3cardFirstNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card First Name" required="required" title="Please enter the first name associated with your credit card. In case of cancelation, a 25% service fee will be charged."
+                                                                    oninvalid="setCustomValidity('Please enter the cardholder first name.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3cardLastNameInput">Cardholder Last Name *</label>
-                                                                <input class="form-control" id="s3cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')"
-                                                                />
+                                                                <input class="form-control" id="s3cardLastNameInput" type="text" pattern="^[(a-zA-Z ,.'-)]+" placeholder="Enter The Card Last Name" required="required" title="Please enter the last name associated with your credit card. In case of cancelation, a 25% service fee will be charged."
+                                                                    oninvalid="setCustomValidity('Please enter the cardholder last name.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" style="text-align: left;">
                                                             <label for="s3cardNumber">Card Number</label>
-                                                            <input class="form-control" id="s3cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" oninvalid="setCustomValidity('Please enter the card number.')" oninput="setCustomValidity('')" />
+                                                            <input class="form-control" id="s3cardNumber" type="text" pattern="\b(?:\d[ -]*?){16}\b" placeholder="xxxx xxxx xxxx xxxx" required="required" title="In case of cancelation, a 25% service fee will be charged to this card." oninvalid="setCustomValidity('Please enter the card number.')"
+                                                                oninput="setCustomValidity('')" />
                                                             <p class="help-block text-danger"></p>
                                                         </div>
                                                         <div class="row row-space">
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3cardExpiryInput">Card Expiry *</label>
-                                                                <input class="form-control" id="s3cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
+                                                                <input class="form-control" id="s3cardExpiryInput" type="text" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" placeholder="MM/YY" required="required" title="Please enter the expiry on the front of your credit card. In case of cancelation, a 25% service fee will be charged."
+                                                                    oninvalid="setCustomValidity('Please enter the card expiry.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3cardCodeInput">Security Code *</label>
-                                                                <input class="form-control" id="s3cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
+                                                                <input class="form-control" id="s3cardCodeInput" type="text" pattern="^[(\d)]{3}" placeholder="xxx" required="required" title="Please enter the three-digit code on the back of your credit card. In case of cancelation, a 25% service fee will be charged to this card."
+                                                                    oninvalid="setCustomValidity('Please enter the card security code.')" oninput="setCustomValidity('')" />
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
