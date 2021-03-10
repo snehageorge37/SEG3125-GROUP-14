@@ -337,8 +337,8 @@
                                                         <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s1professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control" id="s1professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
-                                                                <option value="none" selected>Select your professional for the booking</option>
+                                                            <select class="form-control" id="s1professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                                                <option value="" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
                                                                 <option value="leila">Leila – Works on Thursdays and Fridays</option>
@@ -352,7 +352,7 @@
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s1appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="s1appointmentTimeInput" placeholder="Select the Appointment Time" required="required" title="Please select the time for the appointment." />
+                                                                <input class="form-control" id="s1appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -465,8 +465,8 @@
                                                         <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s2professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control" id="s2professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
-                                                                <option value="none" selected>Select your professional for the booking</option>
+                                                            <select class="form-control" id="s2professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                                                <option value="" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
                                                                 <option value="leila">Leila – Works on Thursdays and Fridays</option>
@@ -593,8 +593,8 @@
                                                         <div style="text-align: left; padding-bottom: 15px">
                                                             <label for="s3professionalDropdown">Professional *</label>
                                                             <br>
-                                                            <select class="form-control" id="s3professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required="required">
-                                                                <option value="none" selected>Select your professional for the booking</option>
+                                                            <select class="form-control" id="s3professionalDropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                                                <option value="" selected>Select your professional for the booking</option>
                                                                 <option value="sarah">Sarah – Works on Mondays </option>
                                                                 <option value="emily">Emily – Works on Tuesdays and Wednesdays</option>
                                                                 <option value="leila">Leila – Works on Thursdays and Fridays</option>
