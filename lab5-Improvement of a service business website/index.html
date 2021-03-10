@@ -480,7 +480,7 @@
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s2appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="s2appointmentTimeInput" placeholder="Select the Appointment Time" required="required" title="Please select the time for the appointment." />
+                                                                <input class="form-control" id="s2appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
@@ -608,7 +608,7 @@
                                                             </div>
                                                             <div class="col-6" style="text-align: left;">
                                                                 <label for="s3appointmentTimeInput">Appointment Time *</label>
-                                                                <input class="form-control" id="s3appointmentTimeInput" placeholder="Select the Appointment Time" required="required" title="Please select the time for the appointment." />
+                                                                <input class="form-control" id="s3appointmentTimeInput" placeholder="Select the Appointment Time" pattern="\b(0?\d|1[0-2]):[0-5]\d (AM|PM)" required="required" title="Please select the time for the appointment." oninvalid="setCustomValidity('Please select a Time.')" oninput="setCustomValidity('')"/>
                                                                 <p class="help-block text-danger"></p>
                                                             </div>
                                                         </div>
