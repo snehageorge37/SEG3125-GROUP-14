@@ -3,12 +3,12 @@
 */
 
 html {
-  background-color: rgb(253, 221, 209);
+
 }
  
 body {
   background-color: rgb(253, 221, 209);
-  width: 600px;
+  width: 900px;
   padding: 20px;
   margin:auto;
   font-family:sans-serif;
@@ -22,18 +22,24 @@ body {
 h1 {
 	text-align: center;
 	margin: 0;
-	padding: 20px 0;
-	color: black;  /* Red */
-	font-family: monospace;
+	padding-top: 25px;
+  font-weight: bold;
 }
 
 
+h2 {
+  font-size: 17px;
+  font-weight: bold;
+}
 
-
+label {
+  font-size: 16px;
+}
 
 p {
-  color: #000000; 
+  font-size: 16px;
 }
+
 
 table {
 	border: 1px solid black;
@@ -65,7 +71,6 @@ table {
 /* Defining styling for a specific element with an id */
 #signature {
   text-align: right;
-  color: rgb(162, 0, 255);
   font-style: italic;
   font-size: 75%;
 }
@@ -73,4 +78,28 @@ table {
   width:200px;
   padding:5px;
   border-radius:5px;
+}
+
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="button"] {
+    background-color: black;
+    border: none;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
 }

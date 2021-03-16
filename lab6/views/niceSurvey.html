@@ -2,84 +2,74 @@
 	<html>
 
 	<head>
-		<meta charset="utf-8">
-		<! Use External CSS file>
-			<link href="style.css" rel="stylesheet" type="text/css">
-			<title>Lab 1 Group 14</title>
+	    <title>Reddit UI Survey</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	    <link href="style.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
 		<h1>Reddit.com Design Survey </h1>
-		<form id="myform" action="index.php">
+		<form id="myform">
 			<br>
 			
-			<p>Please take a few minutes to complete this survey to help us improve the User Experience for the <a
-					href="https://www.reddit.com/">Reddit</a> website :</p>
+			<p>Please take a few minutes to complete this survey to help us improve the User Experience for the <a href="https://www.reddit.com/">Reddit</a> website :</p>
 			<br>
-			<br>
+
 			<a href="https://www.reddit.com/">
-			<img class="picture" src="images/reddit_front_page.png" title="site image" alt="https://www.reddit.com/">
-			<img class="zoomonpicture" src="images/reddit_front_page.png">
+			<img class="picture" style="width: 80%; height: 80%" src="images/reddit_front_page.png" title="site image" alt="https://www.reddit.com/">
 			</a>
-			<br>
 			<br>
 			<div class="question">
 
-				<label>What is your overall opinion of this website's UI?</label><br>
-				<textarea name="opinion"></textarea><br><br><br>
+				<h2>What is your overall opinion of this website's UI?</h2>
+				<textarea name="opinion" style="width: 300px"></textarea>
+				<br><br>
 
-				<label>How do you find the organization of the information on the reddit.com?</label><br>
+				<h2>How do you find the organization of the information on the reddit.com?</h2>
 				<input type="radio" name="info_organization"><label>Vey clear</label><br>
 				<input type="radio" name="info_organization"><label>A little Clear</label><br>
 				<input type="radio" name="info_organization"><label>A little Confusing</label><br>
-				<input type="radio" name="info_organization"><label>Very confusing</label><br>
-				<br><br><br>
+				<input type="radio" name="info_organization"><label>Very confusing</label>
+				<br><br>
 
-        <label>Do you find it difficult to learn how to operate the system and explore new features?</label><br>
-				<input type="radio" name="is_difficult">
-        <label>Yes</label>
-        <input type="radio" name="is_difficult">
-        <label>No</label><br><br><br>
+		        <h2>Do you find it difficult to learn how to operate the system and explore new features?</h2>
+				<input type="radio" name="is_difficult"><label>Yes</label>
+		        <input type="radio" name="is_difficult" style="margin-left: 20px"><label>No</label>
+		        <br><br>
         
 
-				<label> How easy was it for you to find information? (1 = easy, 5 = difficult)</label><br>
-				<input type="radio" id="one" name="find_info_difficulty" value=1>
-				<label for="one">1</label><br>
+				<h2> How easy was it for you to find information? (1 = easy, 5 = difficult)</h2>
+				<input type="radio" id="one" name="find_info_difficulty" value=1><label for="one">1</label><br>
+				<input type="radio" id="two" name="find_info_difficulty" value=2><label for="two">2</label><br>
+				<input type="radio" id="three" name="find_info_difficulty" value=3><label for="three">3</label><br>
+				<input type="radio" id="four" name="find_info_difficulty" value=4><label for="four">4</label><br>
+				<input type="radio" id="five" name="find_info_difficulty" value=5><label for="five">5</label>
+				<br><br>
 
-				<input type="radio" id="two" name="find_info_difficulty" value=2>
-				<label for="two">2</label><br>
+				<h2> What are reddit.com's weaknesses? Choose all that apply. </h2>
+				<input type="checkbox" name="weaknesses" value="Too much content"><label>Too much content</label><br>
+				<input type="checkbox" name="weaknesses" value="Not enough content"><label>Not enough content</label><br>
+				<input type="checkbox" name="weaknesses" value="Hard to find what you're looking for"><label>Hard to find what I am looking for</label><br>
+				<input type="checkbox" name="weaknesses" value="Slow"><label>Slow</label><br>
+				<input type="checkbox" name="weaknesses" value="Not interactive enough"><label>Not interactive enough</label>
+				<br><br>
 
-				<input type="radio" id="three" name="find_info_difficulty" value=3>
-				<label for="three">3</label><br>
-
-				<input type="radio" id="four" name="find_info_difficulty" value=4>
-				<label for="four">4</label><br>
-
-				<input type="radio" id="five" name="find_info_difficulty" value=5>
-				<label for="five">5</label>
-				<br><br><br>
-
-				<label> What are reddit.com's weaknesses? Choose all that apply. </label><br>
-				<input type="checkbox" name="weaknesses" value="Too much content">Too much content<br>
-				<input type="checkbox" name="weaknesses" value="Not enough content">Not enough content<br>
-				<input type="checkbox" name="weaknesses" value="Hard to find what you're looking for">Hard to find what I am looking for<br>
-				<input type="checkbox" name="weaknesses" value="Slow">Slow<br>
-				<input type="checkbox" name="weaknesses" value="Not interactive enough">Not interactive enough<br>
-				<textarea id="othertext" rows="4" cols="35">Other</textarea>
-
-				<br><br><br>
-
-				<textarea id="commenttext" rows="4" cols="35">Any final thoughts? Write here:</textarea>
-				<br><br><br>
+				<h2>Any final thoughts? Write here:</h2>
+				<textarea id="commenttext" style="width: 300px"></textarea>
+				<br><br>
 
 				<input type="button" value="SUBMIT" onclick="alert ('Survey submitted successfully. \n Thank you for your feedback!')">
 				<br><br><br>
 
 			</div>
 
-			<br><br><br>
 			<center>Thanks for taking the time to complete this survey! </center>
-			<br>
+			<br><br>
 			<p id="signature">Site created by Group 14: Sneha, Lamya and Raïssa</p>
 
 		</form>
