@@ -1,46 +1,96 @@
-<html>
-  <head>
-    <title>Questionnaire</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+	<html>
 
-    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+	<head>
+		<meta charset="utf-8">
+		<! Use External CSS file>
+			<link href="style.css" rel="stylesheet" type="text/css">
+			<title>Lab 1 Group 14</title>
+	</head>
 
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-  </head>
-  
-  <body>
-	
-	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
-    <h1>Survey</h1>
-    <form>
-      <h2> What fruits(s) do you like? </h2>
-      I like:<br>
-      <input type="text" name="fruit" placeholder="fruit name..." required />
-      <br>
-      <br>
-      <h2> What color(s) do you like? </h2>
-	    I like:<br>
-		  <input type="checkbox" name="color" value="Red"> Red<br>
-		  <input type="checkbox" name="color" value="Green"> Green<br>
-      <input type="checkbox" name="color" value="Blue"> Blue<br>
-      <br>
-      <h2>What is your favorite animal?</h2>
-      I like:<br>
-      <select name="animal">
-			  <option value="Cat" selected="selected">Cat</option>
-			  <option value="Dog">Dog</option>
-			  <option value="Turtle">Turtle</option>
-      </select>
-      <br>
-      <br>
-      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
-      <p id="thanks"></p>
-    </form>
-    </div>
-	<script src="/assets/action.js"></script>
-  </body>
-</html> 
+	<body>
+		<h1>Reddit.com Design Survey </h1>
+		<form id="myform" action="index.php">
+			<br>
+			
+			<p>Please take a few minutes to complete this survey to help us improve the User Experience for the <a
+					href="https://www.reddit.com/">Reddit</a> website :</p>
+			<br>
+			<br>
+			<a href="https://www.reddit.com/">
+			<img class="picture" src="images/reddit_front_page.png" title="site image" alt="https://www.reddit.com/">
+			<img class="zoomonpicture" src="images/reddit_front_page.png">
+			</a>
+			<br>
+			<br>
+			<div class="question">
+				<h3> Personal Information </h3>
+				<p>First name: <br><br> <input id="input" type="text" name="firstname"></p>
+				<p>Last name: <br><br> <input id="input" type="text" name="lastname"></p>
+				<p>Age: <br><br> <input id="input" type="number" min="5" max="130" name="age"></p>
+				<br>
+				<br>
+
+				<label>What is your overall opinion of this website's UI?</label><br>
+				<textarea></textarea><br><br><br>
+
+				<label>Have you ever visited reddit.com before?</label><br>
+				<input type="radio" name="info">
+				<label>Yes</label>
+				<input type="radio" name="info">
+				<label>No</label><br><br><br>
+
+				<label>If you answered yes to the previous question, how often do you visit reddit.com? </label><br>
+				<input type="radio"><label>Multiple times a day</label><br>
+				<input type="radio"><label>Once a day</label><br>
+				<input type="radio"><label>Few times a week</label><br>
+				<input type="radio"><label>Once a week</label><br>
+				<input type="radio"><label>Every few weeks</label><br>
+				<input type="radio"><label>Once a month</label><br>
+				<input type="radio"><label>Every few months</label>
+				<br><br><br>
+
+				<label> How easy was it for you to find information? (1 = easy, 5 = difficult)</label><br>
+				<input type="radio" id="one" name="ease_of_use_rating" value=1>
+				<label for="one">1</label><br>
+
+				<input type="radio" id="two" name="ease_of_use_rating" value=2>
+				<label for="two">2</label><br>
+
+				<input type="radio" id="three" name="ease_of_use_rating" value=3>
+				<label for="three">3</label><br>
+
+				<input type="radio" id="four" name="ease_of_use_rating" value=4>
+				<label for="four">4</label><br>
+
+				<input type="radio" id="five" name="ease_of_use_rating" value=5>
+				<label for="five">5</label>
+				<br><br><br>
+
+				<label> What are reddit.com's weaknesses? Choose all that apply. </label><br>
+				<input type="checkbox" name="weaknesses" value="Too much content">Too much content<br>
+				<input type="checkbox" name="weaknesses" value="Not enough content">Not enough content<br>
+				<input type="checkbox" name="weaknesses" value="Hard to find what you're looking for">Hard to find what I am looking for<br>
+				<input type="checkbox" name="weaknesses" value="Slow">Slow<br>
+				<input type="checkbox" name="weaknesses" value="Not interactive enough">Not interactive enough<br>
+				<textarea id="othertext" rows="4" cols="35">Other</textarea>
+
+				<br><br><br>
+
+				<textarea id="commenttext" rows="4" cols="35">Any final thoughts? Write here:</textarea>
+				<br><br><br>
+
+				<input type="button" value="SUBMIT" onclick="alert ('Survey submitted successfully. \n Thank you for your feedback!')">
+				<br><br><br>
+
+			</div>
+
+			<br><br><br>
+			<center>Thanks for taking the time to complete this survey! </center>
+			<br>
+			<p id="signature">Site created by Group 14: Sneha, Lamya and Raïssa</p>
+
+		</form>
+	</body>
+
+	</html>
