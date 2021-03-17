@@ -50,8 +50,9 @@ module.exports = function(app) {
         var is_difficult = readData("is_difficult");
         var find_info_difficulty = readData("find_info_difficulty");
         var weaknesses = readData("weaknesses");
-        res.render('showResults', { results: [opinion, info_organization, is_difficult, find_info_difficulty, weaknesses] });
-        console.log([opinion, info_organization, is_difficult, find_info_difficulty, weaknesses]);
+        var colors = readData("colors");
+        res.render('showResults', { results: [opinion, info_organization, is_difficult, find_info_difficulty, weaknesses, colors] });
+        console.log([opinion, info_organization, is_difficult, find_info_difficulty, weaknesses, colors]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
