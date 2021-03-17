@@ -65,12 +65,19 @@ module.exports = function(app) {
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
     app.post('/niceSurvey', urlencodedParser, function(req, res) {
-        console.log(req.body.toString());
-        var json = req.body.toString();
+        console.log(req.body);
+        var json = req.body;
+        var numAns = 1;
         for (var key in json) {
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
-            if ((key === "weaknesses") && (json[key].length === 2)) {
+
+            if ((json[key] == "Slow") || (json[key] == "Too much content") || (json[key] == "Not enough content") || (json[key] == "Hard to find what I am looking for") || (json[key] == "Not interactive enough")) {
+                numAns = 1
+            } else {
+                numAns = json[key].length;
+            }
+            if ((key === "weaknesses") && (numAns >= 2)) {
                 for (var item in json[key]) {
                     combineCounts(key, json[key][item]);
                 }
