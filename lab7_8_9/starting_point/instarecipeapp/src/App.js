@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Todos from "./Todos";
 import AddTodo from "./AddTodo";
 import NavBar from "./NavBar";
+import Home from "./Home";
 
 class App extends Component {
   state = {
@@ -27,11 +28,13 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="todo-app container">
-        <NavBar />
-        <h1 className="center blue-text"> Todo 's</h1>
-        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />{" "}
-        <AddTodo addTodo={this.addTodo} />
+      <div className="instarecipeapp container">
+        <div className="menu-active navigation-menu">
+          <NavBar />
+        </div>
+        <div className="home">
+          <Home />
+        </div>
       </div>
     );
   }

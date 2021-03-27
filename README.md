@@ -56,3 +56,4 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20ser
 ### Sources for lab8:
 <br/> https://www.canva.com/design/DAEZ-V06hMY/NACAyX0B8We7N-GbUgifIQ/edit?layoutQuery=food
 <br/> https://assets.lightspeedhq.com/img/2019/07/db9a4083-mg_4246-copy-e1484761744984-960x540.jpg
+<br/> https://react-bootstrap.github.io/components/navbar/

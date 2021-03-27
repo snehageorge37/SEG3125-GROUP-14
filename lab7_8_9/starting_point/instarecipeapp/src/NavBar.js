@@ -6,7 +6,7 @@ class NavBar extends Component {
     return (
       <Navbar bg="light" variant="light">
         <img
-          alt="InstaRecipe Logo"
+          alt="InstaRecipe logo"
           src="/logo.png"
           width="135"
           height="60"
