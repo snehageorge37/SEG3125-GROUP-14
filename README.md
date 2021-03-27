@@ -52,3 +52,6 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20ser
 <br/> Email: https://regex101.com/library/mX1xW0
 <br/> Credit Card Number: https://www.regular-expressions.info/creditcard.html
 <br/> Expiration: https://regex101.com/library/AFarfB
+
+### Sources for lab8:
+<br/> https://www.canva.com/design/DAEZ-V06hMY/NACAyX0B8We7N-GbUgifIQ/edit?layoutQuery=food
