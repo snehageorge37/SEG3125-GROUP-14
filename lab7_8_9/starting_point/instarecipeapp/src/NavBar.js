@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 class NavBar extends Component {
   render() {
     return (
-      <Navbar bg="light" variant="light">
+      <Navbar bg="light" variant="light" expand="lg" sticky="top">
         <img
           alt="InstaRecipe logo"
           src="/logo.png"
