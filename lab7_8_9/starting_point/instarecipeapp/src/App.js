@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Todos from "./Todos";
-import AddTodo from "./AddTodo";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import Ingredients from "./Ingredients";
+import Recipes from "./Recipes";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -32,9 +33,17 @@ class App extends Component {
         <div className="menu-active navigation-menu">
           <NavBar />
         </div>
-        <div className="home">
-          <Home />
-        </div>
+        <Router>
+          <Switch>
+            <Route path="/home" exact component={() => <Home />} />
+            <Route
+              path="/ingredients"
+              exact
+              component={() => <Ingredients />}
+            />
+            <Route path="/recipe" exact component={() => <Recipes />} />
+          </Switch>
+        </Router>
       </div>
     );
   }
