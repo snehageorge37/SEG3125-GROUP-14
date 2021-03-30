@@ -6,7 +6,7 @@ import Ingredients from "./Ingredients";
 class Recipes extends Component {
     render() {
       return (
-        <div className="home center">
+        <div className="recipes">
           <p>recipes page</p>
         </div>
       );

@@ -41,7 +41,7 @@ class App extends Component {
               exact
               component={() => <Ingredients />}
             />
-            <Route path="/recipe" exact component={() => <Recipes />} />
+            <Route path="/recipes" exact component={() => <Recipes />} />
           </Switch>
         </Router>
       </div>
