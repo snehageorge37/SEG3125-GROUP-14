@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import AccordionMP from "./Accordion";
+import SearchResults from "./SearchResults";
 
 const Container = styled.div`
   font-family: sans-serif;
@@ -162,11 +165,21 @@ const Ingredients = () => {
           </div>
         </div>
         <br />
-        <div style={{textAlignVertical: "center",textAlign: "center", marginBottom:25}}>
-          <button className="btn btn-primary">Search</button>
-        </div>
       </div>
+        <div style={{textAlignVertical: "center",textAlign: "center", marginTop:35, marginBottom:35}}>
+          <Router>
+            <Link class="nav-link" to="/searchResults" className="btn btn-primary">
+              Search
+            </Link>
+            <Switch>
+              <Route path="/searchResults">
+                <SearchResults />
+              </Route>
+            </Switch>
+          </Router>
+        </div>
     </Container>
+
   );
 };
 
