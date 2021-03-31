@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Ingredients from "./Ingredients";
-import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button'
+import Card from "react-bootstrap/Card";
 
 class Home extends Component {
   render() {
@@ -16,16 +15,9 @@ class Home extends Component {
         />
         <br />
         <br />
-        <Router>
-          <Link class="nav-link" to="/ingredients" className="btn btn-primary">
-            Find Recipes
-          </Link>
-          <Switch>
-            <Route path="/ingredients">
-              <Ingredients />
-            </Route>
-          </Switch>
-        </Router>
+        <Card.Link href="/ingredients">
+          <Button variant="primary">Find Recipes</Button>
+        </Card.Link>
       </div>
     );
   }
