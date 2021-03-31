@@ -10,7 +10,7 @@ class NavBar extends Component {
           <div class="container">
             <div>
               <Navbar bg="light" variant="light" expand="lg" sticky="top">
-                <Card.Link href="/home">
+                <Card.Link href="/">
                   <img
                     alt="InstaRecipe logo"
                     src="/logo.png"
@@ -19,7 +19,7 @@ class NavBar extends Component {
                     className="d-inline-block align-top"
                   />{" "}
                 </Card.Link>
-                <Card.Link href="/home">
+                <Card.Link href="/">
                   <Navbar.Brand>InstaRecipe</Navbar.Brand>
                 </Card.Link>
               </Navbar>
