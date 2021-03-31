@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import NavBar from "./NavBar";
-import Home from "./Home";
-import Ingredients from "./Ingredients";
 
 class Recipes extends Component {
-    render() {
-      return (
-        <div class="container">
+  render() {
+    return (
+      <div class="container">
         <br />
         <br />
         <br />
@@ -17,10 +14,21 @@ class Recipes extends Component {
                 <h3 class="mb-0">Recipe title</h3>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Recipe Image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <svg
+                  class="bd-placeholder-img"
+                  width="200"
+                  height="250"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="Placeholder: Recipe Image"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                >
                   <title>Recipe Image</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="30%" y="50%" fill="#eceeef" dy=".3em">Recipe Image</text>
+                  <text x="30%" y="50%" fill="#eceeef" dy=".3em">
+                    Recipe Image
+                  </text>
                 </svg>
               </div>
             </div>
@@ -33,9 +41,9 @@ class Recipes extends Component {
             </div>
           </div>
         </div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
-  
-  export default Recipes;
+}
+
+export default Recipes;

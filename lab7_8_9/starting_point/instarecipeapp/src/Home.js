@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Ingredients from "./Ingredients";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
@@ -10,7 +10,7 @@ class Home extends Component {
         <br />
         <br />
         <img
-          alt="homePage image"
+          alt="a fancy plate of food"
           src="/homepage.jpeg"
           className="homepage-image"
         />

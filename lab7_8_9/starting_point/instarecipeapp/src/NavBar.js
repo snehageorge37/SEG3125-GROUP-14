@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, withRouter } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class NavBar extends Component {
