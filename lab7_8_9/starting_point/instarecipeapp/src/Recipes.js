@@ -47,14 +47,14 @@ class Recipes extends Component {
             </div>
           </div>
         </div>
-        <br /><br /><br />
+        
 
         <div class="row mb-2">
           <div class="col-md-6">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
                 <h4 class="mb-0" style={pStyle}>Ingredients</h4>
-                  <br /><br /><br /><br /><br /><br /><br />
+                  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@ class Recipes extends Component {
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
                 <h4 class="mb-0" style={pStyle} >Instructions</h4>
-                <br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
               </div>
             </div>
           </div>
