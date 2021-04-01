@@ -59,3 +59,5 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20ser
 <br/> https://react-bootstrap.github.io/components/navbar/
 <br/> https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/
 <br/> https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2020/03/bananaSmoothie-471188070-770x533-1-745x490.jpg
+<br/> https://materializecss.com/checkboxes.html
+<br/> https://codesandbox.io/s/1r2mvk87q?file=/src/AccordionMultipleProps.js
