@@ -5,7 +5,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AccordionMP from "./Accordion";
 import SearchResults from "./SearchResults";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 
+const breadcrumb = {
+  color: "black",
+  background: "#ebd9c6",
+};
 const Container = styled.div`
   font-family: sans-serif;
   padding: 1vh 5vw;
@@ -113,6 +118,14 @@ const Ingredients = () => {
 
   return (
     <Container>
+      <Breadcrumb>
+        <Breadcrumb.Item href="/" style={breadcrumb}>
+          Home
+        </Breadcrumb.Item>
+        <Breadcrumb.Item active style={breadcrumb}>
+          Ingredients
+        </Breadcrumb.Item>
+      </Breadcrumb>
       <div style={divBorderStyle}>
         <br />
         <br />
