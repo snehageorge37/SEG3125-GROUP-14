@@ -19,7 +19,7 @@ class Home extends Component {
     return (
       <Container>
         <Breadcrumb>
-          <Breadcrumb.Item href="/" style={breadcrumb}>
+          <Breadcrumb.Item active style={breadcrumb}>
             Home
           </Breadcrumb.Item>
         </Breadcrumb>

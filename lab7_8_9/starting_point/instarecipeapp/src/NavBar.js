@@ -25,6 +25,16 @@ class NavBar extends Component {
               </Navbar>
             </div>
           </div>
+          <div className="language-select">
+            <select
+              className="custom-select"
+              value={this.props.language}
+              onChange={(e) => this.props.handleSetLanguage(e.target.value)}
+            >
+              <option value="English">English</option>
+              <option value="Français">Français</option>
+            </select>
+          </div>
         </nav>
       </div>
     );
