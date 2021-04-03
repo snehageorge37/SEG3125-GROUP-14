@@ -7,6 +7,31 @@ import AccordionMP from "./Accordion";
 import SearchResults from "./SearchResults";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 
+
+let content = {
+  English: {
+    title: "Select Ingredients",
+    description: "Please check all the ingredients you wish to use today !",
+    search_button: "SEARCH",
+    Ingredients_list: {
+      Meat: ["Chiken", "Tuna", "Salmon", "Beef"],
+      Vegetables: ["Potatoes", "Garlic", "Tomatoes"],
+      Fruits: ["Apple", "Strawberry"],
+      Dairy: ["Butter", "Cheese"]
+    }
+  },
+  French: {
+    title: "Séléctionnez les Ingrédients",
+    description: "S.V.P cochez la case pour tout ingédient que vous désirez utiliser aujourd'hui !",
+    search_button: "CHERCHER",
+    Ingredients_list: {
+      Viande: ["Poulet", "Thon", "Saumon", "Boeuf"],
+      Légumes: ["Pommes de Terre", "Ail", "Tomates"],
+      Fruits: ["Pommes", "Fraises"],
+      Laitier: ["Beurre", "Frommage"]
+    }
+  }
+};
 const breadcrumb = {
   color: "black",
   background: "#ebd9c6",
