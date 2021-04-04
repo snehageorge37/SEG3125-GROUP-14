@@ -24,19 +24,7 @@ function SearchResults() {
   return (
     <div className="searchResults" style={divBorderStyle}>
       <h3 style={{ marginTop: 30 }}>Results</h3>
-      <div class="row g-5 py-5">
-        <div class="feature col-md-4" style={rowdivStyle}>
-          <Card.Link href="/recipes">
-            <p style={pStyle}>Banana Smoothie</p>
-            <br />
-            <img src={banana_smoothie} alt="banana smoothie" style={imgStyle} />
-            <br />
-            <br />
-            <br />
-            <p align="right">Time to cook : 20 min</p>
-          </Card.Link>
-        </div>
-      </div>
+      <recipe_result_card />
     </div>
   );
 }

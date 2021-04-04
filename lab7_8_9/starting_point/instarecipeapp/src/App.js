@@ -26,6 +26,7 @@ function App() {
           <Route path="/" exact component={() => <Home />} />
           <Route path="/ingredients" exact component={() => <Ingredients />} />
           <Route path="/recipes" exact component={() => <Recipes />} />
+          <Route path="/recipe_result_card" exact component={() => <recipe_result_card />} />
         </Switch>
       </Router>
     </div>
