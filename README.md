@@ -61,3 +61,22 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20ser
 <br/> https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2020/03/bananaSmoothie-471188070-770x533-1-745x490.jpg
 <br/> https://materializecss.com/checkboxes.html
 <br/> https://codesandbox.io/s/1r2mvk87q?file=/src/AccordionMultipleProps.js
+
+### Sources for lab9:
+
+Sources for the recipes and pictures:
+https://www.allrecipes.com/search/results/?search=beef
+https://www.allrecipes.com/recipe/8819/teriyaki-chicken/
+https://www.allrecipes.com/recipe/83793/pretty-chicken-marinade/
+https://www.allrecipes.com/recipe/228682/amazing-oven-roasted-potatoes/
+https://www.allrecipes.com/recipe/24754/stuffed-potatoes/
+https://www.allrecipes.com/recipe/14860/roasted-garlic/
+https://www.allrecipes.com/recipe/237633/cookie-butter-cookies/
+https://www.allrecipes.com/recipe/247128/oven-roasted-grape-tomatoes/
+https://www.allrecipes.com/recipe/222659/tomato-mozzarella-salad/
+https://www.allrecipes.com/recipe/273169/french-strawberry-cake/
+https://www.allrecipes.com/recipe/254860/doughnut-grilled-cheese-sandwich/
+https://www.allrecipes.com/recipe/12730/grilled-tuna/
+https://www.allrecipes.com/recipe/263248/oven-fried-salmon/
+https://www.allrecipes.com/recipe/279251/simple-beef-stew/
+
