@@ -22,7 +22,7 @@ function Home(props) {
     },
     Français: {
       breadcrumb: "Page d'accueil",
-      button: "Trouvons des recettes",
+      button: "Trouver des recettes",
     },
   };
 

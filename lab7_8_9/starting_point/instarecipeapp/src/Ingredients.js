@@ -7,31 +7,6 @@ import AccordionMP from "./Accordion";
 import SearchResults from "./SearchResults";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 
-
-let content = {
-  English: {
-    title: "Select Ingredients",
-    description: "Please check all the ingredients you wish to use today !",
-    search_button: "SEARCH",
-    Ingredients_list: {
-      Meat: ["Chiken", "Tuna", "Salmon", "Beef"],
-      Vegetables: ["Potatoes", "Garlic", "Tomatoes"],
-      Fruits: ["Apple", "Strawberry"],
-      Dairy: ["Butter", "Cheese"]
-    }
-  },
-  French: {
-    title: "Séléctionnez les Ingrédients",
-    description: "S.V.P cochez la case pour tout ingédient que vous désirez utiliser aujourd'hui !",
-    search_button: "CHERCHER",
-    Ingredients_list: {
-      Viande: ["Poulet", "Thon", "Saumon", "Boeuf"],
-      Légumes: ["Pommes de Terre", "Ail", "Tomates"],
-      Fruits: ["Pommes", "Fraises"],
-      Laitier: ["Beurre", "Frommage"]
-    }
-  }
-};
 const breadcrumb = {
   color: "black",
   background: "#ebd9c6",
@@ -52,90 +27,138 @@ const divBorderStyle = {
 };
 
 const CheckAllowM = styled.input``;
-const listAcc = [
-  {
-    title: "Meat",
-    content: (
-      <form action="#">
-        <Label>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Beef</span>
-        </Label>
-        <Label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Chicken</span>
-        </Label>
-      </form>
-    ),
-  },
-  {
-    title: "Vegetables",
-    content: (
-      <form action="#">
-        <label>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Onions</span>
-        </label>
-        <label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Carrots</span>
-        </label>
-        <label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Potatoes</span>
-        </label>
-        <label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Garlic</span>
-        </label>
-      </form>
-    ),
-  },
-  {
-    title: "Fruits",
-    content: (
-      <form action="#">
-        <label>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Banana</span>
-        </label>
-        <label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Apple</span>
-        </label>
-        <label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Orange</span>
-        </label>
-        <label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Peaches</span>
-        </label>
-      </form>
-    ),
-  },
-  {
-    title: "Dairy",
-    content: (
-      <form action="#">
-        <label>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Milk</span>
-        </label>
-        <label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Cheese</span>
-        </label>
-        <label style={{ marginLeft: 30 }}>
-          <input type="checkbox" />
-          <span style={{ paddingLeft: 25 }}>Butter</span>
-        </label>
-      </form>
-    ),
-  },
-];
 
-const Ingredients = () => {
+function Ingredients(props) {
+  let content = {
+    English: {
+      title: "Select Ingredients",
+      description: "Please check all the ingredients you wish to use today!",
+      breadcrumb_home: "Home",
+      breadcrumb_ingr: "Ingredients",
+      search_button: "SEARCH",
+      ingredient_list_categories: ["Meat", "Vegetables", "Fruits", "Dairy"],
+      ingredients_list: {
+        meat: ["Chicken", "Tuna", "Salmon", "Beef"],
+        vegetables: ["Potato", "Garlic", "Tomato"],
+        fruits: ["Apple", "Strawberry"],
+        dairy: ["Butter", "Cheese"],
+      },
+    },
+    Français: {
+      title: "Séléctionnez les ingrédients",
+      description:
+        "S.V.P cochez la case pour tous les ingrédients que vous désirez utiliser aujourd'hui !",
+      breadcrumb_home: "Page d'accueil",
+      breadcrumb_ingr: "Ingrédients",
+      search_button: "CHERCHER",
+      ingredient_list_categories: ["Viande", "Légumes", "Fruits", "Laitier"],
+      ingredients_list: {
+        meat: ["Poulet", "Thon", "Saumon", "Boeuf"],
+        vegetables: ["Pommes de Terre", "Ail", "Tomate"],
+        fruits: ["Pommes", "Fraises"],
+        dairy: ["Beurre", "Fromage"],
+      },
+    },
+  };
+  props.language === "Français"
+    ? (content = content.Français)
+    : (content = content.English);
+  let listAcc = [
+    {
+      title: <h4>{content.ingredient_list_categories[0]}</h4>,
+      content: (
+        <form action="#">
+          <Label>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.meat[0]}
+            </span>
+          </Label>
+          <Label style={{ marginLeft: 30 }}>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.meat[1]}
+            </span>
+          </Label>
+          <Label style={{ marginLeft: 30 }}>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.meat[2]}
+            </span>
+          </Label>
+          <Label style={{ marginLeft: 30 }}>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.meat[3]}
+            </span>
+          </Label>
+        </form>
+      ),
+    },
+    {
+      title: <h4>{content.ingredient_list_categories[1]}</h4>,
+      content: (
+        <form action="#">
+          <label>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.vegetables[0]}
+            </span>
+          </label>
+          <label style={{ marginLeft: 30 }}>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.vegetables[1]}
+            </span>
+          </label>
+          <label style={{ marginLeft: 30 }}>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.vegetables[2]}
+            </span>
+          </label>
+        </form>
+      ),
+    },
+    {
+      title: <h4>{content.ingredient_list_categories[2]}</h4>,
+      content: (
+        <form action="#">
+          <label>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.fruits[0]}
+            </span>
+          </label>
+          <label style={{ marginLeft: 30 }}>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.fruits[1]}
+            </span>
+          </label>
+        </form>
+      ),
+    },
+    {
+      title: <h4>{content.ingredient_list_categories[3]}</h4>,
+      content: (
+        <form action="#">
+          <label>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.dairy[0]}
+            </span>
+          </label>
+          <label style={{ marginLeft: 30 }}>
+            <input type="checkbox" />
+            <span style={{ paddingLeft: 25 }}>
+              {content.ingredients_list.dairy[1]}
+            </span>
+          </label>
+        </form>
+      ),
+    },
+  ];
   const [isChecked, setChecked] = useState(true);
   const handleChange = () => {
     setChecked((prevState) => !prevState);
@@ -145,21 +168,21 @@ const Ingredients = () => {
     <Container>
       <Breadcrumb>
         <Breadcrumb.Item href="/" style={breadcrumb}>
-          Home
+          {content.breadcrumb_home}
         </Breadcrumb.Item>
         <Breadcrumb.Item active style={breadcrumb}>
-          Ingredients
+          {content.breadcrumb_ingr}
         </Breadcrumb.Item>
       </Breadcrumb>
       <div style={divBorderStyle}>
         <br />
         <br />
         <h3 style={{ textAlignVertical: "center", textAlign: "center" }}>
-          Select Ingredients
+          {content.title}
         </h3>
         <br />
         <h5 style={{ textAlignVertical: "center", textAlign: "center" }}>
-          Please check all the ingredients you wish to use today !
+          {content.description}
         </h5>
         <br />
         <div class="row">
@@ -238,7 +261,7 @@ const Ingredients = () => {
             to="/searchResults"
             className="btn btn-primary"
           >
-            Search
+            {content.search_button}
           </Link>
           <Switch>
             <Route path="/searchResults">
@@ -249,7 +272,7 @@ const Ingredients = () => {
       </div>
     </Container>
   );
-};
+}
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Ingredients />, rootElement);
