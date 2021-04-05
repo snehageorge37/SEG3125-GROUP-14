@@ -23,10 +23,26 @@ function App() {
       </div>
       <Router>
         <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/ingredients" exact component={() => <Ingredients />} />
-          <Route path="/recipes" exact component={() => <Recipes />} />
-          <Route path="/recipe_result_card" exact component={() => <recipe_result_card />} />
+          <Route
+            path="/"
+            exact
+            component={() => <Home language={language} />}
+          />
+          <Route
+            path="/ingredients"
+            exact
+            component={() => <Ingredients language={language} />}
+          />
+          <Route
+            path="/recipes"
+            exact
+            component={() => <Recipes language={language} />}
+          />
+          <Route
+            path="/recipe_result_card"
+            exact
+            component={() => <recipe_result_card language={language} />}
+          />
         </Switch>
       </Router>
     </div>

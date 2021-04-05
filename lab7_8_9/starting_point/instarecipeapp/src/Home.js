@@ -1,8 +1,8 @@
-import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import styled from "styled-components";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
+import React from "react";
 
 const breadcrumb = {
   color: "black",
@@ -14,32 +14,45 @@ const Container = styled.div`
   padding: 1vh 5vw;
 `;
 
-class Home extends Component {
-  render() {
-    return (
-      <Container>
-        <Breadcrumb>
-          <Breadcrumb.Item active style={breadcrumb}>
-            Home
-          </Breadcrumb.Item>
-        </Breadcrumb>
-        <div className="home center">
-          <br />
-          <br />
-          <img
-            alt="a fancy plate of food"
-            src="/homepage.jpeg"
-            className="homepage-image"
-          />
-          <br />
-          <br />
-          <Card.Link href="/ingredients">
-            <Button variant="primary">Find Recipes</Button>
-          </Card.Link>
-        </div>
-      </Container>
-    );
-  }
+function Home(props) {
+  let content = {
+    English: {
+      breadcrumb: "Home",
+      button: "Find Recipes",
+    },
+    Français: {
+      breadcrumb: "Page d'accueil",
+      button: "Trouvons des recettes",
+    },
+  };
+
+  props.language === "Français"
+    ? (content = content.Français)
+    : (content = content.English);
+
+  return (
+    <Container>
+      <Breadcrumb>
+        <Breadcrumb.Item active style={breadcrumb}>
+          {content.breadcrumb}
+        </Breadcrumb.Item>
+      </Breadcrumb>
+      <div className="home center">
+        <br />
+        <br />
+        <img
+          alt="a fancy plate of food"
+          src="/homepage.jpeg"
+          className="homepage-image"
+        />
+        <br />
+        <br />
+        <Card.Link href="/ingredients">
+          <Button variant="primary">{content.button}</Button>
+        </Card.Link>
+      </div>
+    </Container>
+  );
 }
 
 export default Home;
