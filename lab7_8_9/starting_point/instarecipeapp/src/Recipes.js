@@ -7,8 +7,6 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
 
-
-
 const breadcrumb = {
   color: "black",
   background: "#ebd9c6",
@@ -35,15 +33,44 @@ const divBorderStyle = {
   marginTop: 30,
 };
 
-function Recipes() {
+function Recipes(props) {
+  let content = {
+    English: {
+      breadcrumb_home: "Home",
+      breadcrumb_ingr: "Ingredients",
+      prep: "Prep: ",
+      cook: "Cook: ",
+      total: "Total: ",
+      servings: "Servings:",
+      yield: "Yield: ",
+      nutrition_info_button: "Nutrition Info",
+      ingredients: "Ingredients",
+      instructions: "Instructions",
+    },
+    Français: {
+      breadcrumb_home: "Page d'accueil",
+      breadcrumb_ingr: "Ingrédients",
+      prep: "Préparation: ",
+      cook: "Temps de cuisson: ",
+      total: "Temps total: ",
+      servings: "Portions:",
+      yield: "Rendement: ",
+      nutrition_info_button: "Info. nutritionnelle",
+      ingredients: "Ingrédients",
+      instructions: "Instructions",
+    },
+  };
+  props.language === "Français"
+    ? (content = content.Français)
+    : (content = content.English);
   return (
     <Container>
       <Breadcrumb>
         <Breadcrumb.Item href="/" style={breadcrumb}>
-          Home
+          {content.breadcrumb_home}
         </Breadcrumb.Item>
         <Breadcrumb.Item href="/ingredients" style={breadcrumb}>
-          Ingredients
+          {content.breadcrumb_ingr}
         </Breadcrumb.Item>
         <Breadcrumb.Item active style={breadcrumb}>
           Recipe Name Here
@@ -70,20 +97,20 @@ function Recipes() {
               </div>
             </div>
           </div>
-          <Card style={{ width: "10rem" }}>
+          <Card style={{ width: "13rem" }}>
             <ListGroup variant="flush">
-              <ListGroup.Item>Prep:</ListGroup.Item>
-              <ListGroup.Item>Cook:</ListGroup.Item>
-              <ListGroup.Item>Total:</ListGroup.Item>
-              <ListGroup.Item>Servings:</ListGroup.Item>
-              <ListGroup.Item>Yield:</ListGroup.Item>
+              <ListGroup.Item>{content.prep}</ListGroup.Item>
+              <ListGroup.Item>{content.cook}</ListGroup.Item>
+              <ListGroup.Item>{content.total}</ListGroup.Item>
+              <ListGroup.Item>{content.servings}</ListGroup.Item>
+              <ListGroup.Item>{content.yield}</ListGroup.Item>
             </ListGroup>
           </Card>
           <Accordion>
-            <Card style={{ width: "20rem" }}>
+            <Card style={{ width: "18rem" }}>
               <Card.Header>
                 <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                  Nutrition Info
+                  {content.nutrition_info_button}
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey="0">
@@ -101,7 +128,7 @@ function Recipes() {
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
                 <h4 class="mb-0" style={pStyle}>
-                  Ingredients
+                  {content.ingredients}
                 </h4>
                 <br />
                 <br />
@@ -124,7 +151,7 @@ function Recipes() {
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
                 <h4 class="mb-0" style={pStyle}>
-                  Instructions
+                  {content.instructions}
                 </h4>
                 <br />
                 <br />
