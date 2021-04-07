@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import Ingredients from "./Ingredients";
-import SearchResults from "./SearchResults";
 import Recipes from "./Recipes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -35,11 +34,6 @@ function App() {
             component={() => <Ingredients language={language} />}
           />
 
-          <Route
-            path="/searchResults"
-            exact
-            component={() => <SearchResults language={language} />}
-          />
           <Route
             path="/recipes"
             exact
