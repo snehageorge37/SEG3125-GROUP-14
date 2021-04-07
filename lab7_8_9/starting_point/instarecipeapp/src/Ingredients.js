@@ -6,8 +6,16 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Card from "react-bootstrap/Card";
 import cookie_butter_cookies from "./images/cookie_butter_cookies.PNG";
 
+const divBorderStyle2 = {
+  border: "2px solid rgba(0, 0, 0, 0.5)",
+  marginTop: 30,
+  paddingLeft: 30,
+  paddingRight:30,
+  paddingBottom: 30,
+};
+
 function ResultsSection(props) {
-  let content = {
+  let resultContent = {
     English: {
       title: "Results",
       time_to_cook: "Time to Cook: ",
@@ -372,28 +380,29 @@ function ResultsSection(props) {
   };
 
   props.language === "Français"
-    ? (content = content.Français)
-    : (content = content.English);
+    ? (resultContent = resultContent.Français)
+    : (resultContent = resultContent.English);
 
   return (
-    <div className={props.warn ? "warning": "hide"} style={divBorderStyle}>
-      <h3 style={{ marginTop: 30 }}>{content.title}</h3>
-      <Card style={{ width: "18rem" }}>
+    <div className={props.warn ? "warning": "hide"} style={divBorderStyle2}>
+      <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+      <Card style={{ width: "18rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
         <Card.Link href="/recipes">
           <Card.Body>
             <Card.Title>
-              {content.recipes.cookie_butter_cookies.title}
+              {resultContent.recipes.cookie_butter_cookies.title}
             </Card.Title>
             <Card.Img variant="top" src={cookie_butter_cookies} />
             <Card.Text>
               <p align="right">
-                {content.time_to_cook}{" "}
-                {content.recipes.cookie_butter_cookies.total}{" "}
+                {resultContent.time_to_cook}{" "}
+                {resultContent.recipes.cookie_butter_cookies.total}{" "}
               </p>
             </Card.Text>
           </Card.Body>
         </Card.Link>
       </Card>
+
     </div>
   );
 }
@@ -422,6 +431,87 @@ const CheckAllowM = styled.input``;
 
 function Ingredients(props) {
 
+  const [isCheckedMeat0, setCheckedMeat0] = useState(false);
+
+  const handleChangeMeat0 = () => {
+    setCheckedMeat0((prevState) => !prevState);
+  };
+
+  const [isCheckedMeat1, setCheckedMeat1] = useState(false);
+
+  const handleChangeMeat1 = () => {
+    setCheckedMeat1((prevState) => !prevState);
+  };
+
+  const [isCheckedMeat2, setCheckedMeat2] = useState(false);
+
+  const handleChangeMeat2 = () => {
+    setCheckedMeat2((prevState) => !prevState);
+  };
+
+  const [isCheckedMeat3, setCheckedMeat3] = useState(false);
+
+  const handleChangeMeat3 = () => {
+    setCheckedMeat3((prevState) => !prevState);
+  };
+
+  const [isCheckedVeg0, setCheckedVeg0] = useState(false);
+
+  const handleChangeVeg0 = () => {
+    setCheckedVeg0((prevState) => !prevState);
+  };
+
+  const [isCheckedVeg1, setCheckedVeg1] = useState(false);
+
+  const handleChangeVeg1 = () => {
+    setCheckedVeg1((prevState) => !prevState);
+  };
+
+  const [isCheckedVeg2, setCheckedVeg2] = useState(false);
+
+  const handleChangeVeg2 = () => {
+    setCheckedVeg2((prevState) => !prevState);
+  };
+
+  const [isCheckedFruit0, setCheckedFruit0] = useState(false);
+
+  const handleChangeFruit0 = () => {
+    setCheckedFruit0((prevState) => !prevState);
+  };
+
+  const [isCheckedFruit1, setCheckedFruit1] = useState(false);
+
+  const handleChangeFruit1 = () => {
+    setCheckedFruit1((prevState) => !prevState);
+  };
+
+  const [isCheckedDairy0, setCheckedDairy0] = useState(false);
+
+  const handleChangeDairy0 = () => {
+    setCheckedDairy0((prevState) => !prevState);
+  };
+
+  const [isCheckedDairy1, setCheckedDairy1] = useState(false);
+
+  const handleChangeDairy1 = () => {
+    setCheckedDairy1((prevState) => !prevState);
+  };
+
+  const [isChecked, setChecked] = useState(false);
+
+  const handleChange = () => {
+    setChecked((prevState) => !prevState);
+  };
+
+const test = (isCheckedMeat1 && isCheckedMeat2)
+      ? <div> Content </div>
+      : null;
+
+  const disableSearchBtn = !(isCheckedMeat0 || isCheckedMeat1 || isCheckedMeat2 || isCheckedMeat3 ||
+                             isCheckedVeg0 || isCheckedVeg1 || isCheckedVeg2 ||
+                             isCheckedFruit0 || isCheckedFruit1 ||
+                             isCheckedDairy0 || isCheckedDairy1)
+      
   let content = {
     English: {
       title: "Select Ingredients",
@@ -462,25 +552,33 @@ function Ingredients(props) {
       content: (
         <form action="#">
           <Label>
-            <input type="checkbox" />
+            <input type="checkbox"
+                   onChange={handleChangeMeat0}
+                   checked={isCheckedMeat0} />
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.meat[0]}
             </span>
           </Label>
           <Label style={{ marginLeft: 30 }}>
-            <input type="checkbox" />
+            <input type="checkbox"
+                   onChange={handleChangeMeat1}
+                   checked={isCheckedMeat1} />
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.meat[1]}
             </span>
           </Label>
           <Label style={{ marginLeft: 30 }}>
-            <input type="checkbox" />
+            <input type="checkbox"
+                   onChange={handleChangeMeat2}
+                   checked={isCheckedMeat2} />
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.meat[2]}
             </span>
           </Label>
           <Label style={{ marginLeft: 30 }}>
-            <input type="checkbox" />
+            <input type="checkbox" 
+                   onChange={handleChangeMeat3}
+                   checked={isCheckedMeat3}/>
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.meat[3]}
             </span>
@@ -493,19 +591,25 @@ function Ingredients(props) {
       content: (
         <form action="#">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" 
+                   onChange={handleChangeVeg0}
+                   checked={isCheckedVeg0}/>
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.vegetables[0]}
             </span>
           </label>
           <label style={{ marginLeft: 30 }}>
-            <input type="checkbox" />
+            <input type="checkbox" 
+                   onChange={handleChangeVeg1}
+                   checked={isCheckedVeg1}/>
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.vegetables[1]}
             </span>
           </label>
           <label style={{ marginLeft: 30 }}>
-            <input type="checkbox" />
+            <input type="checkbox" 
+                   onChange={handleChangeVeg2}
+                   checked={isCheckedVeg2}/>
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.vegetables[2]}
             </span>
@@ -518,13 +622,17 @@ function Ingredients(props) {
       content: (
         <form action="#">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" 
+                   onChange={handleChangeFruit0}
+                   checked={isCheckedFruit0}/>
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.fruits[0]}
             </span>
           </label>
           <label style={{ marginLeft: 30 }}>
-            <input type="checkbox" />
+            <input type="checkbox" 
+                   onChange={handleChangeFruit1}
+                   checked={isCheckedFruit1}/>
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.fruits[1]}
             </span>
@@ -537,13 +645,17 @@ function Ingredients(props) {
       content: (
         <form action="#">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" 
+                   onChange={handleChangeDairy0}
+                   checked={isCheckedDairy0}/>
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.dairy[0]}
             </span>
           </label>
           <label style={{ marginLeft: 30 }}>
-            <input type="checkbox" />
+            <input type="checkbox" 
+                   onChange={handleChangeDairy1}
+                   checked={isCheckedDairy1}/>
             <span style={{ paddingLeft: 25 }}>
               {content.ingredients_list.dairy[1]}
             </span>
@@ -552,12 +664,6 @@ function Ingredients(props) {
       ),
     },
   ];
-
-  const [isChecked, setChecked] = useState(true);
-
-  const handleChange = () => {
-    setChecked((prevState) => !prevState);
-  };
 
   const [showResults, setShowResults] = useState(false);
 
@@ -576,6 +682,7 @@ function Ingredients(props) {
         </Breadcrumb.Item>
       </Breadcrumb>
       <div style={divBorderStyle}>
+      {test}
         <br />
         <br />
         <h3 style={{ textAlignVertical: "center", textAlign: "center" }}>
@@ -589,12 +696,6 @@ function Ingredients(props) {
         <div class="row">
           <div class="col-lg-6 pl-5 pr-2">
             <div>
-              <CheckAllowM
-                type="checkbox"
-                id="allowM"
-                onChange={handleChange}
-                checked={isChecked}
-              />
               <AccordionMP
                 list={listAcc.slice(0, 1)}
                 allowMultiple={isChecked}
@@ -603,12 +704,6 @@ function Ingredients(props) {
           </div>
           <div class="col-lg-6 pl-2 pr-5">
             <div>
-              <CheckAllowM
-                type="checkbox"
-                id="allowM"
-                onChange={handleChange}
-                checked={isChecked}
-              />
               <AccordionMP
                 list={listAcc.slice(1, 2)}
                 allowMultiple={isChecked}
@@ -619,12 +714,6 @@ function Ingredients(props) {
         <div class="row">
           <div class="col-lg-6 pl-5 pr-2">
             <div>
-              <CheckAllowM
-                type="checkbox"
-                id="allowM"
-                onChange={handleChange}
-                checked={isChecked}
-              />
               <AccordionMP
                 list={listAcc.slice(2, 3)}
                 allowMultiple={isChecked}
@@ -633,12 +722,6 @@ function Ingredients(props) {
           </div>
           <div class="col-lg-6 pl-2 pr-5">
             <div>
-              <CheckAllowM
-                type="checkbox"
-                id="allowM"
-                onChange={handleChange}
-                checked={isChecked}
-              />
               <AccordionMP
                 list={listAcc.slice(3, 4)}
                 allowMultiple={isChecked}
@@ -656,8 +739,8 @@ function Ingredients(props) {
           marginBottom: 35,
         }}
       >
-        <button className="btn btn-primary" onClick={handleToggleClick}>
-          {showResults ? 'Hide Results' : 'Show Results'}
+        <button disabled={disableSearchBtn} className="btn btn-primary" onClick={handleToggleClick}>
+          {content.search_button}
         </button>
         <ResultsSection warn={showResults} />
       </div>
