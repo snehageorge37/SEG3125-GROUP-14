@@ -19,7 +19,7 @@ function SearchResults(props) {
           ingredients: [
             "cup olive oil",
             "spicy brown mustard",
-            "boneless chicken breast halves",
+            "Chicken",
           ],
           steps: [
             "In a large bowl, mix the olive oil and mustard, and place chiken in the bowl",
@@ -38,7 +38,7 @@ function SearchResults(props) {
           title: "Teriyaki Chicken",
           image: "./images/teriyaki_chicken.PNG",
           ingredients: [
-            "whole chicken, cut in half",
+            "Chicken",
             "sugar",
             "soy sauce",
             "2 cloves garlic, minced",
@@ -60,7 +60,7 @@ function SearchResults(props) {
           title: "Grilled Tuna",
           image: "./images/grilled_tuna.PNG",
           ingredients: [
-            "4 tuna steaks",
+            "Tuna",
             "3 tablespoons extra virgin olive oil",
             "salt ",
             "1 lime, juiced",
@@ -81,7 +81,7 @@ function SearchResults(props) {
         oven_fried_salmon: {
           title: "Oven-Fried Salmon",
           image: "./images/oven_fried_salmon.PNG",
-          ingredients: ["garlic", "cheese", "2 punds salmon fillets"],
+          ingredients: ["garlic", "cheese", "Salmon"],
           steps: [
             "Preheat the oven to 500 degrees F ",
             "Coat salmon on all sides with olive oil mixture",
@@ -102,7 +102,7 @@ function SearchResults(props) {
             "vegetable oil",
             "garlic",
             "1 onion",
-            "beef broth",
+            "Beef",
             "1 can crushed tomatoes",
           ],
           steps: [
@@ -120,7 +120,7 @@ function SearchResults(props) {
         roasted_garlic: {
           title: "Roasted Garlic",
           image: "./images/roasted_garlic.PNG",
-          ingredients: ["10 medium heads garlic", "olive oil"],
+          ingredients: ["Garlic", "olive oil"],
           steps: [
             "Preheat oven to 400 degrees F (200 degrees C).",
             "Arrange heads of garlic on a baking sheet. Sprinkle garlic with olive oil. Bake for 40 minutes to 1 hour",
@@ -137,7 +137,7 @@ function SearchResults(props) {
           title: "Stuffed Potatoes",
           image: "./images/stuffed_potatoes.PNG",
           ingredients: [
-            "4 potatoes",
+            "Potato",
             "cheddar cheese",
             "sour cream and onion dip",
           ],
@@ -158,7 +158,7 @@ function SearchResults(props) {
         oven_roasted_potatoes: {
           title: "Oven-Roasted Potatoes",
           image: "./images/oven_roasted_potatoes.PNG",
-          ingredients: ["6 potatoes", "olive oil", "salt and pepper"],
+          ingredients: ["Potato", "olive oil", "salt and pepper"],
           steps: [
             "Preheat oven to 400 degrees F",
             "Add olive oil, seasoned salt, salt, and black pepper; mix well. Spread potatoes on a baking sheet.",
@@ -176,7 +176,7 @@ function SearchResults(props) {
           title: "Oven Roasted Grape Tomatoes",
           image: "./images/oven_roasted_grapetomatoes.PNG",
           ingredients: [
-            "1 pound grape tomatoes",
+            "Tomato",
             "garlic",
             "salt",
             "olive oil",
@@ -199,7 +199,7 @@ function SearchResults(props) {
           title: "Tomato Mozzarella Salad",
           image: "./images/tomato_mozzarella_salad.PNG",
           ingredients: [
-            "3 tomatoes",
+            "Tomato",
             "mozzarella cheese",
             "olive oil",
             "salt",
@@ -225,7 +225,7 @@ function SearchResults(props) {
             "2 eggs",
             "vanilla extract",
             "baking powder",
-            "16 ounce package fresh strwberries",
+            "Strawberry",
           ],
           steps: [
             "Preheat the oven to 350 degrees F ",
@@ -245,7 +245,7 @@ function SearchResults(props) {
           title: "Cookie Butter Cookies",
           image: "./images/cookie_butter_cookies.PNG",
           ingredients: [
-            "cup butter",
+            "Butter",
             "brown sugar",
             "cup of cookie butter",
             "2 cups flour",
@@ -269,7 +269,7 @@ function SearchResults(props) {
           image: "./images/grilled_cheese_sandwich.PNG",
           ingredients: [
             "1 tablespoon butter",
-            "2 slices Gouda cheese",
+            "Cheese",
             "1 glazed raised ring doughnut, halved horizontally",
           ],
           steps: [
