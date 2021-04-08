@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import AccordionMP from "./Accordion";
+import AccordionOpenDefault from "./AccordionOpenDefault";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Card from "react-bootstrap/Card";
 import { Link } from 'react-router-dom';
@@ -1002,7 +1003,7 @@ function Ingredients(props) {
         <div class="row">
           <div class="col-lg-6 pl-5 pr-2">
             <div>
-              <AccordionMP
+              <AccordionOpenDefault
                 list={listAcc.slice(0, 1)}
                 allowMultiple={isChecked}
               />
@@ -1010,7 +1011,7 @@ function Ingredients(props) {
           </div>
           <div class="col-lg-6 pl-2 pr-5">
             <div>
-              <AccordionMP
+              <AccordionOpenDefault
                 list={listAcc.slice(1, 2)}
                 allowMultiple={isChecked}
               />
