@@ -44,7 +44,7 @@ const Accordion = ({ list, icon }) => {
 
     var result = true; 
 
-    if (global.defaultOpen == true){
+    if (global.defaultOpen === true){
       toggleItem;
       result = global.defaultOpen;
       global.defaultOpen = false;

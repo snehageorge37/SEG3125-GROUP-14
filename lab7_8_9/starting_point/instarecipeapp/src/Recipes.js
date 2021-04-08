@@ -5,7 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
-import {Link, useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import StarRatings from "react-rating-stars-component";
 
 const breadcrumb = {
