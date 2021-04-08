@@ -66,7 +66,7 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20ser
 
 https://www.npmjs.com/package/react-rating-stars-component
 
-<br/>Sources for the recipes and pictures:
+Sources for the recipes and pictures:
 https://www.allrecipes.com/recipe/8819/teriyaki-chicken/
 https://www.allrecipes.com/recipe/83793/pretty-chicken-marinade/
 https://www.allrecipes.com/recipe/228682/amazing-oven-roasted-potatoes/
