@@ -88,7 +88,7 @@ function Recipes(props) {
             "- Chicken",
           ],
           steps: [
-            "1. In a large bowl, mix the olive oil and mustard, and place chiken in the bowl",
+            "1. In a large bowl, mix the olive oil and mustard, and place chicken in the bowl",
             "2. Preheat the grill for high heat.",
             "3. Oil grill grate. Discard marinade, and place chicken on grate.",
             "4. Cook 6 to 8 minutes on each side, until juices run clear.",
