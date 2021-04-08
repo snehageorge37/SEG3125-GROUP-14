@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
 import {Link, useLocation} from "react-router-dom";
+import StarRatings from "react-rating-stars-component";
 
 const breadcrumb = {
   color: "black",
@@ -96,6 +97,7 @@ function Recipes(props) {
           total: "4 hrs 30 mins",
           servings: "4",
           yield: "4 servings",
+          rating: 4,
           Nutrition_info:
             "Per Serving: 549 calories; protein 27.5g; carbohydrates 7g; fat 46.1g; cholesterol 67.2mg; sodium 1573.9mg.",
         },
@@ -118,6 +120,7 @@ function Recipes(props) {
           total: "1 hr 30 mins",
           servings: "6",
           yield: "6 servings",
+          rating: 3.5,
           Nutrition_info:
             "Per Serving: 604 calories; protein 44.3g; carbohydrates 27.9g; fat 34.2g; cholesterol 170.3mg; sodium 1963mg.",
         },
@@ -140,6 +143,7 @@ function Recipes(props) {
           total: "1 hr 16 mins",
           servings: "4",
           yield: "4 servings",
+          rating: 4.5,
           Nutrition_info:
             "Per Serving: 281 calories; protein 40g; carbohydrates 1.8g; fat 11.8g; cholesterol 77.1mg; sodium 644.2mg.",
         },
@@ -157,6 +161,7 @@ function Recipes(props) {
           total: "25 mins",
           servings: "6",
           yield: "6 servings",
+          rating: 5,
           Nutrition_info:
             "Per Serving: 405 calories; protein 31.2g; carbohydrates 13.7g; fat 24.2g; cholesterol 80.3mg; sodium 694.7mg.",
         },
@@ -179,6 +184,7 @@ function Recipes(props) {
           total: "1 hr 30 mins",
           servings: "8",
           yield: "8 servings",
+          rating: 3,
           Nutrition_info:
             "Per Serving: 403 calories; protein 24.4g; carbohydrates 27.7g; fat 21.5g; cholesterol 62.6mg; sodium 238.3mg.",
         },
@@ -195,6 +201,7 @@ function Recipes(props) {
           total: "1 hr 5 mins",
           servings: "15",
           yield: "15 servings",
+          rating: 2.5,
           Nutrition_info:
             "Per Serving: 80 calories; protein 2.4g; carbohydrates 12.3g; fat 2.9g; sodium 6.4mg.",
         },
@@ -217,6 +224,7 @@ function Recipes(props) {
           total: "1 hr 45 mins",
           servings: "4",
           yield: "4 servings",
+          rating: 4,
           Nutrition_info:
             "Per Serving: 512 calories; protein 21.7g; carbohydrates 63.6g; fat 20g; cholesterol 62.7mg; sodium 416.5mg. ",
         },
@@ -234,6 +242,7 @@ function Recipes(props) {
           total: "1 hr 10 mins",
           servings: "6",
           yield: "6 servings",
+          rating: 4.5,
           Nutrition_info:
             "Per Serving: 206 calories; protein 4.4g; carbohydrates 37.6g; fat 4.7g; sodium 553.5mg.",
         },
@@ -257,6 +266,7 @@ function Recipes(props) {
           total: "45 mins",
           servings: "2",
           yield: "2 servings",
+          rating: 3.5,
           Nutrition_info:
             "Per Serving: 113 calories; protein 2.2g; carbohydrates 11.7g; fat 7.5g; sodium 98.7mg.",
         },
@@ -279,6 +289,7 @@ function Recipes(props) {
           total: "20 mins",
           servings: "6",
           yield: "6 servings",
+          rating: 5,
           Nutrition_info:
             "Per Serving: 199 calories; protein 10.1g; carbohydrates 6.2g; fat 15.2g; cholesterol 24.2mg; sodium 338.3mg.",
         },
@@ -303,6 +314,7 @@ function Recipes(props) {
           total: "1 hr",
           servings: "10",
           yield: "1 8-inch round cake pan",
+          rating: 4.5,
           Nutrition_info:
             "Per Serving: 294 calories; protein 3.7g; carbohydrates 42g; fat 12.9g; cholesterol 66.6mg; sodium 141.3mg.",
         },
@@ -326,6 +338,7 @@ function Recipes(props) {
           total: "27 mins",
           servings: "25",
           yield: "25 cookies",
+          rating: 3,
           Nutrition_info:
             "Per Serving: 196 calories; protein 2.6g; carbohydrates 24g; fat 10.2g; cholesterol 22.1mg; sodium 125.3mg.",
         },
@@ -346,6 +359,7 @@ function Recipes(props) {
           total: "9 mins",
           servings: "1",
           yield: "1 sandwich",
+          rating: 2.5,
           Nutrition_info:
             "Per Serving: 543 calories; protein 17.9g; carbohydrates 27.8g; fat 40.6g; cholesterol 98mg; sodium 745.6mg. ",
         },
@@ -370,6 +384,7 @@ function Recipes(props) {
           total: "4 hrs 30 mins",
           servings: "4",
           yield: "4 portions",
+          rating: 4,
           Nutrition_info:
             "Par portion: 549 calories; protéine 27,5 g; glucides 7g; graisse 46,1 g; cholestérol 67,2 mg; sodium 1573,9 mg.",
         },
@@ -388,6 +403,7 @@ function Recipes(props) {
           total: "1 hr 30 mins",
           servings: "6",
           yield: "6 portions",
+          rating: 3.5,
           Nutrition_info:
             "Par portion: 604 calories; protéine 44,3 g; glucides 27,9 g; graisse 34,2 g; cholestérol 170,3 mg; sodium 1963 mg.",
         },
@@ -406,6 +422,7 @@ function Recipes(props) {
           total: "1 hr 16 mins",
           servings: "4",
           yield: "4 portions",
+          rating: 4.5,
           Nutrition_info:
             "Par portion: 281 calories; protéine 40g; glucides 1,8 g; matières grasses 11,8 g; cholestérol 77,1 mg; sodium 644,2 mg.",
         },
@@ -423,6 +440,7 @@ function Recipes(props) {
           total: "25 mins",
           servings: "6",
           yield: "6 portions",
+          rating: 5,
           Nutrition_info:
             "Par portion: 405 calories; protéine 31,2 g; glucides 13,7 g; graisse 24,2 g; cholestérol 80,3 mg; sodium 694,7 mg.",
         },
@@ -441,6 +459,7 @@ function Recipes(props) {
           total: "1 hr 30 mins",
           servings: "8",
           yield: "8 portions",
+          rating: 3,
           Nutrition_info:
             "Par portion: 403 calories; protéine 24,4 g; glucides 27,7 g; matières grasses 21,5 g; cholestérol 62,6 mg; sodium 238,3 mg.",
         },
@@ -455,6 +474,7 @@ function Recipes(props) {
           total: "1 hr 5 mins",
           servings: "15",
           yield: "15 portions",
+          rating: 2.5,
           Nutrition_info:
             "Par portion: 80 calories; protéine 2,4 g; glucides 12,3 g; graisse 2,9 g; sodium 6,4 mg.",
         },
@@ -473,6 +493,7 @@ function Recipes(props) {
           total: "1 hr 45 mins",
           servings: "4",
           yield: "4 portions",
+          rating: 4,
           Nutrition_info:
             "Par portion: 512 calories; protéine 21,7 g; glucides 63,6 g; graisse 20g; cholestérol 62,7 mg; sodium 416,5 mg.",
         },
@@ -488,6 +509,7 @@ function Recipes(props) {
           total: "1 hr 10 mins",
           servings: "6",
           yield: "6 portions",
+          rating: 4.5,
           Nutrition_info:
             "Par portion: 206 calories; protéine 4,4 g; glucides 37,6 g; graisse 4,7 g; sodium 553,5 mg.",
         },
@@ -507,6 +529,7 @@ function Recipes(props) {
           total: "45 mins",
           servings: "2",
           yield: "2 portions",
+          rating: 3.5,
           Nutrition_info:
             "Par portion: 113 calories; protéine 2,2 g; glucides 11,7 g; graisse 7,5 g; sodium 98,7 mg.",
         },
@@ -525,6 +548,7 @@ function Recipes(props) {
           total: "20 mins",
           servings: "6",
           yield: "6 portions",
+          rating: 5,
           Nutrition_info:
             "Par portion: 199 calories; protéine 10,1 g; glucides 6,2 g; graisse 15,2 g; cholestérol 24,2 mg; sodium 338,3 mg.",
         },
@@ -545,6 +569,7 @@ function Recipes(props) {
           total: "1 hr",
           servings: "10",
           yield: "1 moule à gâteau rond de 8 pouces",
+          rating: 4.5,
           Nutrition_info:
             "Par portion: 294 calories; protéine 3,7 g; glucides 42g; matières grasses 12,9 g; cholestérol 66,6 mg; sodium 141,3 mg.",
         },
@@ -564,6 +589,7 @@ function Recipes(props) {
           total: "27 mins",
           servings: "25",
           yield: "25 biscuits",
+          rating: 3,
           Nutrition_info:
             "Par portion: 196 calories; protéine 2,6 g; glucides 24g; graisse 10,2 g; cholestérol 22,1 mg; sodium 125,3 mg.",
         },
@@ -580,6 +606,7 @@ function Recipes(props) {
           total: "9 mins",
           servings: "1",
           yield: "1 sandwich",
+          rating: 2.5,
           Nutrition_info:
             "Par portion: 543 calories; protéine 17,9 g; glucides 27,8 g; graisse 40,6 g; cholestérol 98 mg; sodium 745,6 mg.",
         },
@@ -591,6 +618,10 @@ function Recipes(props) {
     ? (resultContent = resultContent.Français)
     : (resultContent = resultContent.English);
 
+
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
 
   const showRecipe = (resultContent.recipes).map((recipe) => {
 
@@ -626,6 +657,15 @@ function Recipes(props) {
                       alt={recipe.title}
                       style={imgStyle}
                     />
+                    <br/>
+                    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+                      <StarRatings  count={5}
+                      value={recipe.rating}
+                      onChange={ratingChanged}
+                      size={24}
+                      activeColor="#F5BE2C"
+                      isHalf={true}/>
+                    </div>
                   </div>
                 </div>
               </div>
