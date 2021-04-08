@@ -5,7 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import StarRatings from "react-rating-stars-component";
 
 const breadcrumb = {
@@ -35,7 +35,6 @@ const divBorderStyle = {
 };
 
 function Recipes(props) {
-
   let previousPage = useLocation();
 
   console.log(previousPage);
@@ -72,14 +71,15 @@ function Recipes(props) {
     ? (content = content.Français)
     : (content = content.English);
 
-
   let resultContent = {
     English: {
       title: "Results",
       time_to_cook: "Time to Cook: ",
-      notFound: "Sorry we couldn’t find a recipe with the ingredients you chose.",
+      notFound:
+        "Sorry we couldn’t find a recipe with the ingredients you chose.",
       recipes: [
-         { id: "chicken_marinade",
+        {
+          id: "chicken_marinade",
           title: "Chicken Marinade",
           image: "/chicken_marinade.PNG",
           ingredients: [
@@ -101,7 +101,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 549 calories; protein 27.5g; carbohydrates 7g; fat 46.1g; cholesterol 67.2mg; sodium 1573.9mg.",
         },
-        { id:"teriyaki_chicken",
+        {
+          id: "teriyaki_chicken",
           title: "Teriyaki Chicken",
           image: "/teriyaki_chicken.PNG",
           ingredients: [
@@ -124,7 +125,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 604 calories; protein 44.3g; carbohydrates 27.9g; fat 34.2g; cholesterol 170.3mg; sodium 1963mg.",
         },
-        { id:"grilled_tuna",
+        {
+          id: "grilled_tuna",
           title: "Grilled Tuna",
           image: "/grilled_tuna.PNG",
           ingredients: [
@@ -147,7 +149,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 281 calories; protein 40g; carbohydrates 1.8g; fat 11.8g; cholesterol 77.1mg; sodium 644.2mg.",
         },
-        { id: "oven_fried_salmon",
+        {
+          id: "oven_fried_salmon",
           title: "Oven-Fried Salmon",
           image: "/oven_fried_salmon.PNG",
           ingredients: ["- Garlic", "- Cheese", "- Salmon"],
@@ -165,7 +168,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 405 calories; protein 31.2g; carbohydrates 13.7g; fat 24.2g; cholesterol 80.3mg; sodium 694.7mg.",
         },
-        { id: "beef_stew",
+        {
+          id: "beef_stew",
           title: "Beef Stew",
           image: "/beef_stew.PNG",
           ingredients: [
@@ -188,7 +192,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 403 calories; protein 24.4g; carbohydrates 27.7g; fat 21.5g; cholesterol 62.6mg; sodium 238.3mg.",
         },
-        {id: "roasted_garlic",
+        {
+          id: "roasted_garlic",
           title: "Roasted Garlic",
           image: "/roasted_garlic.PNG",
           ingredients: ["- Garlic", "- Olive oil"],
@@ -205,7 +210,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 80 calories; protein 2.4g; carbohydrates 12.3g; fat 2.9g; sodium 6.4mg.",
         },
-       { id:"stuffed_potatoes",
+        {
+          id: "stuffed_potatoes",
           title: "Stuffed Potatoes",
           image: "/stuffed_potatoes.PNG",
           ingredients: [
@@ -228,7 +234,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 512 calories; protein 21.7g; carbohydrates 63.6g; fat 20g; cholesterol 62.7mg; sodium 416.5mg. ",
         },
-       { id: "oven_roasted_potatoes",
+        {
+          id: "oven_roasted_potatoes",
           title: "Oven-Roasted Potatoes",
           image: "/oven_roasted_potatoes.PNG",
           ingredients: ["- Potato", "- Olive oil", "- Salt", "- Pepper"],
@@ -246,7 +253,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 206 calories; protein 4.4g; carbohydrates 37.6g; fat 4.7g; sodium 553.5mg.",
         },
-         {id: "oven_roasted_grapetomatoes",
+        {
+          id: "oven_roasted_grapetomatoes",
           title: "Oven Roasted Grape Tomatoes",
           image: "/oven_roasted_grapetomatoes.PNG",
           ingredients: [
@@ -270,7 +278,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 113 calories; protein 2.2g; carbohydrates 11.7g; fat 7.5g; sodium 98.7mg.",
         },
-         {id: "tomato_mozzarella_salad",
+        {
+          id: "tomato_mozzarella_salad",
           title: "Tomato Mozzarella Salad",
           image: "/tomato_mozzarella_salad.PNG",
           ingredients: [
@@ -293,7 +302,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 199 calories; protein 10.1g; carbohydrates 6.2g; fat 15.2g; cholesterol 24.2mg; sodium 338.3mg.",
         },
-         {id: "french_strawberry_cake",
+        {
+          id: "french_strawberry_cake",
           title: "French Strawberry Cake",
           image: "/french_strawberry_cake.PNG",
           ingredients: [
@@ -318,7 +328,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 294 calories; protein 3.7g; carbohydrates 42g; fat 12.9g; cholesterol 66.6mg; sodium 141.3mg.",
         },
-         {id: "cookie_butter_cookies",
+        {
+          id: "cookie_butter_cookies",
           title: "Cookie Butter Cookies",
           image: "/cookie_butter_cookies.PNG",
           ingredients: [
@@ -342,7 +353,8 @@ function Recipes(props) {
           Nutrition_info:
             "Per Serving: 196 calories; protein 2.6g; carbohydrates 24g; fat 10.2g; cholesterol 22.1mg; sodium 125.3mg.",
         },
-       { id: "grilled_cheese_sandwich",
+        {
+          id: "grilled_cheese_sandwich",
           title: "Grilled Cheese Sandwich",
           image: "/grilled_cheese_sandwich.PNG",
           ingredients: [
@@ -368,17 +380,23 @@ function Recipes(props) {
     Français: {
       title: "Résultats",
       time_to_cook: "Temps à cuire: ",
-      notFound: "Désolé, nous n'avons pas trouvé de recette avec les ingrédients que vous avez choisis.",
+      notFound:
+        "Désolé, nous n'avons pas trouvé de recette avec les ingrédients que vous avez choisis.",
       recipes: [
-         { id: "chicken_marinade",
+        {
+          id: "chicken_marinade",
           title: "Marinade au Poulet",
           image: "/chicken_marinade.PNG",
-          ingredients: ["- Tasse d'huile d'olive", 
-                        "- Moutarde brune épicée", 
-                        "- Poulet"],
-          steps: ["1. Dans un grand bol, mélangez l'huile d'olive et la moutarde et placez le poulet dans le bol", 
-                  "2. Préchauffez le gril à feu vif.", 
-                  "3. Huilez la grille du gril. Jeter la marinade et placer le poulet sur la grille. Cuire 6 à 8 minutes de chaque côté, jusqu'à ce que le jus soit clair."],
+          ingredients: [
+            "- Tasse d'huile d'olive",
+            "- Moutarde brune épicée",
+            "- Poulet",
+          ],
+          steps: [
+            "1. Dans un grand bol, mélangez l'huile d'olive et la moutarde et placez le poulet dans le bol",
+            "2. Préchauffez le gril à feu vif.",
+            "3. Huilez la grille du gril. Jeter la marinade et placer le poulet sur la grille. Cuire 6 à 8 minutes de chaque côté, jusqu'à ce que le jus soit clair.",
+          ],
           prep: "15 mins",
           cook: "16 mins",
           total: "4 hrs 30 mins",
@@ -388,16 +406,21 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 549 calories; protéine 27,5 g; glucides 7g; graisse 46,1 g; cholestérol 67,2 mg; sodium 1573,9 mg.",
         },
-       { id:"teriyaki_chicken",
+        {
+          id: "teriyaki_chicken",
           title: "Poulet teriyaki",
           image: "/teriyaki_chicken.PNG",
-          ingredients: ["- Poulet", 
-                        "- Sucre", 
-                        "- Sauce soja",
-                        "- 2 gousses d'ail émincées"],
-          steps: ["1. Rincer les moitiés de poulet et les sécher avec du papier absorbant", 
-                  "2. Mélanger le sucre, l'ail et verser sur le poulet", 
-                  "3. Cuire le poulet à découvert dans le four préchauffé pendant 1 heure"],
+          ingredients: [
+            "- Poulet",
+            "- Sucre",
+            "- Sauce soja",
+            "- 2 gousses d'ail émincées",
+          ],
+          steps: [
+            "1. Rincer les moitiés de poulet et les sécher avec du papier absorbant",
+            "2. Mélanger le sucre, l'ail et verser sur le poulet",
+            "3. Cuire le poulet à découvert dans le four préchauffé pendant 1 heure",
+          ],
           prep: "30 mins",
           cook: "1 hr",
           total: "1 hr 30 mins",
@@ -407,16 +430,21 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 604 calories; protéine 44,3 g; glucides 27,9 g; graisse 34,2 g; cholestérol 170,3 mg; sodium 1963 mg.",
         },
-       {id: "grilled_tuna",
+        {
+          id: "grilled_tuna",
           title: "Thon grillé",
           image: "/grilled_tuna.PNG",
-          ingredients: ["- Thon", 
-                        "- 3 cuillères à soupe d'huile d'olive extra vierge", 
-                        "- Sel",
-                        "- 1 citron vert pressé"],
-          steps: ["1. Placez les steaks de thon et l'huile d'olive dans un grand sac en plastique refermable. Sceller et réfrigérer pendant 1 heure", 
-                  "2. Préchauffez le gril à feu moyen", 
-                  "3. Assaisonner le thon avec du sel et du poivre et cuire sur le gril préchauffé environ 6 minutes, en le retournant une fois"],
+          ingredients: [
+            "- Thon",
+            "- 3 cuillères à soupe d'huile d'olive extra vierge",
+            "- Sel",
+            "- 1 citron vert pressé",
+          ],
+          steps: [
+            "1. Placez les steaks de thon et l'huile d'olive dans un grand sac en plastique refermable. Sceller et réfrigérer pendant 1 heure",
+            "2. Préchauffez le gril à feu moyen",
+            "3. Assaisonner le thon avec du sel et du poivre et cuire sur le gril préchauffé environ 6 minutes, en le retournant une fois",
+          ],
           prep: "10 mins",
           cook: "6 mins",
           total: "1 hr 16 mins",
@@ -426,15 +454,16 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 281 calories; protéine 40g; glucides 1,8 g; matières grasses 11,8 g; cholestérol 77,1 mg; sodium 644,2 mg.",
         },
-       {id: "oven_fried_salmon",
+        {
+          id: "oven_fried_salmon",
           title: "Saumon frit au four",
           image: "/oven_fried_salmon.PNG",
-          ingredients: ["- Ail", 
-                        "- Fromage", 
-                        "- Saumon"],
-          steps: ["1. Préchauffez le four à 500 degrés F",  
-                  "2. Enrober le saumon de tous les côtés du mélange d'huile d'olive", 
-                  "3. Bake in the preheated oven"],
+          ingredients: ["- Ail", "- Fromage", "- Saumon"],
+          steps: [
+            "1. Préchauffez le four à 500 degrés F",
+            "2. Enrober le saumon de tous les côtés du mélange d'huile d'olive",
+            "3. Bake in the preheated oven",
+          ],
           prep: "10 mins",
           cook: "10 mins",
           total: "25 mins",
@@ -444,16 +473,21 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 405 calories; protéine 31,2 g; glucides 13,7 g; graisse 24,2 g; cholestérol 80,3 mg; sodium 694,7 mg.",
         },
-       {id: "beef_stew",
+        {
+          id: "beef_stew",
           title: "Ragoût de bœuf",
           image: "/beef_stew.PNG",
-          ingredients: ["- Huile végétale",
-                        "- Ail",
-                        "- 1 oignon",
-                        "- Boeuf",
-                        "- 1 boîte de tomates concassées"],
-          steps: ["1. Chauffer l'huile dans une grande casserole à feu moyen-vif. Ajouter la viande, la farine, l'oignon et l'ail",
-                  "2. Ajouter le bouillon, les tomates et cuire environ 1 heure"],
+          ingredients: [
+            "- Huile végétale",
+            "- Ail",
+            "- 1 oignon",
+            "- Boeuf",
+            "- 1 boîte de tomates concassées",
+          ],
+          steps: [
+            "1. Chauffer l'huile dans une grande casserole à feu moyen-vif. Ajouter la viande, la farine, l'oignon et l'ail",
+            "2. Ajouter le bouillon, les tomates et cuire environ 1 heure",
+          ],
           prep: "20 mins",
           cook: "1 hr 10 mins",
           total: "1 hr 30 mins",
@@ -463,12 +497,15 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 403 calories; protéine 24,4 g; glucides 27,7 g; matières grasses 21,5 g; cholestérol 62,6 mg; sodium 238,3 mg.",
         },
-       {id: "roasted_garlic",
+        {
+          id: "roasted_garlic",
           title: "Ail rôti",
           image: "/roasted_garlic.PNG",
           ingredients: ["- Ail", "- Huile d'olive"],
-          steps: ["1. Préchauffer le four à 400 degrés F (200 degrés C).",
-                  "2. Disposer les têtes d'ail sur une plaque à pâtisserie. Saupoudrer l'ail d'huile d'olive. Cuire au four de 40 minutes à 1 heure"],
+          steps: [
+            "1. Préchauffer le four à 400 degrés F (200 degrés C).",
+            "2. Disposer les têtes d'ail sur une plaque à pâtisserie. Saupoudrer l'ail d'huile d'olive. Cuire au four de 40 minutes à 1 heure",
+          ],
           prep: "5 mins",
           cook: "1 hr",
           total: "1 hr 5 mins",
@@ -478,16 +515,21 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 80 calories; protéine 2,4 g; glucides 12,3 g; graisse 2,9 g; sodium 6,4 mg.",
         },
-       {id: "stuffed_potatoes",
+        {
+          id: "stuffed_potatoes",
           title: "Pommes de terre farcies",
           image: "/stuffed_potatoes.PNG",
-          ingredients: ["- Pomme de terre",
+          ingredients: [
+            "- Pomme de terre",
             "- Fromage cheddar",
-            "- Trempette à la crème fraîche et à l'oignon"],
-          steps: ["1. Préchauffer le four à 350 degrés F",
+            "- Trempette à la crème fraîche et à l'oignon",
+          ],
+          steps: [
+            "1. Préchauffer le four à 350 degrés F",
             "2. Cuire les pommes de terre au four préchauffé pendant 45 minutes",
             "3. Trancher le dessus des pommes de terre et ramasser la chair dans un grand bol",
-            "4. À la chair de pomme de terre, ajoutez le fromage et la trempette. Mélangez bien et déposez le mélange dans la peau des pommes de terre."],
+            "4. À la chair de pomme de terre, ajoutez le fromage et la trempette. Mélangez bien et déposez le mélange dans la peau des pommes de terre.",
+          ],
           prep: "15 mins",
           cook: "1 hr 30 mins",
           total: "1 hr 45 mins",
@@ -497,13 +539,21 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 512 calories; protéine 21,7 g; glucides 63,6 g; graisse 20g; cholestérol 62,7 mg; sodium 416,5 mg.",
         },
-       {id: "oven_roasted_potatoes",
+        {
+          id: "oven_roasted_potatoes",
           title: "Pommes de terre rôties au four",
           image: "/oven_roasted_potatoes.PNG",
-          ingredients: ["- Pomme de terre", "- Huile d'olive", "- Sel", "- Poivre"],
-          steps: ["1. Préchauffer le four à 400 degrés F",
+          ingredients: [
+            "- Pomme de terre",
+            "- Huile d'olive",
+            "- Sel",
+            "- Poivre",
+          ],
+          steps: [
+            "1. Préchauffer le four à 400 degrés F",
             "2. Ajouter l'huile d'olive, le sel assaisonné, le sel et le poivre noir; bien mélanger. Étaler les pommes de terre sur une plaque à pâtisserie.",
-            "3. Cuire au four préchauffé pendant 30 minutes, en retournant les pommes de terre de temps en temps"],
+            "3. Cuire au four préchauffé pendant 30 minutes, en retournant les pommes de terre de temps en temps",
+          ],
           prep: "10 mins",
           cook: "1 hr",
           total: "1 hr 10 mins",
@@ -513,17 +563,22 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 206 calories; protéine 4,4 g; glucides 37,6 g; graisse 4,7 g; sodium 553,5 mg.",
         },
-       {id: "oven_roasted_grapetomatoes",
+        {
+          id: "oven_roasted_grapetomatoes",
           title: "Tomates raisins rôties au four",
           image: "/oven_roasted_grapetomatoes.PNG",
-          ingredients: ["- Tomate",
+          ingredients: [
+            "- Tomate",
             "- Ail",
             "- Le sel",
             "- Huile d'olive",
-            "- Basilic"],
-          steps: ["1. Préchauffer le four à 350 degrés F",
+            "- Basilic",
+          ],
+          steps: [
+            "1. Préchauffer le four à 350 degrés F",
             "2. Arroser les tomates d'huile d'olive et garnir d'ail, de basilic et de sel",
-            "3. Cuire au four préchauffé jusqu'à ce que les tomates soient tendres, environ 30 minutes"],
+            "3. Cuire au four préchauffé jusqu'à ce que les tomates soient tendres, environ 30 minutes",
+          ],
           prep: "15 mins",
           cook: "30 mins",
           total: "45 mins",
@@ -533,16 +588,21 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 113 calories; protéine 2,2 g; glucides 11,7 g; graisse 7,5 g; sodium 98,7 mg.",
         },
-       {id: "tomato_mozzarella_salad",
+        {
+          id: "tomato_mozzarella_salad",
           title: "Salade de tomates et mozzarella",
           image: "/tomato_mozzarella_salad.PNG",
-          ingredients: ["- Tomate",
+          ingredients: [
+            "- Tomate",
             "- Fromage mozzarella",
             "- Huile d'olive",
             "- Le sel",
-            "- Vinaigre balsamique"],
-          steps: ["1. Placer les tranches de tomates, en alternant avec les tranches de mozzarella, sur un grand plat de service.",
-            "2. Arroser les tomates et la mozzarella d'huile d'olive, de sel et de vinaigre"],
+            "- Vinaigre balsamique",
+          ],
+          steps: [
+            "1. Placer les tranches de tomates, en alternant avec les tranches de mozzarella, sur un grand plat de service.",
+            "2. Arroser les tomates et la mozzarella d'huile d'olive, de sel et de vinaigre",
+          ],
           prep: "10 mins",
           cook: "10 mins",
           total: "20 mins",
@@ -552,18 +612,23 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 199 calories; protéine 10,1 g; glucides 6,2 g; graisse 15,2 g; cholestérol 24,2 mg; sodium 338,3 mg.",
         },
-       {id: "french_strawberry_cake",
+        {
+          id: "french_strawberry_cake",
           title: "Gâteau aux fraises à la française",
           image: "/french_strawberry_cake.PNG",
-          ingredients: ["- Sucre blanc",
+          ingredients: [
+            "- Sucre blanc",
             "- 2 oeufs",
             "- Extrait de vanille",
             "- Levure chimique",
-            "- Fraise"],
-          steps: ["1. Préchauffez le four à 350 degrés F",
+            "- Fraise",
+          ],
+          steps: [
+            "1. Préchauffez le four à 350 degrés F",
             "2. Fouetter ensemble la farine, la poudre à pâte et le sel dans un bol moyen",
             "3. Étalez la pâte dans le moule à gâteau préparé",
-            "4. Cuire au four préchauffé"],
+            "4. Cuire au four préchauffé",
+          ],
           prep: "20 mins",
           cook: "40 mins",
           total: "1 hr",
@@ -573,17 +638,22 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 294 calories; protéine 3,7 g; glucides 42g; matières grasses 12,9 g; cholestérol 66,6 mg; sodium 141,3 mg.",
         },
-       {id: "cookie_butter_cookies",
+        {
+          id: "cookie_butter_cookies",
           title: "Biscuits au beurre",
           image: "/cookie_butter_cookies.PNG",
-          ingredients: ["- Beurre",
+          ingredients: [
+            "- Beurre",
             "- Cassonade",
             "- Tasse de beurre aux biscuits",
             "- 2 tasses de farine",
-            "- 1 oeuf"],
-          steps: ["1. Préchauffer le four à 350 degrés F",
+            "- 1 oeuf",
+          ],
+          steps: [
+            "1. Préchauffer le four à 350 degrés F",
             "2. Battre le beurre, la cassonade et 3/4 tasse de sucre blanc au batteur électrique dans un grand bol jusqu'à consistance lisse.",
-            "3. Cuire au four préchauffé jusqu'à coloration dorée, environ 12 minutes."],
+            "3. Cuire au four préchauffé jusqu'à coloration dorée, environ 12 minutes.",
+          ],
           prep: "15 mins",
           cook: "12 mins",
           total: "27 mins",
@@ -593,14 +663,19 @@ function Recipes(props) {
           Nutrition_info:
             "Par portion: 196 calories; protéine 2,6 g; glucides 24g; graisse 10,2 g; cholestérol 22,1 mg; sodium 125,3 mg.",
         },
-       {id: "grilled_cheese_sandwich",
+        {
+          id: "grilled_cheese_sandwich",
           title: "Sandwich au fromage grillé",
           image: "/grilled_cheese_sandwich.PNG",
-          ingredients: ["- 1 cuillère à soupe de beurre",
+          ingredients: [
+            "- 1 cuillère à soupe de beurre",
             "- Fromage",
-            "- 1 anneau en forme de beignet émaillé, coupé en deux horizontalement"],
-          steps: ["1. Étalez du beurre sur les côtés coupés du beignet",
-            "2. Cuire, en retournant une fois, jusqu'à ce qu'il soit légèrement doré des deux côtés et que le fromage soit fondu, environ 4 minutes."],
+            "- 1 anneau en forme de beignet émaillé, coupé en deux horizontalement",
+          ],
+          steps: [
+            "1. Étalez du beurre sur les côtés coupés du beignet",
+            "2. Cuire, en retournant une fois, jusqu'à ce qu'il soit légèrement doré des deux côtés et que le fromage soit fondu, environ 4 minutes.",
+          ],
           prep: "5 mins",
           cook: "4 mins",
           total: "9 mins",
@@ -618,15 +693,13 @@ function Recipes(props) {
     ? (resultContent = resultContent.Français)
     : (resultContent = resultContent.English);
 
-
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
 
-  const showRecipe = (resultContent.recipes).map((recipe) => {
-
+  const showRecipe = resultContent.recipes.map((recipe) => {
     if (recipe.id === recId) {
-      return(
+      return (
         <div>
           <Breadcrumb>
             <Breadcrumb.Item href="/" style={breadcrumb}>
@@ -648,7 +721,7 @@ function Recipes(props) {
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                   <div class="col p-4 d-flex flex-column position-static">
                     <h4 class="mb-0" style={pStyle}>
-                       {recipe.title}
+                      {recipe.title}
                     </h4>
                     <br />
                     <br />
@@ -657,25 +730,48 @@ function Recipes(props) {
                       alt={recipe.title}
                       style={imgStyle}
                     />
-                    <br/>
-                    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-                      <StarRatings  count={5}
-                      value={recipe.rating}
-                      onChange={ratingChanged}
-                      size={24}
-                      activeColor="#F5BE2C"
-                      isHalf={true}/>
+                    <br />
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <StarRatings
+                        count={5}
+                        value={recipe.rating}
+                        onChange={ratingChanged}
+                        size={24}
+                        activeColor="#F5BE2C"
+                        isHalf={true}
+                      />
                     </div>
                   </div>
                 </div>
               </div>
-              <Card style={{ width: "14rem" }}>
+              <Card style={{ width: "13rem" }}>
                 <ListGroup variant="flush">
-                  <ListGroup.Item>{content.prep}{recipe.prep}</ListGroup.Item>
-                  <ListGroup.Item>{content.cook}{recipe.cook}</ListGroup.Item>
-                  <ListGroup.Item>{content.total}{recipe.total}</ListGroup.Item>
-                  <ListGroup.Item>{content.servings}{recipe.servings}</ListGroup.Item>
-                  <ListGroup.Item>{content.yield}{recipe.yield}</ListGroup.Item>
+                  <ListGroup.Item>
+                    {content.prep}
+                    {recipe.prep}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    {content.cook}
+                    {recipe.cook}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    {content.total}
+                    {recipe.total}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    {content.servings}
+                    {recipe.servings}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    {content.yield}
+                    {recipe.yield}
+                  </ListGroup.Item>
                 </ListGroup>
               </Card>
               <Accordion>
@@ -686,9 +782,7 @@ function Recipes(props) {
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
-                    <Card.Body>
-                      {recipe.Nutrition_info}
-                    </Card.Body>
+                    <Card.Body>{recipe.Nutrition_info}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
               </Accordion>
@@ -703,7 +797,11 @@ function Recipes(props) {
                     </h4>
 
                     <div>
-                      {(recipe.ingredients).map((item) => (<h5 style={{paddingTop:20, paddingLeft:15}}>{item}</h5>))}
+                      {recipe.ingredients.map((item) => (
+                        <h5 style={{ paddingTop: 20, paddingLeft: 15 }}>
+                          {item}
+                        </h5>
+                      ))}
                     </div>
                     <br />
                   </div>
@@ -716,7 +814,11 @@ function Recipes(props) {
                       {content.instructions}
                     </h4>
                     <div>
-                      {(recipe.steps).map((item) => (<h5 style={{paddingTop:20, paddingLeft:15}}>{item}</h5>))}
+                      {recipe.steps.map((item) => (
+                        <h5 style={{ paddingTop: 20, paddingLeft: 15 }}>
+                          {item}
+                        </h5>
+                      ))}
                     </div>
                     <br />
                   </div>
@@ -724,15 +826,12 @@ function Recipes(props) {
               </div>
             </div>
           </div>
-        </div>)
+        </div>
+      );
     }
   });
 
-  return (
-    <Container>
-      {showRecipe}
-    </Container>
-  );
+  return <Container>{showRecipe}</Container>;
 }
 
 export default Recipes;
