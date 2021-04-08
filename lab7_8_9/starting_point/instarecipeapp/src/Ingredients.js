@@ -4,7 +4,6 @@ import styled from "styled-components";
 import AccordionMP from "./Accordion";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Card from "react-bootstrap/Card";
-import cookie_butter_cookies from "./images/cookie_butter_cookies.PNG";
 
 const divBorderStyle2 = {
   border: "2px solid rgba(0, 0, 0, 0.5)",
@@ -14,7 +13,9 @@ const divBorderStyle2 = {
   paddingBottom: 30,
 };
 
-function ResultsSection(props) {
+const ResultsSection=({props, warn, isCheckedMeat0, meat0, isCheckedMeat1, meat1, isCheckedMeat2, meat2, isCheckedMeat3, meat3, isCheckedVeg0, veg0, isCheckedVeg1, veg1, isCheckedVeg2, veg2, isCheckedFruit0, fruit0, isCheckedFruit1, fruit1, isCheckedDairy0, dairy0, isCheckedDairy1, dairy1})=>{
+
+
   let resultContent = {
     English: {
       title: "Results",
@@ -22,7 +23,7 @@ function ResultsSection(props) {
       recipes: {
         chicken_marinade: {
           title: "Chicken Marinade",
-          image: "./images/chicken_marinade.PNG",
+          image: "/chicken_marinade.PNG",
           ingredients: [
             "cup olive oil",
             "spicy brown mustard",
@@ -43,7 +44,7 @@ function ResultsSection(props) {
         },
         teriyaki_chicken: {
           title: "Teriyaki Chicken",
-          image: "./images/teriyaki_chicken.PNG",
+          image: "/teriyaki_chicken.PNG",
           ingredients: [
             "Chicken",
             "sugar",
@@ -65,7 +66,7 @@ function ResultsSection(props) {
         },
         grilled_tuna: {
           title: "Grilled Tuna",
-          image: "./images/grilled_tuna.PNG",
+          image: "/grilled_tuna.PNG",
           ingredients: [
             "Tuna",
             "3 tablespoons extra virgin olive oil",
@@ -87,7 +88,7 @@ function ResultsSection(props) {
         },
         oven_fried_salmon: {
           title: "Oven-Fried Salmon",
-          image: "./images/oven_fried_salmon.PNG",
+          image: "/oven_fried_salmon.PNG",
           ingredients: ["garlic", "cheese", "Salmon"],
           steps: [
             "Preheat the oven to 500 degrees F ",
@@ -104,7 +105,7 @@ function ResultsSection(props) {
         },
         beef_stew: {
           title: "Beef Stew",
-          image: "./images/beef_stew.PNG",
+          image: "/beef_stew.PNG",
           ingredients: [
             "vegetable oil",
             "garlic",
@@ -126,7 +127,7 @@ function ResultsSection(props) {
         },
         roasted_garlic: {
           title: "Roasted Garlic",
-          image: "./images/roasted_garlic.PNG",
+          image: "/roasted_garlic.PNG",
           ingredients: ["Garlic", "olive oil"],
           steps: [
             "Preheat oven to 400 degrees F (200 degrees C).",
@@ -142,7 +143,7 @@ function ResultsSection(props) {
         },
         stuffed_potatoes: {
           title: "Stuffed Potatoes",
-          image: "./images/stuffed_potatoes.PNG",
+          image: "/stuffed_potatoes.PNG",
           ingredients: [
             "Potato",
             "cheddar cheese",
@@ -164,7 +165,7 @@ function ResultsSection(props) {
         },
         oven_roasted_potatoes: {
           title: "Oven-Roasted Potatoes",
-          image: "./images/oven_roasted_potatoes.PNG",
+          image: "/oven_roasted_potatoes.PNG",
           ingredients: ["Potato", "olive oil", "salt and pepper"],
           steps: [
             "Preheat oven to 400 degrees F",
@@ -181,7 +182,7 @@ function ResultsSection(props) {
         },
         oven_roasted_grapetomatoes: {
           title: "Oven Roasted Grape Tomatoes",
-          image: "./images/oven_roasted_grapetomatoes.PNG",
+          image: "/oven_roasted_grapetomatoes.PNG",
           ingredients: [
             "Tomato",
             "garlic",
@@ -204,7 +205,7 @@ function ResultsSection(props) {
         },
         tomato_mozzarella_salad: {
           title: "Tomato Mozzarella Salad",
-          image: "./images/tomato_mozzarella_salad.PNG",
+          image: "/tomato_mozzarella_salad.PNG",
           ingredients: [
             "Tomato",
             "mozzarella cheese",
@@ -226,7 +227,7 @@ function ResultsSection(props) {
         },
         french_strawberry_cake: {
           title: "French Strawberry Cake",
-          image: "./images/french_strawberry_cake.PNG",
+          image: "/french_strawberry_cake.PNG",
           ingredients: [
             "white sugar",
             "2 eggs",
@@ -250,7 +251,7 @@ function ResultsSection(props) {
         },
         cookie_butter_cookies: {
           title: "Cookie Butter Cookies",
-          image: "./images/cookie_butter_cookies.PNG",
+          image: "/cookie_butter_cookies.PNG",
           ingredients: [
             "Butter",
             "brown sugar",
@@ -273,7 +274,7 @@ function ResultsSection(props) {
         },
         grilled_cheese_sandwich: {
           title: "Grilled Cheese Sandwich",
-          image: "./images/grilled_cheese_sandwich.PNG",
+          image: "/grilled_cheese_sandwich.PNG",
           ingredients: [
             "1 tablespoon butter",
             "Cheese",
@@ -299,79 +300,79 @@ function ResultsSection(props) {
       recipes: {
         chicken_marinade: {
           title: "Marinade au Poulet",
-          image: "./images/chicken_marinade.PNG",
+          image: "/chicken_marinade.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         teriyaki_chicken: {
           title: "Poulet teriyaki",
-          image: "./images/teriyaki_chicken.PNG",
+          image: "/teriyaki_chicken.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         grilled_tuna: {
           title: "Thon grillé",
-          image: "./images/grilled_tuna.PNG",
+          image: "/grilled_tuna.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         oven_fried_salmon: {
           title: "Saumon frit au four",
-          image: "./images/oven_fried_salmon.PNG",
+          image: "/oven_fried_salmon.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         beef_stew: {
           title: "Ragoût de bœuf",
-          image: "./images/beef_stew.PNG",
+          image: "/beef_stew.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         roasted_garlic: {
           title: "Ail rôti",
-          image: "./images/roasted_garlic.PNG",
+          image: "/roasted_garlic.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         stuffed_potatoes: {
           title: "Pommes de terre farcies",
-          image: "./images/stuffed_potatoes.PNG",
+          image: "/stuffed_potatoes.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         oven_roasted_potatoes: {
           title: "Pommes de terre rôties au four",
-          image: "./images/oven_roasted_potatoes.PNG",
+          image: "/oven_roasted_potatoes.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         oven_roasted_grapetomatoes: {
           title: "Tomates raisins rôties au four",
-          image: "./images/oven_roasted_grapetomatoes.PNG",
+          image: "/oven_roasted_grapetomatoes.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         tomato_mozzarella_salad: {
           title: "Salade de tomates et mozzarella",
-          image: "./images/tomato_mozzarella_salad.PNG",
+          image: "/tomato_mozzarella_salad.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         french_strawberry_cake: {
           title: "Gâteau aux fraises à la française",
-          image: "./images/french_strawberry_cake.PNG",
+          image: "/french_strawberry_cake.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         cookie_butter_cookies: {
           title: "Biscuits au beurre",
-          image: "./images/cookie_butter_cookies.PNG",
+          image: "/cookie_butter_cookies.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
         grilled_cheese_sandwich: {
           title: "Sandwich au fromage grillé",
-          image: "./images/grilled_cheese_sandwich.PNG",
+          image: "/grilled_cheese_sandwich.PNG",
           ingredients: ["i1", "i2", "i3"],
           steps: ["step1", "step2", "step3", "step4"],
         },
@@ -383,26 +384,662 @@ function ResultsSection(props) {
     ? (resultContent = resultContent.Français)
     : (resultContent = resultContent.English);
 
-  return (
-    <div className={props.warn ? "warning": "hide"} style={divBorderStyle2}>
-      <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
-      <Card style={{ width: "18rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
-        <Card.Link href="/recipes">
-          <Card.Body>
-            <Card.Title>
-              {resultContent.recipes.cookie_butter_cookies.title}
-            </Card.Title>
-            <Card.Img variant="top" src={cookie_butter_cookies} />
-            <Card.Text>
-              <p align="right">
-                {resultContent.time_to_cook}{" "}
-                {resultContent.recipes.cookie_butter_cookies.total}{" "}
-              </p>
-            </Card.Text>
-          </Card.Body>
-        </Card.Link>
-      </Card>
+  const getResults = () => {
 
+    const recipesList = resultContent.recipes;
+
+    // chicken
+    if(isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.chicken_marinade.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.chicken_marinade.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.chicken_marinade.time_to_cook}{" "}
+                    {resultContent.recipes.chicken_marinade.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.teriyaki_chicken.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.teriyaki_chicken.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.teriyaki_chicken.time_to_cook}{" "}
+                    {resultContent.recipes.teriyaki_chicken.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedMeat1 && !isCheckedMeat0 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //tuna
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.grilled_tuna.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.grilled_tuna.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.grilled_tuna.time_to_cook}{" "}
+                    {resultContent.recipes.grilled_tuna.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedMeat2 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //salmon
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_fried_salmon.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_fried_salmon.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_fried_salmon.time_to_cook}{" "}
+                    {resultContent.recipes.oven_fried_salmon.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedMeat3 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //beef
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.beef_stew.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.beef_stew.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.beef_stew.time_to_cook}{" "}
+                    {resultContent.recipes.beef_stew.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedVeg0 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //potato
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.stuffed_potatoes.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.stuffed_potatoes.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.stuffed_potatoes.time_to_cook}{" "}
+                    {resultContent.recipes.stuffed_potatoes.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_roasted_potatoes.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_roasted_potatoes.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_roasted_potatoes.time_to_cook}{" "}
+                    {resultContent.recipes.oven_roasted_potatoes.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedVeg1 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //garlic
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.teriyaki_chicken.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.teriyaki_chicken.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.teriyaki_chicken.time_to_cook}{" "}
+                    {resultContent.recipes.teriyaki_chicken.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_fried_salmon.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_fried_salmon.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_fried_salmon.time_to_cook}{" "}
+                    {resultContent.recipes.oven_fried_salmon.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.beef_stew.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.beef_stew.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.beef_stew.time_to_cook}{" "}
+                    {resultContent.recipes.beef_stew.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.roasted_garlic.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.roasted_garlic.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.roasted_garlic.time_to_cook}{" "}
+                    {resultContent.recipes.roasted_garlic.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_roasted_grapetomatoes.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_roasted_grapetomatoes.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_roasted_grapetomatoes.time_to_cook}{" "}
+                    {resultContent.recipes.oven_roasted_grapetomatoes.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedVeg2 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //tomato
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.beef_stew.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.beef_stew.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.beef_stew.time_to_cook}{" "}
+                    {resultContent.recipes.beef_stew.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_roasted_grapetomatoes.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_roasted_grapetomatoes.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_roasted_grapetomatoes.time_to_cook}{" "}
+                    {resultContent.recipes.oven_roasted_grapetomatoes.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.tomato_mozzarella_salad.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.tomato_mozzarella_salad.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.tomato_mozzarella_salad.time_to_cook}{" "}
+                    {resultContent.recipes.tomato_mozzarella_salad.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedFruit1 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedDairy0 && !isCheckedDairy1){  //strawberry
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.french_strawberry_cake.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.french_strawberry_cake.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.french_strawberry_cake.time_to_cook}{" "}
+                    {resultContent.recipes.french_strawberry_cake.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedDairy0 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy1){ //butter
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.cookie_butter_cookies.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.cookie_butter_cookies.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.cookie_butter_cookies.time_to_cook}{" "}
+                    {resultContent.recipes.cookie_butter_cookies.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.grilled_cheese_sandwich.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.grilled_cheese_sandwich.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.grilled_cheese_sandwich.time_to_cook}{" "}
+                    {resultContent.recipes.grilled_cheese_sandwich.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedDairy1 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0){ //cheese
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_fried_salmon.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_fried_salmon.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_fried_salmon.time_to_cook}{" "}
+                    {resultContent.recipes.oven_fried_salmon.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.stuffed_potatoes.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.stuffed_potatoes.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.stuffed_potatoes.time_to_cook}{" "}
+                    {resultContent.recipes.stuffed_potatoes.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.tomato_mozzarella_salad.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.tomato_mozzarella_salad.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.tomato_mozzarella_salad.time_to_cook}{" "}
+                    {resultContent.recipes.tomato_mozzarella_salad.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.grilled_cheese_sandwich.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.grilled_cheese_sandwich.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.grilled_cheese_sandwich.time_to_cook}{" "}
+                    {resultContent.recipes.grilled_cheese_sandwich.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedMeat0 && isCheckedVeg1 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //chicken and garlic
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.teriyaki_chicken.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.teriyaki_chicken.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.teriyaki_chicken.time_to_cook}{" "}
+                    {resultContent.recipes.teriyaki_chicken.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedMeat2 && isCheckedDairy1 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0){  //salmon and cheese
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_fried_salmon.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_fried_salmon.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_fried_salmon.time_to_cook}{" "}
+                    {resultContent.recipes.oven_fried_salmon.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedMeat2 && isCheckedDairy1 && isCheckedVeg1 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0){  //salmon, cheese and garlic
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_fried_salmon.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_fried_salmon.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_fried_salmon.time_to_cook}{" "}
+                    {resultContent.recipes.oven_fried_salmon.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedDairy1 && isCheckedVeg1 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0){  //garlic and cheese
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_fried_salmon.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_fried_salmon.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_fried_salmon.time_to_cook}{" "}
+                    {resultContent.recipes.oven_fried_salmon.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(isCheckedMeat3 && isCheckedVeg1 && !isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedVeg0 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //beef and garlic
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.beef_stew.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.beef_stew.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.beef_stew.time_to_cook}{" "}
+                    {resultContent.recipes.beef_stew.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(!isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //beef and tomato
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.beef_stew.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.beef_stew.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.beef_stew.time_to_cook}{" "}
+                    {resultContent.recipes.beef_stew.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(!isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && isCheckedVeg1 && isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && !isCheckedDairy1){  //garlic and tomato
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.beef_stew.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.beef_stew.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.beef_stew.time_to_cook}{" "}
+                    {resultContent.recipes.beef_stew.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.oven_roasted_grapetomatoes.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.oven_roasted_grapetomatoes.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.oven_roasted_grapetomatoes.time_to_cook}{" "}
+                    {resultContent.recipes.oven_roasted_grapetomatoes.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(!isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && isCheckedDairy1){  // potato and cheese
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.stuffed_potatoes.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.stuffed_potatoes.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.stuffed_potatoes.time_to_cook}{" "}
+                    {resultContent.recipes.stuffed_potatoes.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(!isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && !isCheckedDairy0 && isCheckedDairy1){  // tomato and cheese
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.tomato_mozzarella_salad.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.tomato_mozzarella_salad.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.tomato_mozzarella_salad.time_to_cook}{" "}
+                    {resultContent.recipes.tomato_mozzarella_salad.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else if(!isCheckedMeat0 && !isCheckedMeat1 && !isCheckedMeat2 && !isCheckedMeat3 && !isCheckedVeg0 && !isCheckedVeg1 && !isCheckedVeg2 && !isCheckedFruit0 && !isCheckedFruit1 && isCheckedDairy0 && isCheckedDairy1){  // cheese and butter
+      return(
+        <div>
+          <h3 style={{ marginTop: 30,  marginBottom: 30 }}>{resultContent.title}</h3>
+          <Card style={{ width: "20rem", display: "inline-block", marginLeft: 10,  marginRight: 10}}>
+            <Card.Link href="/recipes">
+              <Card.Body>
+                <Card.Title>
+                  {resultContent.recipes.grilled_cheese_sandwich.title}
+                </Card.Title>
+                <Card.Img variant="top" src={resultContent.recipes.grilled_cheese_sandwich.image} />
+                <Card.Text>
+                  <p align="right">
+                    {resultContent.recipes.grilled_cheese_sandwich.time_to_cook}{" "}
+                    {resultContent.recipes.grilled_cheese_sandwich.total}{" "}
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card.Link>
+          </Card>
+        </div>);
+    } else {
+      return(
+        <div style={{textAlignVertical: "center", textAlign: "center"}}>
+          <h5 style={{background:"#FFFFFF", paddingTop: 30,  paddingBottom: 30, marginLeft: 100, marginRight:100}}>Sorry we couldn’t find a recipe with the ingredients you chose.</h5>
+        </div>);
+    }
+  };
+
+  return (
+    <div className={warn ? "warning": "hide"} style={{paddingTop: 50, paddingBottom: 35}}>  
+        {getResults()}
     </div>
   );
 }
@@ -502,10 +1139,6 @@ function Ingredients(props) {
   const handleChange = () => {
     setChecked((prevState) => !prevState);
   };
-
-const test = (isCheckedMeat1 && isCheckedMeat2)
-      ? <div> Content </div>
-      : null;
 
   const disableSearchBtn = !(isCheckedMeat0 || isCheckedMeat1 || isCheckedMeat2 || isCheckedMeat3 ||
                              isCheckedVeg0 || isCheckedVeg1 || isCheckedVeg2 ||
@@ -682,7 +1315,6 @@ const test = (isCheckedMeat1 && isCheckedMeat2)
         </Breadcrumb.Item>
       </Breadcrumb>
       <div style={divBorderStyle}>
-      {test}
         <br />
         <br />
         <h3 style={{ textAlignVertical: "center", textAlign: "center" }}>
@@ -730,19 +1362,25 @@ const test = (isCheckedMeat1 && isCheckedMeat2)
           </div>
         </div>
         <br />
+        <div style={{ textAlignVertical: "center", textAlign: "center", marginBottom: 35}}>
+          <button disabled={disableSearchBtn} className="btn btn-primary" onClick={handleToggleClick}>
+            {content.search_button}
+          </button>
+        </div>
       </div>
-      <div
-        style={{
-          textAlignVertical: "center",
-          textAlign: "center",
-          marginTop: 35,
-          marginBottom: 35,
-        }}
-      >
-        <button disabled={disableSearchBtn} className="btn btn-primary" onClick={handleToggleClick}>
-          {content.search_button}
-        </button>
-        <ResultsSection warn={showResults} />
+
+      <div style={{textAlignVertical: "center", textAlign: "center"}}>
+        <ResultsSection props={props} warn={showResults} isCheckedMeat0={isCheckedMeat0} meat0={content.ingredients_list.meat[0]}
+                                                          isCheckedMeat1={isCheckedMeat1} meat1={content.ingredients_list.meat[1]}
+                                                          isCheckedMeat2={isCheckedMeat2} meat2={content.ingredients_list.meat[2]}
+                                                          isCheckedMeat3={isCheckedMeat3} meat3={content.ingredients_list.meat[3]}
+                                                          isCheckedVeg0={isCheckedVeg0} veg0={content.ingredients_list.vegetables[0]}
+                                                          isCheckedVeg1={isCheckedVeg1} veg1={content.ingredients_list.vegetables[1]}
+                                                          isCheckedVeg2={isCheckedVeg2} veg2={content.ingredients_list.vegetables[2]}
+                                                          isCheckedFruit0={isCheckedFruit0} fruit0={content.ingredients_list.fruits[0]}
+                                                          isCheckedFruit1={isCheckedFruit1} fruit1={content.ingredients_list.fruits[1]}
+                                                          isCheckedDairy0={isCheckedDairy0} dairy0={content.ingredients_list.dairy[0]}
+                                                          isCheckedDairy1={isCheckedDairy1} dairy1={content.ingredients_list.dairy[1]}/>
       </div>
     </Container>
   );
