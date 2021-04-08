@@ -64,20 +64,20 @@ https://snehageorge37.github.io/SEG3125-GROUP-14/lab5-Improvement%20of%20a%20ser
 
 ### Sources for lab9:
 
-https://www.npmjs.com/package/react-rating-stars-component
+<br/> https://www.npmjs.com/package/react-rating-stars-component
 
-Sources for the recipes and pictures:
-https://www.allrecipes.com/recipe/8819/teriyaki-chicken/
-https://www.allrecipes.com/recipe/83793/pretty-chicken-marinade/
-https://www.allrecipes.com/recipe/228682/amazing-oven-roasted-potatoes/
-https://www.allrecipes.com/recipe/24754/stuffed-potatoes/
-https://www.allrecipes.com/recipe/14860/roasted-garlic/
-https://www.allrecipes.com/recipe/237633/cookie-butter-cookies/
-https://www.allrecipes.com/recipe/247128/oven-roasted-grape-tomatoes/
-https://www.allrecipes.com/recipe/222659/tomato-mozzarella-salad/
-https://www.allrecipes.com/recipe/273169/french-strawberry-cake/
-https://www.allrecipes.com/recipe/254860/doughnut-grilled-cheese-sandwich/
-https://www.allrecipes.com/recipe/12730/grilled-tuna/
-https://www.allrecipes.com/recipe/263248/oven-fried-salmon/
-https://www.allrecipes.com/recipe/279251/simple-beef-stew/
+<br/> Sources for the recipes and pictures:
+<br/> https://www.allrecipes.com/recipe/8819/teriyaki-chicken/
+<br/> https://www.allrecipes.com/recipe/83793/pretty-chicken-marinade/
+<br/> https://www.allrecipes.com/recipe/228682/amazing-oven-roasted-potatoes/
+<br/> https://www.allrecipes.com/recipe/24754/stuffed-potatoes/
+<br/> https://www.allrecipes.com/recipe/14860/roasted-garlic/
+<br/> https://www.allrecipes.com/recipe/237633/cookie-butter-cookies/
+<br/> https://www.allrecipes.com/recipe/247128/oven-roasted-grape-tomatoes/
+<br/> https://www.allrecipes.com/recipe/222659/tomato-mozzarella-salad/
+<br/> https://www.allrecipes.com/recipe/273169/french-strawberry-cake/
+<br/> https://www.allrecipes.com/recipe/254860/doughnut-grilled-cheese-sandwich/
+<br/> https://www.allrecipes.com/recipe/12730/grilled-tuna/
+<br/> https://www.allrecipes.com/recipe/263248/oven-fried-salmon/
+<br/> https://www.allrecipes.com/recipe/279251/simple-beef-stew/
 
